@@ -57,7 +57,7 @@ export function ProcessSection() {
 
                                     <div className="mb-6">
                                         <span className="font-mono text-xs text-primary font-bold tracking-widest block mb-2">{step.phase}</span>
-                                        <span className="text-6xl font-black text-gray-200 group-hover:text-black transition-colors duration-500">{step.num}</span>
+                                        <span className="text-7xl font-black font-serif italic text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-transparent stroke-gray-300 md:opacity-50 group-hover:opacity-100 group-hover:from-primary/20 group-hover:to-primary transition-all duration-500" style={{ WebkitTextStroke: "1px rgba(0,0,0,0.1)" }}>{step.num}</span>
                                     </div>
 
                                     <h3 className="text-2xl font-bold mb-2">{step.title}</h3>

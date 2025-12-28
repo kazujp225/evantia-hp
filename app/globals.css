@@ -1,94 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  /* Brand Colors - Deep & Rich */
-  --color-primary: #29ABE2;
-  --color-primary-dark: #0077B5;
-  --color-accent: #111827;
-  /* Dark charcoal for contrast */
-
-  --color-text-main: #111827;
-  --color-text-light: #6B7280;
-
-  --color-bg-base: #FFFFFF;
-  --color-bg-sub: #F3F4F6;
-  --color-bg-alt: #F9FAFB;
-
-  --color-border: #E5E7EB;
-
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #29ABE2 0%, #007CAB 100%);
-  --gradient-mesh: radial-gradient(at 0% 0%, rgba(41, 171, 226, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(100, 200, 255, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(41, 171, 226, 0.05) 0px, transparent 50%);
+@theme {
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(0 0% 3.9%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(0 0% 3.9%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(0 0% 3.9%);
+  --color-primary: hsl(199 89% 48%);
+  --color-primary-foreground: hsl(0 0% 98%);
+  --color-secondary: hsl(0 0% 96.1%);
+  --color-secondary-foreground: hsl(0 0% 9%);
+  --color-muted: hsl(0 0% 96.1%);
+  --color-muted-foreground: hsl(0 0% 45.1%);
+  --color-accent: hsl(0 0% 96.1%);
+  --color-accent-foreground: hsl(0 0% 9%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+  --color-border: hsl(0 0% 89.8%);
+  --color-input: hsl(0 0% 89.8%);
+  --color-ring: hsl(199 89% 48%);
+  --radius: 0.5rem;
 }
 
-@theme inline {
-  --color-primary: var(--color-primary);
-  --color-primary-dark: var(--color-primary-dark);
-  --color-accent: var(--color-accent);
-
-  --color-text-main: var(--color-text-main);
-  --color-text-light: var(--color-text-light);
-
-  --color-bg-base: var(--color-bg-base);
-  --color-bg-sub: var(--color-bg-sub);
-  --color-bg-alt: var(--color-bg-alt);
-
-  --color-border: var(--color-border);
-
-  --font-sans: var(--font-noto-sans-jp), 'Helvetica Neue', Arial, sans-serif;
-
-  --box-shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-  --backdrop-blur-glass: 8px;
+/* Base Styles */
+* {
+  border-color: var(--color-border);
 }
 
-/* Clean SaaS Backgrounds */
 body {
-  background-color: var(--color-bg-base);
-  color: var(--color-text-main);
-  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-feature-settings: "palt" 1;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: 0.02em;
-  /* Tighter for SaaS look */
-  line-height: 1.6;
-  position: relative;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-  background-size: 32px 32px;
-  /* Dot Grid */
+  letter-spacing: 0.04em;
 }
 
-/* Remove Noise */
+/* Typography Refinements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.025em;
+  font-feature-settings: "palt" 1;
+}
+
+/* Global Texture Overlay */
 body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+
+/* Utility */
+.container-custom {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-/* Utilities */
-.text-balance {
-  text-wrap: balance;
-}
-
-.glass-panel {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-}
-
-.hero-glow {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(41, 171, 226, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
-  pointer-events: none;
-}
-
-
-.container-custom {
-  max-width: 1440px;
-  /* Wider for "Magazine" look */
-  margin: 0 auto;
-  padding: 0 5%;
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
