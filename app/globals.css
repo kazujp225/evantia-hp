@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors - Deep & Rich */
+  --color-primary: #29ABE2;
+  --color-primary-dark: #0077B5;
+  --color-accent: #111827;
+  /* Dark charcoal for contrast */
+
+  --color-text-main: #111827;
+  --color-text-light: #6B7280;
+
+  --color-bg-base: #FFFFFF;
+  --color-bg-sub: #F3F4F6;
+  --color-bg-alt: #F9FAFB;
+
+  --color-border: #E5E7EB;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #29ABE2 0%, #007CAB 100%);
+  --gradient-mesh: radial-gradient(at 0% 0%, rgba(41, 171, 226, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(100, 200, 255, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(41, 171, 226, 0.05) 0px, transparent 50%);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-accent: var(--color-accent);
+
+  --color-text-main: var(--color-text-main);
+  --color-text-light: var(--color-text-light);
+
+  --color-bg-base: var(--color-bg-base);
+  --color-bg-sub: var(--color-bg-sub);
+  --color-bg-alt: var(--color-bg-alt);
+
+  --color-border: var(--color-border);
+
+  --font-sans: var(--font-noto-sans-jp), 'Helvetica Neue', Arial, sans-serif;
+
+  --box-shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  --backdrop-blur-glass: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Clean SaaS Backgrounds */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.02em;
+  /* Tighter for SaaS look */
+  line-height: 1.6;
+  position: relative;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  /* Dot Grid */
+}
+
+/* Remove Noise */
+body::before {
+  display: none;
+}
+
+/* Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.hero-glow {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(41, 171, 226, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+
+
+.container-custom {
+  max-width: 1440px;
+  /* Wider for "Magazine" look */
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
