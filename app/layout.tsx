@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Fraunces } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${notoSansJP.variable} ${fraunces.variable} antialiased flex flex-col min-h-screen font-sans`}
+        className={`${notoSansJP.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex-grow pt-20">

@@ -29,47 +29,42 @@ const STEPS = [
 
 export function ProcessSection() {
     return (
-        <section className="py-40 md:py-64 bg-background relative overflow-hidden">
-            {/* Background Texture */}
-            <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '40px 40px' }} />
-
-            <div className="container-custom relative z-10">
-                <ScrollReveal className="mb-32 flex flex-col lg:flex-row lg:items-end justify-between">
+        <section className="py-32 bg-gray-50 relative overflow-hidden">
+            <div className="container-custom">
+                <ScrollReveal className="mb-24 flex flex-col md:flex-row justify-between items-end">
                     <div>
-                        <span className="text-[10px] font-black tracking-[0.6em] text-primary mb-6 block uppercase">Our Method</span>
-                        <h2 className="text-6xl md:text-8xl font-black leading-none uppercase tracking-tighter">
+                        <span className="text-primary font-bold tracking-widest text-xs mb-4 block uppercase">The Evantia Method</span>
+                        <h2 className="text-4xl md:text-5xl font-black leading-tight">
                             Process of<br />Transformation.
                         </h2>
                     </div>
-                    <p className="text-white/40 font-black text-[10px] tracking-[0.4em] lg:text-right mt-10 lg:mt-0 uppercase">
+                    <p className="text-gray-500 font-mono text-xs md:text-right mt-6 md:mt-0">
                         SYSTEMATIC APPROACH<br />FOR SUSTAINABLE GROWTH
                     </p>
                 </ScrollReveal>
 
                 <div className="relative">
-                    {/* Floating Vertical/Horizontal Progress Line */}
-                    <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-primary/10 md:hidden" />
-                    <div className="hidden md:block absolute top-[40px] left-0 right-0 h-[2px] bg-primary/10" />
+                    {/* Vertical Line for Mobile / Horizontal for Desktop */}
+                    <div className="absolute left-4 top-0 bottom-0 w-px bg-gray-200 md:hidden" />
+                    <div className="hidden md:block absolute top-[28px] left-0 right-0 h-px bg-gray-200" />
 
-                    <div className="grid md:grid-cols-3 gap-10 md:gap-16">
+                    <div className="grid md:grid-cols-3 gap-12 md:gap-8">
                         {STEPS.map((step, i) => (
                             <ScrollReveal key={step.num} delay={i * 0.2}>
-                                <div className="relative pl-16 md:pl-0 pt-0 md:pt-20 group h-full">
-                                    {/* Connection Point with Glow */}
-                                    <div className="absolute left-[19px] top-0 md:left-0 md:top-[33px] w-4 h-4 rounded-full bg-background border-4 border-primary z-10 group-hover:scale-150 group-hover:bg-primary transition-all duration-700 shadow-[0_0_20px_rgba(var(--color-primary),0.5)]" />
+                                <div className="relative pl-12 md:pl-0 pt-0 md:pt-12 group">
+                                    {/* Connection Point */}
+                                    <div className="absolute left-[11px] top-0 md:left-0 md:top-[23px] w-[10px] h-[10px] rounded-full bg-white border-2 border-primary z-10 group-hover:bg-primary transition-colors duration-300" />
 
-                                    <div className="glass-card p-10 md:p-12 rounded-[2.5rem] h-full hover:bg-white hover:shadow-2xl transition-all duration-700 flex flex-col">
-                                        <div className="mb-10 flex items-start justify-between">
-                                            <span className="font-mono text-[10px] text-primary font-black tracking-[0.4em] block uppercase">{step.phase}</span>
-                                            <span className="text-6xl font-black font-serif italic text-primary/5 group-hover:text-primary/20 transition-all duration-700">{step.num}</span>
-                                        </div>
-
-                                        <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tighter">{step.title}</h3>
-                                        <p className="text-[10px] font-black tracking-[0.2em] text-primary mb-10 uppercase">{step.jp}</p>
-                                        <p className="text-muted-foreground text-sm leading-relaxed font-medium mt-auto">
-                                            {step.desc}
-                                        </p>
+                                    <div className="mb-6">
+                                        <span className="font-mono text-xs text-primary font-bold tracking-widest block mb-2">{step.phase}</span>
+                                        <span className="text-7xl font-black font-serif italic text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-transparent stroke-gray-300 md:opacity-50 group-hover:opacity-100 group-hover:from-primary/20 group-hover:to-primary transition-all duration-500" style={{ WebkitTextStroke: "1px rgba(0,0,0,0.1)" }}>{step.num}</span>
                                     </div>
+
+                                    <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
+                                    <p className="text-sm font-bold text-primary mb-4">{step.jp}</p>
+                                    <p className="text-gray-500 text-sm leading-relaxed border-l-2 border-gray-100 pl-4 group-hover:border-primary transition-colors duration-300">
+                                        {step.desc}
+                                    </p>
                                 </div>
                             </ScrollReveal>
                         ))}

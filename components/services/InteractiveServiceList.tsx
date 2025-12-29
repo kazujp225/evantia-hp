@@ -45,58 +45,71 @@ export function InteractiveServiceList() {
 
     return (
         <section className="relative py-40 md:py-60 bg-black text-white overflow-hidden">
+            {/* Cinematic Background Layer */}
+            <AnimatePresence>
+                {hoveredService !== null && (
+                    <motion.div
+                        key={hoveredService}
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 0.6, scale: 1.05 }} // subtle zoom
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="absolute inset-0 z-0 bg-cover bg-center pointer-events-none"
+                        style={{ backgroundImage: `url(${SERVICES[hoveredService].image})` }}
+                    >
+                        <div className="absolute inset-0 bg-black/50" />
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Default Background */}
+            {hoveredService === null && (
+                <div className="absolute inset-0 z-0 bg-black pointer-events-none transition-colors duration-500" />
+            )}
+
             <div className="container-custom relative z-10">
-                <div className="mb-32 flex flex-col lg:flex-row lg:items-end justify-between border-b border-white/10 pb-12">
+                <div className="mb-24 flex flex-col md:flex-row items-end justify-between border-b border-white/20 pb-8">
                     <div>
-                        <span className="text-primary font-black tracking-[0.6em] text-[10px] mb-6 block uppercase">Our Excellence</span>
-                        <h2 className="text-6xl md:text-8xl font-black leading-none uppercase tracking-tighter">
-                            Professional<br />Services
-                        </h2>
+                        <span className="text-primary font-bold tracking-widest text-xs mb-4 block">OUR EXPERTISE</span>
+                        <h2 className="text-4xl md:text-6xl font-bold leading-tight">Our Services</h2>
                     </div>
-                    <p className="text-white/40 font-medium mt-10 lg:mt-0 max-w-sm text-lg leading-relaxed italic">
+                    <p className="text-gray-400 font-medium mt-6 md:mt-0 max-w-md text-right md:text-left">
                         一時的な成功より、勝ち続ける「自走力」を。<br />
                         表面ではなく本質から、貴社の採用を強くします。
                     </p>
                 </div>
 
-                <div className="flex flex-col w-full">
+                <div className="flex flex-col">
                     {SERVICES.map((service, index) => (
-                        <motion.div
+                        <Link
+                            href={service.link}
                             key={service.id}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 1.2, delay: index * 0.15, ease: [0.19, 1, 0.22, 1] }}
+                            className="group relative border-b border-white/10 py-12 md:py-16 transition-all"
+                            onMouseEnter={() => setHoveredService(index)}
+                            onMouseLeave={() => setHoveredService(null)}
                         >
-                            <Link
-                                href={service.link}
-                                onMouseEnter={() => setHoveredService(index)}
-                                onMouseLeave={() => setHoveredService(null)}
-                                className="group py-12 border-b border-white/5 transition-all duration-700 cursor-pointer relative block"
-                            >
-                                <div className="flex items-baseline justify-between transition-all group-hover:pl-4">
-                                    <div className="flex items-baseline gap-8">
-                                        <span className="text-[10px] font-black text-primary/30 tracking-widest select-none uppercase">{service.id}</span>
-                                        <div className="flex flex-col">
-                                            <h3 className="text-3xl lg:text-5xl font-black tracking-tighter transition-all group-hover:text-primary uppercase">
-                                                {service.jp}
-                                            </h3>
-                                            <div className="h-0 overflow-hidden group-hover:h-auto group-hover:mt-6 transition-all duration-700">
-                                                <p className="text-white/60 text-sm font-medium leading-relaxed max-w-sm">
-                                                    {service.desc}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition-all duration-700">
-                                        <ArrowRight className="text-primary" size={24} />
-                                    </div>
+                            <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-6 group-hover:translate-x-4 transition-transform duration-500">
+                                <div className="flex items-baseline gap-6 md:gap-12">
+                                    <span className="text-sm md:text-lg font-bold tracking-widest text-primary/80">
+                                        {service.id}
+                                    </span>
+                                    <h3 className="text-3xl md:text-5xl lg:text-6xl font-black text-white transition-colors duration-300">
+                                        {service.jp}
+                                    </h3>
                                 </div>
 
-                                {/* Minimal hover bridge indicator */}
-                                <div className="absolute left-0 bottom-0 w-0 h-[1.5px] bg-primary group-hover:w-full transition-all duration-1000" />
-                            </Link>
-                        </motion.div>
+                                <div className="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
+                                    <span className="text-sm font-bold uppercase tracking-wider hidden md:block">{service.en}</span>
+                                    <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+                                        <ArrowUpRight size={20} />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-6 md:pl-[120px] max-w-xl overflow-hidden transition-all duration-500 max-h-0 group-hover:max-h-40 opacity-0 group-hover:opacity-100">
+                                <p className="text-gray-300 text-lg leading-relaxed">{service.desc}</p>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </div>
