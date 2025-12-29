@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { HeroSlider } from "@/components/hero/HeroSlider";
 import { InteractiveServiceList } from "@/components/services/InteractiveServiceList";
@@ -13,101 +14,151 @@ export default function Home() {
       {/* 1. Full Screen Slider (Reverted) */}
       <HeroSlider />
 
-      {/* 2. Philosophy Section - Editorial Style */}
-      <section className="py-32 md:py-48 bg-secondary/30 relative z-10">
+      {/* 2. Philosophy Section - Architectural Asymmetry */}
+      <section className="py-48 md:py-80 relative overflow-hidden bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-            {/* Title Column */}
-            <div className="md:col-span-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-24">
+
+            {/* Title Block - Shifted down for rhythm */}
+            <div className="lg:col-span-12 lg:mb-32">
               <ScrollReveal>
-                <h2 className="text-sm font-bold tracking-[0.2em] text-primary mb-6 flex items-center gap-4">
-                  <span className="w-8 h-[1px] bg-primary"></span>
-                  PHILOSOPHY
-                </h2>
-                <p className="text-4xl md:text-5xl font-black leading-tight feature-font-palt font-serif italic">
+                <div className="flex items-baseline gap-10 border-b border-border pb-10">
+                  <span className="text-[10px] font-black tracking-[0.8em] text-primary uppercase">01</span>
+                  <h2 className="text-[10px] font-black tracking-[0.8em] text-muted-foreground uppercase">Philosophy</h2>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Core Message - Asymmetric Column */}
+            <div className="lg:col-span-7 lg:col-start-2">
+              <ScrollReveal>
+                <p className="text-6xl md:text-8xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter font-serif italic text-black mb-20">
                   Fairness<br />
-                  & Growth
+                  <span className="text-primary">&</span> Growth
+                </p>
+                <h3 className="text-3xl md:text-5xl font-black leading-tight mb-20 max-w-2xl">
+                  採用は「人を集めること」ではなく、<br />
+                  <span className="text-primary italic font-serif">Future Synergy</span> を生み出すこと。
+                </h3>
+              </ScrollReveal>
+            </div>
+
+            {/* Context Column - Staggered right */}
+            <div className="lg:col-span-4 lg:col-start-9 lg:mt-64">
+              <ScrollReveal delay={0.4} className="space-y-16">
+                <div className="w-16 h-[2px] bg-primary mb-12" />
+                <div className="space-y-10 text-muted-foreground text-lg font-medium leading-[2] tracking-wide">
+                  <p>
+                    単なる人材の調達は、ゴールではありません。
+                  </p>
+                  <p>
+                    エバンティアは、クライアントと候補者が<br className="hidden lg:block" />
+                    互いに高め合える「自走体制」の構築を一貫して支援します。
+                  </p>
+                  <p>
+                    挑戦には痛みが伴いますが、それこそが成長の源泉。<br className="hidden lg:block" />
+                    公平な裁量と誠実な基準のもとで、<br />
+                    <strong className="text-black font-black">潜在力を最大限に引き出す場所</strong> を創ります。
+                  </p>
+                </div>
+
+                <div className="pt-10">
+                  <Link href="/about" className="group flex items-center gap-6">
+                    <span className="text-[10px] font-black tracking-[0.4em] uppercase border-b border-black pb-2 group-hover:border-primary transition-all">Discover More</span>
+                    <ArrowRight size={18} className="text-primary group-hover:translate-x-2 transition-transform" />
+                  </Link>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Decorative Static Element - Geometric Logic */}
+            <div className="absolute top-1/2 right-[-5%] w-[40%] h-[1px] bg-border z-0 hidden lg:block" />
+            <div className="absolute top-1/2 left-[-5%] w-[1px] h-[40%] bg-border z-0 hidden lg:block" />
+
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Service Highlight - Clean Asymmetry */}
+      <section className="py-48 bg-white border-y border-border overflow-hidden">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-24">
+            <div className="lg:col-span-12">
+              <ScrollReveal>
+                <div className="flex items-baseline gap-10 border-b border-border pb-10 mb-32">
+                  <span className="text-[10px] font-black tracking-[0.8em] text-primary uppercase">03</span>
+                  <h2 className="text-[10px] font-black tracking-[0.8em] text-muted-foreground uppercase">Services</h2>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            <div className="lg:col-span-6 lg:col-start-1">
+              <ScrollReveal>
+                <p className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter uppercase font-serif mb-16">
+                  Architecting<br />
+                  <span className="text-primary italic">Sustainable</span><br />
+                  Autonomy.
                 </p>
               </ScrollReveal>
             </div>
 
-            {/* Context Column */}
-            <div className="md:col-span-8 md:pl-12 pt-8 md:pt-20">
+            <div className="lg:col-span-5 lg:col-start-8">
               <ScrollReveal delay={0.2}>
-                <h3 className="text-2xl md:text-3xl font-bold leading-relaxed mb-12 feature-font-palt">
-                  採用は「人を集めること」ではなく、<br className="hidden md:block" />
-                  <span className="bg-gradient-to-r from-primary/20 to-transparent pr-4">「未来をつくること」。</span>
-                </h3>
-                <div className="max-w-xl space-y-8 text-muted-foreground font-medium leading-loose text-lg">
-                  <p>
-                    顧客や社会や仲間のために最良を追求したい人が<br />
-                    モチベーション高く働ける組織でありたい。
-                  </p>
-                  <p>
-                    挑戦には痛みも伴うが、その過程こそが人を成長させ、成果へとつながる。<br />
-                    だからこそ、公平な裁量と誠実な基準のもとで、<br />
-                    <strong className="text-foreground border-b border-primary/50 pb-1">”挑戦する人の潜在力を最大限に引き出す場所”</strong>
-                    でいたい。
-                  </p>
-                  <p>
-                    それがエバンティアの理想です。
-                  </p>
-                </div>
-
-                <div className="mt-16">
-                  <Link href="/about/message" className="group inline-flex items-center gap-2 text-primary font-bold px-8 py-4 bg-white border border-border rounded-full hover:bg-primary hover:text-white transition-all shadow-md">
-                    View Message <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+                <InteractiveServiceList />
               </ScrollReveal>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Interactive Service List (Reverted) */}
-      <InteractiveServiceList />
-
       {/* 4. Process - How We Build - Keeping existing but ensuring spacing */}
-      <div className="py-20">
+      <div className="py-20 md:py-40">
         <ProcessSection />
       </div>
 
       {/* 5. Impact - Keeping existing */}
       <ImpactSection />
 
-      {/* 6. News - Minimalist List */}
-      <section className="py-32 border-t border-border/50">
+      {/* 3. Work Section - Structural Typographic Grid */}
+      <section className="py-48 px-10 bg-white">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20">
-            <div>
-              <h2 className="text-4xl font-black mb-4">Latest Updates</h2>
-              <p className="text-muted-foreground">エバンティアの最新情報</p>
+          <div className="flex justify-between items-baseline mb-32 border-b border-border pb-10">
+            <div className="flex items-baseline gap-10">
+              <span className="text-[10px] font-black tracking-[0.8em] text-primary">02</span>
+              <h2 className="text-[10px] font-black tracking-[0.8em] text-muted-foreground uppercase">Latest Updates</h2>
             </div>
-            <Link href="/news" className="group flex items-center gap-2 font-bold text-sm mt-6 md:mt-0 px-4 py-2 hover:bg-secondary/50 rounded-lg transition-colors">
-              VIEW ALL NEWS
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <Link href="/column" className="text-[10px] font-black tracking-[0.4em] text-black hover:text-primary transition-all uppercase border-b border-black pb-1">View Archives</Link>
           </div>
 
-          <div className="space-y-8">
-            {[
-              { date: "2025.04.01", cat: "PRESS", title: "株式会社エバンティア、設立のお知らせ" },
-              { date: "2025.04.15", cat: "EVENT", title: "「次世代の採用戦略」セミナー登壇のお知らせ" },
-              { date: "2025.05.01", cat: "RECRUIT", title: "2026年度新卒採用のエントリー受付を開始しました" },
-            ].map((news, i) => (
-              <Link key={i} href="#" className="flex flex-col md:flex-row md:items-center py-8 border-b border-border/40 group hover:bg-secondary/20 transition-colors px-4 -mx-4 rounded-lg">
-                <div className="md:w-1/4 mb-2 md:mb-0">
-                  <span className="font-mono text-sm text-muted-foreground mr-6">{news.date}</span>
-                  <span className="text-xs font-bold border border-border px-2 py-1 rounded-full uppercase tracking-wider">{news.cat}</span>
-                </div>
-                <div className="md:w-3/4 flex justify-between items-center">
-                  <h3 className="text-lg md:text-xl font-bold group-hover:text-primary transition-colors line-clamp-1">
-                    {news.title}
-                  </h3>
-                  <ArrowRight className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
-                </div>
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-32">
+            {[1, 2, 3].map((i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <Link href={`/column/${i}`} className="group block space-y-8">
+                  <div className="aspect-[16/9] overflow-hidden bg-neutral-100 relative">
+                    <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-700" />
+                    <img
+                      src={`https://images.unsplash.com/photo-${i === 1 ? '1504384308090-c894fdcc538d' : i === 2 ? '1486312338219-ce68d2c6f44d' : '1519389950473-47ba0277781c'}?auto=format&fit=crop&q=80&w=800`}
+                      className="w-full h-full object-cover grayscale brightness-110 contrast-100 transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                      alt="Work"
+                    />
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex gap-4 text-[10px] font-black tracking-[0.2em] text-primary uppercase">
+                      <span>Recruitment</span>
+                      <span className="text-border">/</span>
+                      <span>Dec 2025</span>
+                    </div>
+                    <h3 className="text-xl font-black leading-tight group-hover:text-primary transition-colors">
+                      {i === 1
+                        ? "エンジニア採用における『自走化』の重要性と、エバンティアが支援する仕組み作りについて"
+                        : i === 2
+                          ? "【導入事例】急成長スタートアップの採用チームをゼロから構築。3ヶ月で10名のエンジニア採用に成功。"
+                          : "経営層と人事の『視点』を同期させる。強固な動機形成を生むための、一貫性のある採用シナリオとは。"
+                      }
+                    </h3>
+                  </div>
+                </Link>
+              </ScrollReveal>
             ))}
           </div>
         </div>

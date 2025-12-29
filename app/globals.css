@@ -2,25 +2,26 @@
 
 @theme {
   --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(0 0% 3.9%);
+  --color-foreground: hsl(0 0% 0%);
   --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(0 0% 3.9%);
+  --color-card-foreground: hsl(0 0% 10%);
   --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(0 0% 3.9%);
-  --color-primary: hsl(199 89% 48%);
-  --color-primary-foreground: hsl(0 0% 98%);
-  --color-secondary: hsl(0 0% 96.1%);
-  --color-secondary-foreground: hsl(0 0% 9%);
-  --color-muted: hsl(0 0% 96.1%);
-  --color-muted-foreground: hsl(0 0% 45.1%);
-  --color-accent: hsl(0 0% 96.1%);
-  --color-accent-foreground: hsl(0 0% 9%);
+  --color-popover-foreground: hsl(0 0% 0%);
+  --color-primary: hsl(221 83% 53%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(0 0% 98%);
+  --color-secondary-foreground: hsl(0 0% 5%);
+  --color-muted: hsl(0 0% 96%);
+  --color-muted-foreground: hsl(0 0% 40%);
+  --color-accent: hsl(221 83% 53%);
+  --color-accent-foreground: hsl(0 0% 100%);
   --color-destructive: hsl(0 84.2% 60.2%);
   --color-destructive-foreground: hsl(0 0% 98%);
-  --color-border: hsl(0 0% 89.8%);
-  --color-input: hsl(0 0% 89.8%);
-  --color-ring: hsl(199 89% 48%);
-  --radius: 0.5rem;
+  --color-border: hsl(0 0% 92%);
+  --color-input: hsl(0 0% 92%);
+  --color-ring: hsl(221 83% 53%);
+  --radius: 0rem;
+  /* Strictly sharp or minimal */
 }
 
 /* Base Styles */
@@ -33,21 +34,56 @@ body {
   color: var(--color-foreground);
   font-feature-settings: "palt" 1;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.1em;
+  /* Generous breathing room */
+  line-height: 1.8;
 }
 
 /* Typography Refinements */
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  letter-spacing: -0.025em;
+h4 {
+  letter-spacing: -0.04em;
   font-feature-settings: "palt" 1;
+  line-height: 1.1;
+  font-weight: 900;
 }
 
-/* Global Texture Overlay */
+.font-serif {
+  font-family: var(--font-fraunces), serif;
+  font-variant-caps: common-ligatures;
+}
+
+/* Minimal Utilities */
+.container-custom {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Removal of "Performance" Effects */
+.glass,
+.glass-dark,
+.glass-card {
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Architectural Lines */
+.border-thin {
+  border: 1px solid var(--color-border);
+}
+
+.bg-neutral-light {
+  background-color: #F8F9FA;
+}
+
+/* Subtle Texture - Almost Invisible */
 body::before {
   content: "";
   position: fixed;
@@ -56,16 +92,13 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.03;
+  opacity: 0.01;
   pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: overlay;
+  mix-blend-mode: multiply;
 }
 
-/* Utility */
-.container-custom {
-  margin-left: auto;
-  margin-right: auto;
+.text-gradient {
   padding-left: 1rem;
   padding-right: 1rem;
   max-width: 80rem;
