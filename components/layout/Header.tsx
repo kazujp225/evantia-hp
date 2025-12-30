@@ -79,7 +79,7 @@ export const Header = () => {
                         <div className="container-custom grid md:grid-cols-[1fr_300px] items-center gap-16 md:gap-0 h-full max-h-[800px]">
 
                             {/* Main Nav Links */}
-                            <nav className="flex flex-col gap-6 md:gap-8">
+                            <nav className="flex flex-col gap-8 md:gap-12">
                                 {NAV_ITEMS.map((item, i) => (
                                     <motion.div
                                         key={item.href}
@@ -89,7 +89,7 @@ export const Header = () => {
                                     >
                                         <Link
                                             href={item.href}
-                                            className="group flex items-baseline gap-4 text-5xl md:text-8xl font-black tracking-tighter hover:text-primary transition-colors text-white"
+                                            className="group flex items-baseline gap-6 text-5xl md:text-8xl font-black tracking-tighter hover:text-white/50 transition-colors text-white py-2"
                                         >
                                             {item.label}
                                             <span className="text-sm md:text-lg font-bold tracking-widest text-gray-500 group-hover:text-white transition-colors">
@@ -105,7 +105,7 @@ export const Header = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.6 }}
-                                className="hidden md:flex flex-col gap-8 text-gray-400 text-sm font-bold tracking-widest border-l border-white/20 pl-12 h-full justify-center"
+                                className="hidden md:flex flex-col gap-8 text-gray-400 text-sm font-bold tracking-widest border-l border-white/20 pl-24 h-full justify-center"
                             >
                                 <div className="flex flex-col gap-2">
                                     <span className="text-white">EVANTIA Inc.</span>
