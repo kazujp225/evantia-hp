@@ -17,27 +17,21 @@ export default function RecruitPage() {
             <section className="py-32 md:py-48 bg-white border-b border-black">
                 <div className="container-custom">
                     <ScrollReveal className="max-w-6xl">
-                        <p className="font-mono text-primary font-bold tracking-widest mb-12 uppercase">Join the Challenge</p>
-                        <h2 className="text-4xl md:text-7xl font-black leading-[1.1] mb-20 tracking-tight">
-                            Redefine<br />
-                            The Standard.
+                        <p className="text-primary font-bold tracking-widest mb-6 uppercase text-sm">仲間を募集しています</p>
+                        <h2 className="text-4xl md:text-7xl font-black leading-[1.1] mb-12 tracking-tight">
+                            常識を超えて、<br />
+                            本質を追求する。
                         </h2>
-                        <div className="grid md:grid-cols-2 gap-16 md:gap-32">
-                            <p className="text-xl md:text-3xl font-bold leading-relaxed">
-                                これまでの「採用」の常識を疑い、<br />
-                                本質的な価値を追求する。
+                        <p className="text-xl md:text-2xl font-bold leading-relaxed mb-12 max-w-2xl">
+                            これまでの「採用」の常識を疑い、本質的な価値を追求する。
+                        </p>
+                        <div className="space-y-6 text-lg text-gray-600 leading-relaxed max-w-3xl">
+                            <p>
+                                私たちは、ただの人材会社ではありません。企業の成長エンジンであり、個人のキャリアの伴走者です。
                             </p>
-                            <div className="space-y-8 font-medium text-gray-500 leading-loose">
-                                <p>
-                                    私たちは、ただの人材会社ではありません。
-                                    企業の成長エンジンであり、個人のキャリアの伴走者です。
-                                </p>
-                                <p>
-                                    「自走」というゴールに向かって、
-                                    クライアントと共に汗をかき、痛みも喜びも分かち合う。
-                                    そんなヒリヒリするような挑戦を、楽しみながら乗り越えられる仲間を求めています。
-                                </p>
-                            </div>
+                            <p>
+                                「自走」というゴールに向かって、クライアントと共に汗をかき、痛みも喜びも分かち合う。そんなヒリヒリするような挑戦を、楽しみながら乗り越えられる仲間を求めています。
+                            </p>
                         </div>
                     </ScrollReveal>
                 </div>

@@ -16,7 +16,7 @@ export default function ServicePage() {
             jp: "採用戦略を設計する",
             desc: "採用を、事業の意思決定にする",
             href: "/service/strategy",
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+            image: "/assets/images/service-strategy.png"
         },
         {
             id: "execution",
@@ -24,7 +24,7 @@ export default function ServicePage() {
             jp: "実行を担う",
             desc: "現場を止めずに回しきる",
             href: "/service/execution",
-            image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=800"
+            image: "/assets/images/service-execution.png" // Keep local
         },
         {
             id: "system",
@@ -32,7 +32,7 @@ export default function ServicePage() {
             jp: "仕組みにする",
             desc: "属人性を残さない",
             href: "/service/system",
-            image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800"
+            image: "/assets/images/service-marketing.png"
         }
     ];
 

@@ -47,12 +47,14 @@ export const AsymmetricalHero = () => {
                             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                             className="relative w-full max-w-md aspect-[3/4] shadow-2xl"
                         >
-                            {/* Using a placeholder for now as per instructions, but styling it to look like a placeholder image */}
-                            <div className="w-full h-full bg-gray-200 relative overflow-hidden rounded-lg">
+                            <div className="w-full h-full relative overflow-hidden rounded-lg">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1200"
+                                    alt="Japanese Business Team"
+                                    fill
+                                    className="object-cover"
+                                />
                                 <div className="absolute inset-0 bg-gradient-to-tr from-gray-800/20 to-transparent mix-blend-multiply" />
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-400 font-bold text-xl">
-                                    HERO VISUAL
-                                </div>
                             </div>
                         </motion.div>
 

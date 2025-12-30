@@ -9,48 +9,47 @@ import { cn } from "@/lib/utils";
 const SLIDES = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000",
-        subtitle: "RECRUITMENT SUCCESS PARTNER",
+        image: "/assets/images/hero-team.png",
+        subtitle: "採用成功パートナー",
         title: (
             <>
-                DESIGNING THE<br />
-                VALUE OF<br />
-                <span className="text-primary">CHALLENGE.</span>
+                挑戦の価値を<br />
+                <span className="text-primary max-lg:text-white">デザインする。</span>
             </>
         ),
-        description: "エバンティアは、人も企業も“より良い未来”を実現できる場所。\n「自走体制」の構築をゴールに、あらゆる採用課題を突破します。",
-        alignment: "left-bottom", // Text Align
-        btnText: "Our Mission",
+        description: "エバンティアは、人も企業も「より良い未来」を実現できる場所。\n「自走体制」の構築をゴールに、あらゆる採用課題を突破します。",
+        alignment: "left-bottom",
+        btnText: "私たちのミッション",
         btnLink: "/about"
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=2000",
-        subtitle: "STRATEGIC CONSULTING",
+        image: "/assets/images/hero-city.png",
+        subtitle: "戦略的コンサルティング",
         title: (
             <>
-                DESIGN THE<br />
-                FUTURE SYNERGY.
+                未来のシナジーを<br />
+                <span className="text-primary max-lg:text-white">設計する。</span>
             </>
         ),
         description: "経営層はトップセールス出身。\n人の心の機微を突くシナリオ構築力で、\n確固たる動機形成を実現します。",
         alignment: "right-center",
-        btnText: "View Services",
+        btnText: "サービスを見る",
         btnLink: "/service"
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000",
-        subtitle: "SELF-RUNNING SYSTEM",
+        image: "/assets/images/hero-woman.png",
+        subtitle: "自走できる仕組み",
         title: (
             <>
-                GAIN SUSTAINABLE<br />
-                <span className="text-primary">AUTONOMY.</span>
+                持続可能な<br />
+                <span className="text-primary max-lg:text-white">自立を獲得する。</span>
             </>
         ),
         description: "一時的な成功ではなく、\n貴社だけで勝ち続けられる「仕組み」を構築します。",
         alignment: "center-bottom",
-        btnText: "Contact Us",
+        btnText: "お問い合わせ",
         btnLink: "/contact"
     }
 ];
@@ -73,82 +72,96 @@ export function HeroSlider() {
                     index === currentSlide && (
                         <motion.div
                             key={slide.id}
-                            className="absolute inset-0 w-full h-full flex flex-col lg:flex-row pb-20 lg:pb-0"
+                            className="absolute inset-0 w-full h-full"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1] }}
                         >
-                            {/* Left Text Column (40%) - Architectural Breathing Room */}
-                            <div className="lg:w-[45%] h-full flex flex-col justify-center px-10 lg:px-20 z-10 pt-32 lg:pt-0">
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.4, duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
-                                    className="mb-12"
-                                >
-                                    <span className="text-[10px] font-black tracking-[0.6em] text-primary uppercase block mb-4 border-l-2 border-primary pl-4">
-                                        {slide.subtitle}
-                                    </span>
-                                </motion.div>
-
-                                <div className="space-y-10">
-                                    <motion.h1
-                                        initial={{ opacity: 0, y: 30 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.6, duration: 1.5, ease: [0.19, 1, 0.22, 1] }}
-                                        className="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tighter uppercase font-serif"
-                                    >
-                                        {slide.title}
-                                    </motion.h1>
-
-                                    <motion.p
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.8, duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
-                                        className="text-lg text-muted-foreground leading-loose max-w-sm whitespace-pre-wrap font-medium"
-                                    >
-                                        {slide.description}
-                                    </motion.p>
-                                </div>
-
-                                <motion.div
-                                    initial={{ opacity: 0, x: -10 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 1.0, duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
-                                    className="mt-16"
-                                >
-                                    <Link
-                                        href={slide.btnLink}
-                                        className="inline-flex items-center gap-6 group"
-                                    >
-                                        <span className="text-xs font-black tracking-[0.4em] uppercase border-b-2 border-black pb-2 group-hover:border-primary transition-all">
-                                            {slide.btnText}
-                                        </span>
-                                        <ArrowRight className="group-hover:translate-x-2 transition-transform text-primary" size={20} />
-                                    </Link>
-                                </motion.div>
-                            </div>
-
-                            {/* Right Image Column (55%) - Atmospheric Background */}
-                            <div className="flex-1 relative h-full overflow-hidden">
+                            {/* Mobile: Full screen background image */}
+                            <div className="absolute inset-0 lg:hidden">
                                 <motion.div
                                     className="absolute inset-0 bg-cover bg-center"
                                     style={{ backgroundImage: `url(${slide.image})` }}
-                                    initial={{ scale: 1.1, x: 40, opacity: 0 }}
-                                    animate={{ scale: 1, x: 0, opacity: 1 }}
+                                    initial={{ scale: 1.1, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
                                     transition={{ duration: 3, ease: [0.19, 1, 0.22, 1] }}
                                 />
-                                {/* Clean White Overlay to blend edges on desktop if needed, otherwise just let it breath */}
-                                <div className="absolute inset-0 bg-black/5" />
+                                <div className="absolute inset-0 bg-black/70" />
+                            </div>
 
-                                {/* Structural Chapter Indicator overlay on image area */}
-                                <div className="absolute bottom-10 left-10 text-white/40 flex items-center gap-6 text-[10px] font-black tracking-widest hidden lg:flex">
-                                    <span className="text-white">0{index + 1}</span>
-                                    <div className="w-12 h-[1px] bg-white/20" />
-                                    <span>0{SLIDES.length}</span>
+                            <div className="relative h-full flex flex-col lg:flex-row">
+                                {/* Text Column */}
+                                <div className="lg:w-[45%] h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-8 lg:px-20 z-10">
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.4, duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
+                                        className="mb-8 lg:mb-12 hidden lg:block"
+                                    >
+                                        <span className="text-2xl font-black tracking-wide text-primary block mb-6 border-l-4 border-primary pl-6">
+                                            {slide.subtitle}
+                                        </span>
+                                    </motion.div>
+
+                                    <div className="space-y-6 lg:space-y-10">
+                                        <motion.h1
+                                            initial={{ opacity: 0, y: 30 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.6, duration: 1.5, ease: [0.19, 1, 0.22, 1] }}
+                                            className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.95] tracking-tighter font-serif text-white lg:text-black"
+                                        >
+                                            {slide.title}
+                                        </motion.h1>
+
+                                        <motion.p
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.8, duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
+                                            className="text-lg lg:text-xl leading-relaxed lg:leading-relaxed max-w-lg whitespace-pre-wrap font-medium text-white lg:text-muted-foreground"
+                                        >
+                                            {slide.description}
+                                        </motion.p>
+                                    </div>
+
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 1.0, duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
+                                        className="mt-10 lg:mt-16"
+                                    >
+                                        <Link
+                                            href={slide.btnLink}
+                                            className="inline-flex items-center gap-4 group bg-white/20 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none px-8 py-4 lg:px-0 lg:py-0 rounded-full lg:rounded-none"
+                                        >
+                                            <span className="text-lg lg:text-base font-black tracking-wide lg:tracking-widest lg:border-b-2 border-black pb-0 lg:pb-2 group-hover:border-primary transition-all text-white lg:text-black">
+                                                {slide.btnText}
+                                            </span>
+                                            <ArrowRight className="group-hover:translate-x-2 transition-transform text-white lg:text-primary" size={24} />
+                                        </Link>
+                                    </motion.div>
+                                </div>
+
+                                {/* Right Image Column (Desktop only) */}
+                                <div className="hidden lg:block flex-1 relative h-full overflow-hidden">
+                                    <motion.div
+                                        className="absolute inset-0 bg-cover bg-center"
+                                        style={{ backgroundImage: `url(${slide.image})` }}
+                                        initial={{ scale: 1.1, x: 40, opacity: 0 }}
+                                        animate={{ scale: 1, x: 0, opacity: 1 }}
+                                        transition={{ duration: 3, ease: [0.19, 1, 0.22, 1] }}
+                                    />
+                                    <div className="absolute inset-0 bg-black/5" />
+
+                                    {/* Structural Chapter Indicator */}
+                                    <div className="absolute bottom-10 left-10 text-white/40 flex items-center gap-6 text-[10px] font-black tracking-widest">
+                                        <span className="text-white">0{index + 1}</span>
+                                        <div className="w-12 h-[1px] bg-white/20" />
+                                        <span>0{SLIDES.length}</span>
+                                    </div>
                                 </div>
                             </div>
+
                         </motion.div>
                     )
                 ))}
@@ -176,8 +189,8 @@ export function HeroSlider() {
                 ))}
             </div>
 
-            {/* Subtle Bottom Scroll Prompt */}
-            <div className="absolute bottom-10 left-10 md:left-20 z-20 flex items-center gap-6 text-[10px] font-black tracking-[0.4em] text-black/30">
+            {/* Subtle Bottom Scroll Prompt - Desktop only */}
+            <div className="absolute bottom-10 left-20 z-20 hidden lg:flex items-center gap-6 text-[10px] font-black tracking-[0.4em] text-black/30">
                 <div className="w-px h-16 bg-black/10 relative overflow-hidden">
                     <motion.div
                         className="absolute top-0 left-0 w-full h-1/2 bg-primary"
@@ -185,7 +198,7 @@ export function HeroSlider() {
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     />
                 </div>
-                <span className="uppercase [writing-mode:vertical-rl] h-16">Explore</span>
+                <span className="[writing-mode:vertical-rl] h-16">スクロール</span>
             </div>
         </section>
     );

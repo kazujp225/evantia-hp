@@ -3,37 +3,37 @@ import { ArrowUpRight, Facebook, Instagram, Linkedin, Twitter } from "lucide-rea
 
 const FOOTER_MAP = [
     {
-        category: "SERVICE",
+        category: "事業内容",
         links: [
-            { label: "Recruitment Consulting", href: "/service/consulting" },
-            { label: "RPO", href: "/service/rpo" },
-            { label: "Direct Recruiting", href: "/service/scout" },
-            { label: "Creative / Branding", href: "/service/creative" },
+            { label: "採用コンサルティング", href: "/service/consulting" },
+            { label: "RPO（採用代行）", href: "/service/rpo" },
+            { label: "スカウト代行", href: "/service/scout" },
+            { label: "クリエイティブ / ブランディング", href: "/service/creative" },
         ]
     },
     {
-        category: "ABOUT",
+        category: "会社概要",
         links: [
-            { label: "Mission & Vision", href: "/about" },
-            { label: "CEO Message", href: "/about/message" },
-            { label: "Company Profile", href: "/about/company" },
+            { label: "ミッション＆ビジョン", href: "/about" },
+            { label: "代表メッセージ", href: "/about/message" },
+            { label: "会社情報", href: "/about/company" },
         ]
     },
     {
-        category: "RECRUIT",
+        category: "採用情報",
         links: [
-            { label: "Interview", href: "/recruit/interview" },
-            { label: "Culture", href: "/recruit" },
-            { label: "Entry", href: "/recruit/entry" },
+            { label: "インタビュー", href: "/recruit/interview" },
+            { label: "カルチャー", href: "/recruit" },
+            { label: "エントリー", href: "/recruit/entry" },
         ]
     },
     {
-        category: "INFORMATION",
+        category: "インフォメーション",
         links: [
-            { label: "News", href: "/news" },
-            { label: "Column", href: "/column" },
-            { label: "Case Study", href: "/case" },
-            { label: "Contact", href: "/contact" },
+            { label: "ニュース", href: "/news" },
+            { label: "コラム", href: "/column" },
+            { label: "導入事例", href: "/case" },
+            { label: "お問い合わせ", href: "/contact" },
         ]
     }
 ];
@@ -49,19 +49,19 @@ export const Footer = () => {
 
                 {/* 1. CTA Section */}
                 <div className="border-b border-white/10 pb-24 mb-24">
-                    <div className="flex flex-col md:flex-row justify-between items-end gap-12">
+                    <div className="flex flex-col gap-12 text-center md:text-left md:flex-row md:justify-between md:items-end">
                         <div>
                             <h2 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
-                                LET'S BUILD<br />
-                                THE FUTURE.
+                                未来を、<br />
+                                共に創る。
                             </h2>
-                            <p className="text-gray-400 font-medium text-lg max-w-xl">
+                            <p className="text-white/80 font-medium text-xl md:text-2xl max-w-xl">
                                 貴社の成長を加速させるパートナーとして。<br />
                                 まずはカジュアルにお話ししませんか？
                             </p>
                         </div>
-                        <Link href="/contact" className="group flex items-center gap-4 bg-white text-black px-12 py-6 rounded-full text-xl font-bold hover:bg-primary hover:text-white transition-all duration-300">
-                            CONTACT US <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        <Link href="/contact" className="group flex items-center justify-center gap-4 bg-white text-black px-12 py-6 rounded-full text-xl font-bold hover:bg-primary hover:text-white transition-all duration-300">
+                            お問い合わせ <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </Link>
                     </div>
                 </div>
@@ -73,14 +73,14 @@ export const Footer = () => {
                             {/* Logo Text */}
                             <span className="text-2xl font-black tracking-tighter">EVANTIA</span>
                         </div>
-                        <address className="not-italic text-sm text-gray-500 space-y-4 leading-relaxed font-mono">
+                        <address className="not-italic text-sm text-gray-500 space-y-4 leading-relaxed">
                             <p>
-                                <strong className="text-white block mb-1">TOKYO HEADQUARTER</strong>
-                                1-2-3 Otemachi, Chiyoda-ku,<br />Tokyo 100-0004
+                                <strong className="text-white block mb-1">東京本社</strong>
+                                〒100-0004<br />東京都千代田区大手町1-2-3
                             </p>
                             <p>
-                                <strong className="text-white block mb-1">OSAKA BRANCH</strong>
-                                1-4-9 Awajicho, Chuo-ku,<br />Osaka 541-0047
+                                <strong className="text-white block mb-1">大阪支社</strong>
+                                〒541-0047<br />大阪府大阪市中央区淡路町1-4-9
                             </p>
                         </address>
                         <div className="flex gap-4 mt-8">
@@ -107,13 +107,13 @@ export const Footer = () => {
                 </div>
 
                 {/* 3. Bottom Legal */}
-                <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-xs font-mono text-gray-600 gap-4">
+                <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-xs text-gray-600 gap-4">
                     <div className="flex gap-6">
-                        <Link href="/privacy" className="hover:text-gray-400 transition-colors">PRIVACY POLICY</Link>
-                        <Link href="/security" className="hover:text-gray-400 transition-colors">SECURITY POLICY</Link>
-                        <Link href="/sitemap" className="hover:text-gray-400 transition-colors">SITEMAP</Link>
+                        <Link href="/privacy" className="hover:text-gray-400 transition-colors">プライバシーポリシー</Link>
+                        <Link href="/security" className="hover:text-gray-400 transition-colors">セキュリティポリシー</Link>
+                        <Link href="/sitemap" className="hover:text-gray-400 transition-colors">サイトマップ</Link>
                     </div>
-                    <p>© 2026 EVANTIA Inc. All Rights Reserved.</p>
+                    <p>© 2026 株式会社エバンティア All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

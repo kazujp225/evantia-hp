@@ -12,7 +12,7 @@ const SERVICES = [
         jp: "採用戦略の構築",
         desc: "自走を見据えた採用ブランド構築と\nPDCAサイクルの仕組みづくりを実施。",
         link: "/service/strategy",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000"
+        image: "https://images.unsplash.com/photo-1454165833767-027ffea9e7a7?auto=format&fit=crop&q=80&w=1200" // Strategic Workspace
     },
     {
         id: "02",
@@ -20,7 +20,7 @@ const SERVICES = [
         jp: "母集団形成支援",
         desc: "ナビサイト、スカウト、イベントなど\n幅広いチャネルから最適な手法を提案。",
         link: "/service/population",
-        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=2000"
+        image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1200" // Professional Interview
     },
     {
         id: "03",
@@ -28,7 +28,7 @@ const SERVICES = [
         jp: "採用実務アウトソーシング",
         desc: "説明会や面接を代行。\n単なる代行ではなく、自走用マニュアル作成をゴールに。",
         link: "/service/rpo",
-        image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=2000"
+        image: "/assets/images/service-execution.png"
     },
     {
         id: "04",
@@ -36,7 +36,7 @@ const SERVICES = [
         jp: "採用事務アウトソーシング",
         desc: "ATS構築や運用を専任チームが代行し、成果最大化を支援。",
         link: "/service/admin",
-        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2000"
+        image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200" // Corporate Lounge
     }
 ];
 

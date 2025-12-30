@@ -12,7 +12,7 @@ const SERVICES = [
         jp: "採用戦略の構築",
         desc: "「欲しい人材」の定義から、彼らに響くメッセージ設計まで。自走を見据えた採用ブランドの土台を築きます。",
         link: "/service/strategy",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000",
+        image: "/assets/images/service-strategy.png",
         colSpan: "md:col-span-7",
         height: "h-[400px] md:h-[500px]",
         delay: 0.1
@@ -23,7 +23,7 @@ const SERVICES = [
         jp: "母集団形成支援",
         desc: "ナビサイト、ダイレクトリクルーティング、SNS。貴社に最適なチャネルを選定し、ターゲットへのリーチを最大化します。",
         link: "/service/population",
-        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=2000",
+        image: "/assets/images/service-marketing.png",
         colSpan: "md:col-span-5",
         height: "h-[400px] md:h-[360px]", // Adjusted height for balance
         delay: 0.2
@@ -34,7 +34,7 @@ const SERVICES = [
         jp: "採用実務アウトソーシング",
         desc: "説明会運営から面接代行まで。単なるマンパワーの提供ではなく、プロフェッショナルとしての「目」を提供します。",
         link: "/service/rpo",
-        image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=2000",
+        image: "/assets/images/service-execution.png",
         colSpan: "md:col-span-5",
         height: "h-[400px] md:h-[360px]",
         delay: 0.3
@@ -45,7 +45,7 @@ const SERVICES = [
         jp: "採用事務アウトソーシング",
         desc: "ATS管理、日程調整、数値集計。煩雑な業務を巻き取り、人事が「人」と向き合う時間を創出します。",
         link: "/service/admin",
-        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2000",
+        image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200", // Corporate Lounge
         colSpan: "md:col-span-7",
         height: "h-[400px] md:h-[500px]",
         delay: 0.4
