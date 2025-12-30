@@ -220,17 +220,17 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/70" />
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="max-w-5xl mx-auto text-center relative z-10">
           <ScrollReveal>
-            <p className="text-4xl md:text-7xl font-black leading-tight tracking-wide mb-16">
+            <p className="text-5xl md:text-8xl font-black leading-tight tracking-tight mb-16">
               採用は「人を集めること」ではない。<br />
-              <span className="text-primary">未来に責任を持つことだ。</span>
+              <span className="text-white border-b-4 border-white/20 pb-2">未来に責任を持つことだ。</span>
             </p>
-            <p className="text-lg md:text-2xl text-gray-300 leading-loose mb-20 font-bold">
+            <p className="text-2xl md:text-4xl text-white/90 leading-relaxed mb-24 font-black">
               私たちは、短期的な成果よりも、<br className="hidden md:block" />
               組織に残る判断と仕組みを重視します。
             </p>
-            <Link href="/about" className="inline-flex items-center gap-4 text-sm font-black tracking-[0.2em] uppercase px-10 py-5 border border-white hover:bg-white hover:text-black transition-all">
+            <Link href="/about" className="inline-flex items-center gap-4 text-sm font-black tracking-[0.2em] uppercase px-12 py-6 border border-white hover:bg-white hover:text-black transition-all">
               About Philosophy
             </Link>
           </ScrollReveal>
