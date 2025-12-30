@@ -73,7 +73,7 @@ export const Footer = () => {
                             {/* Logo Text */}
                             <span className="text-2xl font-black tracking-tighter">EVANTIA</span>
                         </div>
-                        <address className="not-italic text-sm text-gray-500 space-y-4 leading-relaxed">
+                        <address className="not-italic text-base md:text-sm text-gray-500 space-y-4 leading-relaxed">
                             <p>
                                 <strong className="text-white block mb-1">東京本社</strong>
                                 〒100-0004<br />東京都千代田区大手町1-2-3
@@ -92,11 +92,11 @@ export const Footer = () => {
 
                     {FOOTER_MAP.map((section, i) => (
                         <div key={i}>
-                            <h3 className="font-bold text-xs tracking-[0.2em] text-gray-500 mb-8 uppercase">{section.category}</h3>
+                            <h3 className="font-bold text-sm md:text-xs tracking-[0.2em] text-gray-500 mb-8 uppercase">{section.category}</h3>
                             <ul className="space-y-4">
                                 {section.links.map((link) => (
                                     <li key={link.href}>
-                                        <Link href={link.href} className="text-sm font-bold text-gray-300 hover:text-primary transition-colors block py-1">
+                                        <Link href={link.href} className="text-base md:text-sm font-bold text-gray-300 hover:text-primary transition-colors block py-2 md:py-1">
                                             {link.label}
                                         </Link>
                                     </li>
@@ -107,11 +107,11 @@ export const Footer = () => {
                 </div>
 
                 {/* 3. Bottom Legal */}
-                <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-xs text-gray-600 gap-4">
-                    <div className="flex gap-6">
-                        <Link href="/privacy" className="hover:text-gray-400 transition-colors">プライバシーポリシー</Link>
-                        <Link href="/security" className="hover:text-gray-400 transition-colors">セキュリティポリシー</Link>
-                        <Link href="/sitemap" className="hover:text-gray-400 transition-colors">サイトマップ</Link>
+                <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-sm md:text-xs text-gray-600 gap-4">
+                    <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                        <Link href="/privacy" className="hover:text-gray-400 transition-colors py-2 md:py-0">プライバシーポリシー</Link>
+                        <Link href="/security" className="hover:text-gray-400 transition-colors py-2 md:py-0">セキュリティポリシー</Link>
+                        <Link href="/sitemap" className="hover:text-gray-400 transition-colors py-2 md:py-0">サイトマップ</Link>
                     </div>
                     <p>© 2026 株式会社エバンティア All Rights Reserved.</p>
                 </div>

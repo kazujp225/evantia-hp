@@ -55,7 +55,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         {/* Left: Features */}
                         <div className="flex-1">
                             <ScrollReveal className="mb-12">
-                                <h3 className="text-3xl font-bold mb-8">What We Do</h3>
+                                <h3 className="text-3xl font-bold mb-8">サービス内容</h3>
                                 <ul className="space-y-6">
                                     {service.features.map((feature, i) => (
                                         <li key={i} className="flex items-start gap-4 p-6 border border-border rounded-xl hover:border-primary transition-colors">
@@ -72,12 +72,12 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         {/* Right: Flow */}
                         <div className="flex-1">
                             <ScrollReveal delay={0.2}>
-                                <h3 className="text-3xl font-bold mb-8">Process</h3>
+                                <h3 className="text-3xl font-bold mb-8">プロセス</h3>
                                 <div className="border-l-2 border-black/10 ml-4 space-y-12">
                                     {service.process.map((step, i) => (
                                         <div key={i} className="relative pl-12">
                                             <div className="absolute -left-[9px] top-0 w-[18px] h-[18px] rounded-full bg-white border-4 border-black group-hover:bg-primary transition-colors" />
-                                            <span className="text-xs font-bold text-primary tracking-widest block mb-2">STEP {step.step}</span>
+                                            <span className="text-sm md:text-xs font-bold text-primary tracking-widest block mb-2">ステップ {step.step}</span>
                                             <h4 className="text-xl font-bold mb-3">{step.title}</h4>
                                             <p className="text-text-light leading-relaxed">{step.desc}</p>
                                         </div>
@@ -92,7 +92,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             {/* CTA */}
             <section className="bg-black text-white py-32 text-center">
                 <div className="container-custom">
-                    <h2 className="text-4xl font-bold mb-8">Ready to Start?</h2>
+                    <h2 className="text-4xl font-bold mb-8">始めませんか？</h2>
                     <p className="text-gray-400 mb-12 max-w-2xl mx-auto">
                         貴社の課題に合わせた最適なプランをご提案します。<br />
                         まずはお気軽にご相談ください。

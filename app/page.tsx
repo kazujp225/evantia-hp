@@ -29,7 +29,7 @@ export default function Home() {
                     Strategy before action.
                   </p>
                 </div>
-                <span className="text-[150px] md:text-[200px] leading-none font-black text-foreground/5 absolute bottom-[-40px] right-0 md:right-4 select-none pointer-events-none group-hover:text-foreground/10 transition-colors duration-500">01</span>
+                <span className="hidden md:block text-[200px] leading-none font-black text-foreground/5 absolute bottom-[-40px] right-4 select-none pointer-events-none group-hover:text-foreground/10 transition-colors duration-500">01</span>
               </div>
 
               {/* Item 02 */}
@@ -43,7 +43,7 @@ export default function Home() {
                     Execution without chaos.
                   </p>
                 </div>
-                <span className="text-[150px] md:text-[200px] leading-none font-black text-foreground/5 absolute bottom-[-40px] right-0 md:right-4 select-none pointer-events-none group-hover:text-foreground/10 transition-colors duration-500">02</span>
+                <span className="hidden md:block text-[200px] leading-none font-black text-foreground/5 absolute bottom-[-40px] right-4 select-none pointer-events-none group-hover:text-foreground/10 transition-colors duration-500">02</span>
               </div>
 
               {/* Item 03 */}
@@ -57,7 +57,7 @@ export default function Home() {
                     Results that remain.
                   </p>
                 </div>
-                <span className="text-[150px] md:text-[200px] leading-none font-black text-foreground/5 absolute bottom-[-40px] right-0 md:right-4 select-none pointer-events-none group-hover:text-foreground/10 transition-colors duration-500">03</span>
+                <span className="hidden md:block text-[200px] leading-none font-black text-foreground/5 absolute bottom-[-40px] right-4 select-none pointer-events-none group-hover:text-foreground/10 transition-colors duration-500">03</span>
               </div>
             </div>
           </ScrollReveal>
@@ -178,7 +178,7 @@ export default function Home() {
       <section className="py-32 bg-foreground text-background px-6">
         <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-end">
           <div>
-            <h2 className="text-[10px] font-black tracking-[0.4em] text-background/60 mb-8">お問い合わせ</h2>
+            <h2 className="text-sm md:text-[10px] font-black tracking-[0.4em] text-background/60 mb-8">お問い合わせ</h2>
             <p className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-12">
               未来のための<br />
               対話を。

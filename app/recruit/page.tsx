@@ -42,8 +42,8 @@ export default function RecruitPage() {
                 <div className="container-custom">
                     <ScrollReveal className="flex justify-between items-end mb-24 border-b border-black pb-8">
                         <h2 className="text-4xl font-black">INTERVIEW</h2>
-                        <Link href="/recruit/interview" className="font-bold text-sm tracking-widest hover:text-primary transition-colors flex items-center gap-2">
-                            View All <ArrowRight size={16} />
+                        <Link href="/recruit/interview" className="font-bold text-base md:text-sm tracking-widest hover:text-primary transition-colors flex items-center gap-2">
+                            すべて見る <ArrowRight size={16} />
                         </Link>
                     </ScrollReveal>
 
@@ -64,15 +64,15 @@ export default function RecruitPage() {
 
                                     <div className="flex-1 flex flex-col justify-center">
                                         <div className="flex items-center gap-4 mb-6">
-                                            <span className="font-mono text-primary font-bold tracking-widest text-xs uppercase">{member.role}</span>
+                                            <span className="font-mono text-primary font-bold tracking-widest text-sm md:text-xs uppercase">{member.role}</span>
                                             <span className="w-10 h-px bg-gray-300" />
-                                            <span className="font-mono font-bold text-xs uppercase">{member.name}</span>
+                                            <span className="font-mono font-bold text-sm md:text-xs uppercase">{member.name}</span>
                                         </div>
                                         <h3 className="text-2xl md:text-4xl font-bold leading-tight group-hover:text-primary transition-colors">
                                             {member.title}
                                         </h3>
-                                        <div className="mt-8 flex items-center gap-2 font-bold text-sm opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
-                                            Read Story <ArrowRight size={16} />
+                                        <div className="mt-8 flex items-center gap-2 font-bold text-base md:text-sm opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                                            記事を読む <ArrowRight size={16} />
                                         </div>
                                     </div>
                                 </Link>
@@ -96,7 +96,7 @@ export default function RecruitPage() {
                                 <Link href="#" className="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-white/20 hover:bg-white hover:text-black transition-all duration-300 px-6 md:px-10">
                                     <div className="mb-4 md:mb-0">
                                         <h3 className="text-2xl font-bold mb-2">{job}</h3>
-                                        <span className="text-sm font-mono opacity-50 group-hover:opacity-100">Full Time / Tokyo, Osaka</span>
+                                        <span className="text-base md:text-sm font-mono opacity-50 group-hover:opacity-100">正社員 / 東京, 大阪</span>
                                     </div>
                                     <div className="w-12 h-12 rounded-full border border-white/30 group-hover:border-black flex items-center justify-center transition-colors">
                                         <ArrowUpRight size={20} />

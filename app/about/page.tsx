@@ -12,22 +12,22 @@ export default function AboutPage() {
         <main className="bg-background min-h-screen">
 
             {/* Hero Image */}
-            <div className="relative h-[70vh] w-full overflow-hidden">
+            <div className="relative min-h-[80vh] md:h-[70vh] w-full overflow-hidden">
                 <Image
-                    src="https://images.unsplash.com/photo-1554797078-4574bd71e70e?auto=format&fit=crop&q=80&w=2000"
+                    src="/assets/images/hero-team.png"
                     alt="About Hero"
                     fill
-                    className="object-cover brightness-75"
+                    className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-90" />
-                <div className="absolute bottom-0 left-0 w-full px-6 pb-20">
+                <div className="absolute inset-0 bg-black/60 md:bg-black/40" />
+                <div className="absolute bottom-0 left-0 w-full px-6 pb-16 md:pb-20">
                     <div className="max-w-screen-xl mx-auto">
                         <ScrollReveal>
-                            <h1 className="text-sm font-black tracking-[0.4em] uppercase mb-8 text-primary">Philosophy</h1>
-                            <p className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] max-w-5xl text-foreground">
+                            <h1 className="text-xl font-black tracking-widest uppercase mb-6 md:mb-8 text-white">Philosophy</h1>
+                            <p className="text-3xl md:text-6xl lg:text-7xl font-black leading-[1.15] max-w-5xl text-white">
                                 採用は「人を集めること」ではない。<br />
-                                過去ではなく、<span className="text-primary">未来に責任を持つことだ。</span>
+                                過去ではなく、未来に責任を持つことだ。
                             </p>
                         </ScrollReveal>
                     </div>
@@ -68,18 +68,18 @@ export default function AboutPage() {
                 {/* Company Profile */}
                 <div className="border-t border-border pt-20">
                     <ScrollReveal>
-                        <h2 className="text-[10px] font-black tracking-[0.4em] uppercase mb-12">Company Profile</h2>
+                        <h2 className="text-sm md:text-[10px] font-black tracking-[0.4em] uppercase mb-12">会社概要</h2>
                         <div className="border-t border-border">
                             {[
-                                { label: "Company Name", value: "株式会社エバンティア (Evantia Inc.)" },
-                                { label: "Establishment", value: "2026.01.05" },
-                                { label: "Representative", value: "新井 淳平 (Junpei Arai)" },
-                                { label: "Location", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F" },
-                                { label: "Business", value: "採用コンサルティング / 採用戦略立案 / RPO / 採用ブランディング" },
-                                { label: "Contact", value: "jyunpei.arai@evantia-co.jp" }
+                                { label: "会社名", value: "株式会社エバンティア (Evantia Inc.)" },
+                                { label: "設立", value: "2026.01.05" },
+                                { label: "代表", value: "新井 淳平 (Junpei Arai)" },
+                                { label: "所在地", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F" },
+                                { label: "事業内容", value: "採用コンサルティング / 採用戦略立案 / RPO / 採用ブランディング" },
+                                { label: "連絡先", value: "jyunpei.arai@evantia-co.jp" }
                             ].map((row, i) => (
                                 <div key={i} className="grid grid-cols-1 md:grid-cols-4 py-8 border-b border-border/60 gap-4 md:gap-0">
-                                    <div className="md:col-span-1 text-xs font-bold uppercase tracking-widest text-muted-foreground">{row.label}</div>
+                                    <div className="md:col-span-1 text-sm md:text-xs font-bold uppercase tracking-widest text-muted-foreground">{row.label}</div>
                                     <div className="md:col-span-3 font-medium">{row.value}</div>
                                 </div>
                             ))}
@@ -88,8 +88,8 @@ export default function AboutPage() {
                 </div>
 
                 <div className="mt-40 text-center">
-                    <Link href="/contact" className="inline-flex items-center justify-center px-12 py-6 bg-foreground text-background text-sm font-black tracking-[0.2em] uppercase hover:bg-primary hover:text-white transition-all">
-                        Start Dialogue
+                    <Link href="/contact" className="inline-flex items-center justify-center px-12 py-6 bg-foreground text-background text-base md:text-sm font-black tracking-[0.2em] hover:bg-primary hover:text-white transition-all">
+                        お問い合わせ
                     </Link>
                 </div>
 

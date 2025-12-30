@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="bg-background min-h-screen pt-40 pb-40 px-6">
+        <main className="bg-background min-h-screen pt-24 md:pt-32 pb-40 px-6">
             <div className="max-w-screen-xl mx-auto">
 
                 <ScrollReveal>
@@ -58,22 +58,22 @@ export default function ContactPage() {
                             <form className="space-y-8 bg-zinc-50 p-8 md:p-12 rounded-none border border-border/50">
                                 <div className="grid grid-cols-1 gap-8">
                                     <div>
-                                        <label htmlFor="company" className="block text-xs font-black uppercase tracking-widest mb-3">Company Name</label>
+                                        <label htmlFor="company" className="block text-sm md:text-xs font-black tracking-widest mb-3">会社名</label>
                                         <input type="text" id="company" className="w-full bg-background border border-border/60 p-4 font-medium focus:outline-none focus:border-primary transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="御社名" />
                                     </div>
                                     <div>
-                                        <label htmlFor="email" className="block text-xs font-black uppercase tracking-widest mb-3">Email Address</label>
+                                        <label htmlFor="email" className="block text-sm md:text-xs font-black tracking-widest mb-3">メールアドレス</label>
                                         <input type="email" id="email" className="w-full bg-background border border-border/60 p-4 font-medium focus:outline-none focus:border-primary transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="メールアドレス" />
                                     </div>
                                     <div>
-                                        <label htmlFor="content" className="block text-xs font-black uppercase tracking-widest mb-3">Consultation Content</label>
+                                        <label htmlFor="content" className="block text-sm md:text-xs font-black tracking-widest mb-3">ご相談内容</label>
                                         <textarea id="content" rows={6} className="w-full bg-background border border-border/60 p-4 font-medium focus:outline-none focus:border-primary transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="ご相談内容（簡単で構いません）"></textarea>
                                     </div>
                                 </div>
 
                                 <div className="pt-4 text-right">
-                                    <button type="submit" className="inline-flex items-center gap-4 bg-foreground text-background px-10 py-4 text-sm font-black tracking-widest uppercase hover:bg-primary transition-colors">
-                                        Send Request <ArrowRight className="w-4 h-4" />
+                                    <button type="submit" className="inline-flex items-center gap-4 bg-foreground text-background px-10 py-4 text-base md:text-sm font-black tracking-widest hover:bg-primary transition-colors">
+                                        送信する <ArrowRight className="w-4 h-4" />
                                     </button>
                                 </div>
                             </form>
