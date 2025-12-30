@@ -1,128 +1,87 @@
-import { PageHeader } from "@/components/ui/PageHeader";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 
 export const metadata = {
-    title: "Contact | お問い合わせ",
-    description: "アズライトへのお問い合わせはこちら。",
+    title: "Contact | EVANTIA",
+    description: "対話から始めませんか。",
 };
 
 export default function ContactPage() {
     return (
-        <div className="bg-white pb-40 text-black">
-            <PageHeader title="CONTACT" subtitle="お問い合わせ" />
+        <main className="bg-background min-h-screen pt-40 pb-40 px-6">
+            <div className="max-w-screen-xl mx-auto">
 
-            {/* Intro */}
-            <section className="py-24">
-                <div className="container-custom max-w-5xl">
-                    <ScrollReveal>
-                        <h2 className="text-4xl md:text-6xl font-black leading-tight mb-12">
-                            Let's Build<br />
-                            Together.
-                        </h2>
-                        <div className="flex flex-col md:flex-row gap-16 md:gap-32">
-                            <p className="text-xl font-bold leading-relaxed max-w-md">
-                                事業の成長を加速させるためのパートナーとして、<br />
-                                まずはお気軽にご相談ください。
-                            </p>
-                            <div className="space-y-4 text-sm font-medium text-gray-500">
-                                <p className="flex items-center gap-4 border-b border-gray-200 pb-4">
-                                    <Mail size={16} className="text-black" /> jyunpei.arai@evantia-co.jp (担当: 新井)
-                                </p>
-                                <p className="flex items-center gap-4 border-b border-gray-200 pb-4">
-                                    <Phone size={16} className="text-black" /> 090-2393-2820
-                                </p>
-                            </div>
-                        </div>
-                    </ScrollReveal>
-                </div>
-            </section>
-
-            {/* Swiss Grid Form */}
-            <section className="container-custom max-w-5xl">
-                <ScrollReveal delay={0.2} className="border-t-2 border-black">
-                    <form className="flex flex-col">
-
-                        {/* Company */}
-                        <div className="grid md:grid-cols-[300px_1fr] border-b border-gray-200 group focus-within:bg-gray-50 transition-colors">
-                            <label htmlFor="company" className="py-8 md:py-12 font-bold tracking-widest text-xs uppercase flex items-center md:border-r border-gray-200 group-focus-within:border-black pr-8">
-                                Company Name <span className="ml-auto text-primary">*</span>
-                            </label>
-                            <input
-                                type="text"
-                                id="company"
-                                className="w-full bg-transparent p-8 md:p-12 text-xl md:text-2xl font-bold placeholder:text-gray-200 focus:outline-none"
-                                placeholder="YOUR COMPANY INC."
-                                required
-                            />
-                        </div>
-
-                        {/* Name */}
-                        <div className="grid md:grid-cols-[300px_1fr] border-b border-gray-200 group focus-within:bg-gray-50 transition-colors">
-                            <label htmlFor="name" className="py-8 md:py-12 font-bold tracking-widest text-xs uppercase flex items-center md:border-r border-gray-200 group-focus-within:border-black pr-8">
-                                Your Name <span className="ml-auto text-primary">*</span>
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                className="w-full bg-transparent p-8 md:p-12 text-xl md:text-2xl font-bold placeholder:text-gray-200 focus:outline-none"
-                                placeholder="TARO YAMADA"
-                                required
-                            />
-                        </div>
-
-                        {/* Email */}
-                        <div className="grid md:grid-cols-[300px_1fr] border-b border-gray-200 group focus-within:bg-gray-50 transition-colors">
-                            <label htmlFor="email" className="py-8 md:py-12 font-bold tracking-widest text-xs uppercase flex items-center md:border-r border-gray-200 group-focus-within:border-black pr-8">
-                                Email Address <span className="ml-auto text-primary">*</span>
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                className="w-full bg-transparent p-8 md:p-12 text-xl md:text-2xl font-bold placeholder:text-gray-200 focus:outline-none"
-                                placeholder="name@example.com"
-                                required
-                            />
-                        </div>
-
-                        {/* Category */}
-                        <div className="grid md:grid-cols-[300px_1fr] border-b border-gray-200 group focus-within:bg-gray-50 transition-colors">
-                            <label htmlFor="category" className="py-8 md:py-12 font-bold tracking-widest text-xs uppercase flex items-center md:border-r border-gray-200 group-focus-within:border-black pr-8">
-                                Topic
-                            </label>
-                            <div className="relative w-full">
-                                <select id="category" className="w-full bg-transparent p-8 md:p-12 text-xl md:text-2xl font-bold focus:outline-none appearance-none cursor-pointer">
-                                    <option>About Recruitment Consulting</option>
-                                    <option>About RPO</option>
-                                    <option>Interview Request</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        {/* Message */}
-                        <div className="grid md:grid-cols-[300px_1fr] border-b border-black group focus-within:bg-gray-50 transition-colors">
-                            <label htmlFor="message" className="py-8 md:py-12 font-bold tracking-widest text-xs uppercase flex items-start md:border-r border-gray-200 group-focus-within:border-black pr-8">
-                                Message <span className="ml-auto text-primary">*</span>
-                            </label>
-                            <textarea
-                                id="message"
-                                rows={6}
-                                className="w-full bg-transparent p-8 md:p-12 text-lg md:text-xl font-medium placeholder:text-gray-200 focus:outline-none resize-none"
-                                placeholder="HOW CAN WE HELP YOU?"
-                                required
-                            ></textarea>
-                        </div>
-
-                        <div className="py-12 flex justify-end">
-                            <button type="submit" className="group inline-flex items-center gap-4 bg-black text-white px-16 py-6 rounded-full text-lg font-bold hover:bg-primary transition-colors duration-300">
-                                SEND MESSAGE <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-                            </button>
-                        </div>
-
-                    </form>
+                <ScrollReveal>
+                    <div className="mb-24 border-b border-border/40 pb-12">
+                        <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
+                            Get in Touch.
+                        </h1>
+                        <p className="text-muted-foreground font-medium tracking-wide">
+                            まずは対話から始めませんか。
+                        </p>
+                    </div>
                 </ScrollReveal>
-            </section>
-        </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+                    {/* Left: Context & Anxieties */}
+                    <div className="lg:col-span-5">
+                        <ScrollReveal delay={0.1}>
+                            <h3 className="text-lg font-bold mb-8">このような相談を受けています</h3>
+                            <ul className="space-y-6">
+                                {[
+                                    "採用が属人化している",
+                                    "戦略と実行が分断されている",
+                                    "外注に依存している",
+                                    "母集団形成がうまくいかない",
+                                    "採用ブランディングを見直したい"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-center gap-4 text-muted-foreground font-medium border-b border-border/50 pb-4 last:border-0">
+                                        <span className="w-1.5 h-1.5 bg-foreground rounded-full" />
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <div className="mt-16 text-sm text-foreground/60 leading-relaxed">
+                                <p>
+                                    具体的な依頼内容が決まっていなくても構いません。<br />
+                                    現状の課題感や、理想の状態についてお聞かせください。
+                                </p>
+                            </div>
+                        </ScrollReveal>
+                    </div>
+
+                    {/* Right: Anxiety-free Form */}
+                    <div className="lg:col-span-7">
+                        <ScrollReveal delay={0.2}>
+                            <form className="space-y-8 bg-zinc-50 p-8 md:p-12 rounded-none border border-border/50">
+                                <div className="grid grid-cols-1 gap-8">
+                                    <div>
+                                        <label htmlFor="company" className="block text-xs font-black uppercase tracking-widest mb-3">Company Name</label>
+                                        <input type="text" id="company" className="w-full bg-background border border-border/60 p-4 font-medium focus:outline-none focus:border-primary transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="御社名" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="email" className="block text-xs font-black uppercase tracking-widest mb-3">Email Address</label>
+                                        <input type="email" id="email" className="w-full bg-background border border-border/60 p-4 font-medium focus:outline-none focus:border-primary transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="メールアドレス" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="content" className="block text-xs font-black uppercase tracking-widest mb-3">Consultation Content</label>
+                                        <textarea id="content" rows={6} className="w-full bg-background border border-border/60 p-4 font-medium focus:outline-none focus:border-primary transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="ご相談内容（簡単で構いません）"></textarea>
+                                    </div>
+                                </div>
+
+                                <div className="pt-4 text-right">
+                                    <button type="submit" className="inline-flex items-center gap-4 bg-foreground text-background px-10 py-4 text-sm font-black tracking-widest uppercase hover:bg-primary transition-colors">
+                                        Send Request <ArrowRight className="w-4 h-4" />
+                                    </button>
+                                </div>
+                            </form>
+                        </ScrollReveal>
+                    </div>
+                </div>
+
+            </div>
+        </main>
     );
 }

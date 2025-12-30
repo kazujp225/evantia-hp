@@ -1,142 +1,99 @@
-import { PageHeader } from "@/components/ui/PageHeader";
+import Link from "next/link";
+import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { Check, Mail, MapPin, Phone } from "lucide-react";
 
 export const metadata = {
-    title: "About | 私たちについて",
-    description: "株式会社エバンティアの企業情報です。",
+    title: "About | EVANTIA",
+    description: "未来に責任を持つことだ。",
 };
 
 export default function AboutPage() {
     return (
-        <div className="bg-white overflow-hidden text-black">
-            <PageHeader title="ABOUT" subtitle="私たちについて" />
+        <main className="bg-background min-h-screen">
 
-            {/* Mission Section - Stark Typography */}
-            <section className="py-32 md:py-40">
-                <div className="container-custom">
-                    <ScrollReveal className="max-w-6xl mx-auto">
-                        <span className="text-primary font-bold tracking-[0.5em] text-xs mb-12 block uppercase">Our Mission</span>
-                        <h2 className="text-4xl md:text-7xl font-black leading-[1.1] mb-16">
-                            挑戦の価値と面白さを<br />
-                            <span className="text-primary">最大化する。</span>
-                        </h2>
-                        <div className="grid md:grid-cols-2 gap-16">
-                            <p className="text-xl md:text-2xl font-bold leading-relaxed">
-                                エバンティア(Evantia)は、<br />
-                                "Evand (挑戦)" と "tir (場所)" を<br />
-                                掛け合わせた造語です。
+            {/* Hero Image */}
+            <div className="relative h-[70vh] w-full overflow-hidden">
+                <Image
+                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000"
+                    alt="About Hero"
+                    fill
+                    className="object-cover brightness-75"
+                    priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-90" />
+                <div className="absolute bottom-0 left-0 w-full px-6 pb-20">
+                    <div className="max-w-screen-xl mx-auto">
+                        <ScrollReveal>
+                            <h1 className="text-sm font-black tracking-[0.4em] uppercase mb-8 text-primary">Philosophy</h1>
+                            <p className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] max-w-5xl text-foreground">
+                                採用は「人を集めること」ではない。<br />
+                                過去ではなく、<span className="text-primary">未来に責任を持つことだ。</span>
                             </p>
-                            <div className="space-y-8 text-gray-500 font-medium leading-loose">
-                                <p>
-                                    私たちは、顧客や社会や仲間のために最良を追求したい人が、
-                                    モチベーション高く働ける「挑戦の場所」でありたいと考えています。
-                                </p>
-                                <p>
-                                    挑戦には痛みが伴いますが、その過程こそが人を成長させます。
-                                    私たちは、公平な裁量と誠実な基準のもとで、
-                                    「挑戦する人の潜在力」を最大限に引き出し、より良い未来を実現します。
-                                </p>
-                            </div>
-                        </div>
-                    </ScrollReveal>
-                </div>
-            </section>
-
-            {/* Feature Section - Horizontal Flow */}
-            <section className="py-32 bg-gray-50 border-y border-black">
-                <div className="container-custom">
-                    <ScrollReveal>
-                        <div className="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-black pb-8">
-                            <h2 className="text-4xl font-black">Why EVANTIA?</h2>
-                            <p className="font-mono text-sm tracking-widest mt-4 md:mt-0">CORE COMPETENCIES</p>
-                        </div>
-                    </ScrollReveal>
-
-                    <div className="grid md:grid-cols-3 gap-12 md:gap-0">
-                        {[
-                            { num: "01", title: "Story Design", desc: "トップセールス流の戦略構築" },
-                            { num: "02", title: "Total Solution", desc: "一気通貫のソリューション" },
-                            { num: "03", title: "Self Running", desc: "「自走体制」の構築" }
-                        ].map((feature, i) => (
-                            <ScrollReveal key={i} delay={i * 0.1} className="md:border-r border-black last:border-r-0 md:px-12 first:pl-0">
-                                <span className="text-6xl font-black text-gray-200 block mb-8">{feature.num}</span>
-                                <h3 className="text-3xl font-bold mb-4">{feature.title}</h3>
-                                <p className="text-primary font-bold mb-6">{feature.desc}</p>
-                                <p className="text-sm text-gray-500 leading-relaxed">
-                                    {i === 0 && "経営層は業界のトップセールス出身。人の心の機微を突くシナリオ構築力で、確固たる動機形成を実現します。"}
-                                    {i === 1 && "戦略立案から、集客、イベント、ツール制作まで。入り口から出口までを一貫して支援することで最適解を提供します。"}
-                                    {i === 2 && "ゴールは「勝ち続けられる」こと。成功事例から導き出した勝ちパターンを移植し、成果を生み出し続けるチームを創ります。"}
-                                </p>
-                            </ScrollReveal>
-                        ))}
+                        </ScrollReveal>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            {/* Company Profile - Swiss Grid */}
-            <section className="py-32">
-                <div className="container-custom max-w-5xl mx-auto">
+            <div className="max-w-screen-xl mx-auto px-6 py-24">
+
+                {/* Philosophy Detail with Image */}
+                <ScrollReveal>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-40">
+                        <div className="text-muted-foreground leading-loose font-bold text-xl md:text-2xl space-y-10">
+                            <p>
+                                「いい人が採れない」<br />
+                                その嘆きの裏には、停止した思考があります。
+                            </p>
+                            <p>
+                                私たちは、短期的な成果（＝頭数）よりも、<br className="hidden md:inline" />
+                                組織に残る判断と仕組み（＝未来への資産）を重視します。
+                            </p>
+                            <p>
+                                挑戦する人と企業が、<br className="hidden md:inline" />
+                                正しく評価され、成長できる環境をつくる。<br />
+                                それが、私たちの仕事です。
+                            </p>
+                        </div>
+                        <div className="relative aspect-square md:aspect-[4/5] bg-muted">
+                            <Image
+                                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200"
+                                alt="Working"
+                                fill
+                                className="object-cover transition-all duration-1000 hover:scale-105"
+                            />
+                        </div>
+                    </div>
+                </ScrollReveal>
+
+                {/* Company Profile */}
+                <div className="border-t border-border pt-20">
                     <ScrollReveal>
-                        <h2 className="text-4xl font-black mb-16 tracking-tight">COMPANY INFO</h2>
-
-                        <div className="border-t border-black">
-                            {/* Row 1 */}
-                            <div className="grid md:grid-cols-[200px_1fr] border-b border-black group hover:bg-black hover:text-white transition-colors duration-300">
-                                <div className="py-8 font-bold text-sm tracking-widest uppercase md:border-r border-black group-hover:border-white/20 transition-colors">Company Name</div>
-                                <div className="py-8 md:pl-12 font-bold text-xl">株式会社エバンティア</div>
-                            </div>
-
-                            {/* Row 2 */}
-                            <div className="grid md:grid-cols-[200px_1fr] border-b border-black group hover:bg-black hover:text-white transition-colors duration-300">
-                                <div className="py-8 font-bold text-sm tracking-widest uppercase md:border-r border-black group-hover:border-white/20 transition-colors">Establishment</div>
-                                <div className="py-8 md:pl-12 font-bold text-xl">2026.01.05</div>
-                            </div>
-
-                            {/* Row 3 - Rep */}
-                            <div className="grid md:grid-cols-[200px_1fr] border-b border-black group hover:bg-black hover:text-white transition-colors duration-300">
-                                <div className="py-8 font-bold text-sm tracking-widest uppercase md:border-r border-black group-hover:border-white/20 transition-colors">Board Member</div>
-                                <div className="py-8 md:pl-12 font-medium">
-                                    <div className="mb-4"><span className="text-sm opacity-50 block mb-1">Representative Director</span>新井 淳平 (Junpei Arai)</div>
-                                    <div><span className="text-sm opacity-50 block mb-1">Director</span>豊嶋 令 (Rei Toyoshima)</div>
+                        <h2 className="text-[10px] font-black tracking-[0.4em] uppercase mb-12">Company Profile</h2>
+                        <div className="border-t border-border">
+                            {[
+                                { label: "Company Name", value: "株式会社エバンティア (Evantia Inc.)" },
+                                { label: "Establishment", value: "2026.01.05" },
+                                { label: "Representative", value: "新井 淳平 (Junpei Arai)" },
+                                { label: "Location", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F" },
+                                { label: "Business", value: "採用コンサルティング / 採用戦略立案 / RPO / 採用ブランディング" },
+                                { label: "Contact", value: "jyunpei.arai@evantia-co.jp" }
+                            ].map((row, i) => (
+                                <div key={i} className="grid grid-cols-1 md:grid-cols-4 py-8 border-b border-border/60 gap-4 md:gap-0">
+                                    <div className="md:col-span-1 text-xs font-bold uppercase tracking-widest text-muted-foreground">{row.label}</div>
+                                    <div className="md:col-span-3 font-medium">{row.value}</div>
                                 </div>
-                            </div>
-
-                            {/* Row 4 - Location */}
-                            <div className="grid md:grid-cols-[200px_1fr] border-b border-black group hover:bg-black hover:text-white transition-colors duration-300">
-                                <div className="py-8 font-bold text-sm tracking-widest uppercase md:border-r border-black group-hover:border-white/20 transition-colors">Location</div>
-                                <div className="py-8 md:pl-12 font-medium">
-                                    〒541-0047<br />
-                                    大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F
-                                </div>
-                            </div>
-
-                            {/* Row 5 - Business */}
-                            <div className="grid md:grid-cols-[200px_1fr] border-b border-black group hover:bg-black hover:text-white transition-colors duration-300">
-                                <div className="py-8 font-bold text-sm tracking-widest uppercase md:border-r border-black group-hover:border-white/20 transition-colors">Business</div>
-                                <div className="py-8 md:pl-12 font-medium">
-                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                                        <li>・採用コンサルティング事業</li>
-                                        <li>・採用戦略立案・プロセス設計</li>
-                                        <li>・求人媒体選定・運用支援</li>
-                                        <li>・採用ブランディング支援</li>
-                                        <li>・人材定着・組織開発</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            {/* Row 6 - Contact */}
-                            <div className="grid md:grid-cols-[200px_1fr] border-b border-black group hover:bg-black hover:text-white transition-colors duration-300">
-                                <div className="py-8 font-bold text-sm tracking-widest uppercase md:border-r border-black group-hover:border-white/20 transition-colors">Contact</div>
-                                <div className="py-8 md:pl-12 font-medium">
-                                    <p className="mb-2 font-mono">jyunpei.arai@evantia-co.jp</p>
-                                    <p className="font-mono">090-2393-2820</p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </ScrollReveal>
                 </div>
-            </section>
-        </div>
+
+                <div className="mt-40 text-center">
+                    <Link href="/contact" className="inline-flex items-center justify-center px-12 py-6 bg-foreground text-background text-sm font-black tracking-[0.2em] uppercase hover:bg-primary hover:text-white transition-all">
+                        Start Dialogue
+                    </Link>
+                </div>
+
+            </div>
+        </main>
     );
 }

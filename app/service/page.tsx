@@ -1,123 +1,125 @@
-import { PageHeader } from "@/components/ui/PageHeader";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { ArrowRight, Check, Target, Users, Zap, BarChart3, PenTool, Search } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
-    title: "Service | 事業内容",
-    description: "アズライトのサービス一覧です。",
+    title: "Services | EVANTIA",
+    description: "採用を、事業の意思決定にする。",
 };
 
-// Updated to match service-data.ts slugs
-const SERVICES = [
-    {
-        id: 'consulting',
-        title: 'Recruitment Consulting',
-        jp: '採用戦略コンサルティング',
-        desc: '「採れない」を「採れる」へ。経営戦略と同期した採用戦略の立案から、実行支援、内製化までを一気通貫でサポートします。',
-        icon: Target,
-        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-        id: 'rpo',
-        title: 'RPO (Process Outsourcing)',
-        jp: '採用実務アウトソーシング',
-        desc: 'ノンコア業務をプロに任せ、貴社は「見極め」と「魅力付け」に集中を。工数削減だけでなく、歩留まり向上も同時に実現します。',
-        icon: Zap,
-        image: 'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-        id: 'scout',
-        title: 'Direct Recruiting',
-        jp: 'ダイレクトリクルーティング支援',
-        desc: '待っているだけでは出会えない優秀層へ、最適なメッセージを。媒体選定から文面作成、送信代行までをフルサポート。',
-        icon: Search,
-        image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-        id: 'creative',
-        title: 'Creative / Branding',
-        jp: '採用クリエイティブ / ブランディング',
-        desc: '「伝わる」デザインと言葉で、企業の魅力を最大化。採用サイト、ピッチ資料、動画など、あらゆるツールを制作します。',
-        icon: PenTool,
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800'
-    },
-];
-
 export default function ServicePage() {
+    const services = [
+        {
+            id: "strategy",
+            role: "Strategy Design",
+            jp: "採用戦略を設計する",
+            desc: "採用を、事業の意思決定にする",
+            href: "/service/strategy",
+            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+            id: "execution",
+            role: "Execution",
+            jp: "実行を担う",
+            desc: "現場を止めずに回しきる",
+            href: "/service/execution",
+            image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+            id: "system",
+            role: "Systematization",
+            jp: "仕組みにする",
+            desc: "属人性を残さない",
+            href: "/service/system",
+            image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800"
+        }
+    ];
+
     return (
-        <div className="bg-bg-base text-text-main pb-40">
-            <PageHeader title="SERVICE" subtitle="事業内容" />
+        <main className="bg-background min-h-screen pt-40 pb-40">
+            <div className="max-w-screen-xl mx-auto px-6">
 
-            {/* Intro */}
-            <section className="py-20 md:py-32 bg-white">
-                <div className="container-custom max-w-4xl text-center">
-                    <ScrollReveal>
-                        <h2 className="text-3xl md:text-5xl font-black leading-tight mb-8">
-                            Total Recruitment<br />
-                            <span className="text-primary">Solution.</span>
-                        </h2>
-                        <p className="text-lg text-text-light leading-relaxed font-medium">
-                            課題は企業ごとに異なります。だからこそ、決まりきったパッケージは提案しません。<br />
-                            戦略から実務、クリエイティブまで。あらゆる手法を組み合わせ、<br className="hidden md:inline" />
-                            貴社だけの「勝ちパターン」を構築します。
+                <ScrollReveal>
+                    <div className="mb-32 border-b border-border/40 pb-12">
+                        <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
+                            Services.
+                        </h1>
+                        <p className="text-muted-foreground font-medium tracking-wide">
+                            私たちが提供する3つの価値。
                         </p>
-                    </ScrollReveal>
-                </div>
-            </section>
+                    </div>
+                </ScrollReveal>
 
-            {/* Grand List */}
-            <div className="flex flex-col">
-                {SERVICES.map((service, i) => (
-                    <section key={service.id} className={`py-20 md:py-32 ${i % 2 === 0 ? 'bg-bg-alt' : 'bg-white'}`}>
-                        <div className="container-custom">
-                            <ScrollReveal className={`flex flex-col md:flex-row gap-12 md:gap-24 items-center ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-
-                                {/* Image Block */}
-                                <div className="w-full md:w-1/2 aspect-[4/3] relative rounded-3xl overflow-hidden shadow-2xl group">
-                                    <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                    />
-                                </div>
-
-                                {/* Text Block */}
-                                <div className="w-full md:w-1/2">
-                                    <div className="flex items-center gap-4 mb-6">
-                                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                                            <service.icon size={24} />
+                <div className="flex flex-col gap-24">
+                    {services.map((service, i) => (
+                        <ScrollReveal key={service.id} delay={i * 0.1}>
+                            <Link href={service.href} className="group block">
+                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                                    {/* Text */}
+                                    <div className="lg:col-span-5 order-2 lg:order-1">
+                                        <span className="text-[10px] font-black tracking-[0.4em] text-primary uppercase block mb-6">0{i + 1}</span>
+                                        <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors mb-2">
+                                            {service.role}
+                                        </h3>
+                                        <h2 className="text-3xl md:text-5xl font-bold mb-6 group-hover:text-primary transition-colors leading-tight">
+                                            {service.jp}
+                                        </h2>
+                                        <p className="text-lg font-medium text-muted-foreground mb-8">
+                                            └ {service.desc}
+                                        </p>
+                                        <div className="flex items-center gap-4 text-sm font-bold tracking-widest uppercase group-hover:gap-6 transition-all">
+                                            View Details <ArrowRight className="w-4 h-4 text-primary" />
                                         </div>
-                                        <span className="font-bold text-sm tracking-widest text-primary uppercase">0{i + 1}</span>
                                     </div>
 
-                                    <h2 className="text-3xl md:text-5xl font-black leading-tight mb-4">
-                                        {service.title}
-                                    </h2>
-                                    <p className="text-lg font-bold text-gray-400 mb-8">{service.jp}</p>
-
-                                    <p className="text-text-light leading-loose mb-10 text-lg">
-                                        {service.desc}
-                                    </p>
-
-                                    <Link
-                                        href={`/service/${service.id}`}
-                                        className="inline-flex items-center gap-2 text-lg font-bold hover:gap-4 transition-all duration-300 relative group"
-                                    >
-                                        <span className="relative z-10">VIEW DETAILS</span>
-                                        <ArrowRight size={20} className="text-primary" />
-                                        <span className="absolute bottom-0 left-0 w-0 h-2 bg-primary/20 transition-all duration-300 group-hover:w-full z-0" />
-                                    </Link>
+                                    {/* Image */}
+                                    <div className="lg:col-span-7 order-1 lg:order-2">
+                                        <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+                                            <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
+                                            <Image
+                                                src={service.image}
+                                                alt={service.jp}
+                                                fill
+                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
+                            </Link>
+                        </ScrollReveal>
+                    ))}
+                </div>
 
-                            </ScrollReveal>
+                <ScrollReveal delay={0.4}>
+                    <div className="mt-40 p-12 bg-foreground text-background">
+                        <h3 className="text-[10px] font-black tracking-[0.4em] uppercase opacity-70 mb-12">Professional Services</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                            {[
+                                { title: "採用戦略の構築", desc: "判断の質を上げる" },
+                                { title: "母集団形成支援", desc: "届く人にだけ届かせる" },
+                                { title: "採用実務アウトソーシング", desc: "現場を止めない" },
+                                { title: "採用事務アウトソーシング", desc: "判断以外を任せる" }
+                            ].map((item, i) => (
+                                <div key={i} className="flex flex-col gap-2 border-b border-white/20 pb-8">
+                                    <h4 className="text-xl font-bold">{item.title}</h4>
+                                    <div className="flex items-center gap-2 text-white/60 text-sm font-medium">
+                                        <ArrowRight className="w-3 h-3" />
+                                        <span>{item.desc}</span>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    </section>
-                ))}
+                    </div>
+                </ScrollReveal>
+
+                <div className="mt-40 text-center pb-20">
+                    <Link href="/contact" className="inline-flex items-center justify-center px-12 py-6 bg-foreground text-background text-sm font-black tracking-[0.2em] uppercase hover:bg-primary hover:text-white transition-all">
+                        Start Consultation
+                    </Link>
+                </div>
+
             </div>
-        </div>
+        </main >
     );
 }
