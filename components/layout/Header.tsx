@@ -133,10 +133,9 @@ export const Header = () => {
                                 </div>
                             </motion.div>
                         </div>
-                    </div>
                     </motion.div>
                 )}
-        </AnimatePresence >
+            </AnimatePresence>
         </>
     );
 };
