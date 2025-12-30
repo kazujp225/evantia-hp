@@ -76,7 +76,7 @@ export const Header = () => {
                         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                         className="fixed inset-0 bg-black text-white z-40 flex flex-col justify-center items-center"
                     >
-                        <div className="container-custom grid md:grid-cols-[1fr_300px] items-center gap-16 md:gap-0 h-full max-h-[800px]">
+                        <div className="container-custom flex flex-col md:grid md:grid-cols-[1fr_300px] items-start md:items-center justify-center md:gap-0 h-full max-h-[800px] py-32 md:py-0 overflow-y-auto md:overflow-hidden">
 
                             {/* Main Nav Links */}
                             <nav className="flex flex-col gap-8 md:gap-12">
@@ -105,26 +105,38 @@ export const Header = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.6 }}
-                                className="hidden md:flex flex-col gap-8 text-gray-400 text-sm font-bold tracking-widest border-l border-white/20 pl-24 h-full justify-center"
+                                className="flex flex-col justify-end md:justify-center gap-8 text-gray-400 text-sm font-bold tracking-widest w-full md:w-auto md:border-l border-white/20 pt-12 md:pt-0 md:pl-24 md:h-full"
                             >
-                                <div className="flex flex-col gap-2">
-                                    <span className="text-white">EVANTIA Inc.</span>
-                                    <span>TPR Kitahama Bldg 6F</span>
-                                    <span>Osaka, Japan</span>
+                                <div className="block md:hidden mb-4">
+                                    <Link
+                                        href="/contact"
+                                        className="flex items-center justify-center w-full bg-white text-black py-4 rounded-full font-black text-lg hover:bg-white/90 transition-colors"
+                                    >
+                                        CONTACT US
+                                    </Link>
                                 </div>
-                                <div className="flex flex-col gap-2">
-                                    <span>jyunpei.arai@evantia-co.jp</span>
-                                    <span>090-2393-2820</span>
+
+                                <div className="grid grid-cols-2 md:flex md:flex-col gap-8 md:gap-8">
+                                    <div className="flex flex-col gap-2">
+                                        <span className="text-white">EVANTIA Inc.</span>
+                                        <span>TPR Kitahama Bldg 6F</span>
+                                        <span>Osaka, Japan</span>
+                                    </div>
+                                    <div className="flex flex-col gap-2">
+                                        <span>jyunpei.arai@evantia-co.jp</span>
+                                        <span>090-2393-2820</span>
+                                    </div>
                                 </div>
-                                <div className="flex gap-4 mt-8">
+                                <div className="flex gap-6 mt-4 md:mt-8">
                                     <a href="#" className="hover:text-white transition-colors">TWITTER</a>
                                     <a href="#" className="hover:text-white transition-colors">LINKEDIN</a>
                                 </div>
                             </motion.div>
                         </div>
+                    </div>
                     </motion.div>
                 )}
-            </AnimatePresence>
+        </AnimatePresence >
         </>
     );
 };
