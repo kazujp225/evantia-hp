@@ -15,21 +15,21 @@ export default function ServicePage() {
             role: "Strategy Design",
             jp: "採用戦略を設計する",
             desc: "採用を、事業の意思決定にする",
-            image: "/assets/images/service-strategy.png"
+            image: "/assets/images/service-strategy.jpg"
         },
         {
             id: "rpo",
             role: "Execution",
             jp: "実行を担う",
             desc: "現場を止めずに回しきる",
-            image: "/assets/images/service-execution.png"
+            image: "/assets/images/service-execution.jpg"
         },
         {
             id: "scout",
             role: "Systematization",
             jp: "仕組みにする",
             desc: "属人性を残さない",
-            image: "/assets/images/service-marketing.png"
+            image: "/assets/images/service-marketing.jpg"
         }
     ];
 

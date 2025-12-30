@@ -49,9 +49,9 @@ export default function RecruitPage() {
 
                     <div className="flex flex-col">
                         {[
-                            { name: "TANAKA TARO", role: "Consultant", title: "「クライアントの事業成長」こそが我々のゴールである。", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" },
-                            { name: "SUZUKI HANAKO", role: "RPO Specialist", title: "「代行」ではなく「パートナー」。泥臭い現場にこそ答えがある。", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" },
-                            { name: "SATO ICHIRO", role: "Designer", title: "言葉にできない魅力を、デザインの力で可視化する。", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" }
+                            { name: "TANAKA TARO", role: "Consultant", title: "「クライアントの事業成長」こそが我々のゴールである。", image: "https://images.unsplash.com/photo-1507679799987-c7377ec48696?auto=format&fit=crop&q=80&w=800" },
+                            { name: "SUZUKI HANAKO", role: "RPO Specialist", title: "「代行」ではなく「パートナー」。泥臭い現場にこそ答えがある。", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800" },
+                            { name: "SATO ICHIRO", role: "Designer", title: "言葉にできない魅力を、デザインの力で可視化する。", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" }
                         ].map((member, i) => (
                             <ScrollReveal key={i} delay={i * 0.1}>
                                 <Link href="#" className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-gray-300 hover:border-black transition-colors">

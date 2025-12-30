@@ -16,7 +16,7 @@ const INTERVIEWS = [
         role: "Recruitment Consultant",
         joined: "2026",
         title: "「クライアントの事業成長」こそが、我々のゴールである。",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+        image: "https://images.unsplash.com/photo-1507679799987-c7377ec48696?auto=format&fit=crop&q=80&w=800"
     },
     {
         id: "002",
@@ -24,7 +24,7 @@ const INTERVIEWS = [
         role: "RPO Specialist",
         joined: "2026",
         title: "現場にこそ答えがある。泥臭い改善が組織を変える。",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+        image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800"
     },
     {
         id: "003",
@@ -32,14 +32,14 @@ const INTERVIEWS = [
         role: "Creative Director",
         joined: "2025",
         title: "言葉にできない魅力を、デザインの力で可視化する。",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
     },
     {
         id: "004",
         name: "高橋 由美",
         role: "Career Advisor",
         joined: "2025",
-        title: "「転職」という人生の分岐点に、誰よりも真剣に向き合う。",
+        title: "「転職」という人生の分岐点に、誰よりも真剣に向き向き合う。",
         image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800"
     },
     {
@@ -56,7 +56,7 @@ const INTERVIEWS = [
         role: "HR Tech Engineer",
         joined: "2026",
         title: "テクノロジーで採用の不確実性を減らし、マッチングの精度を上げる。",
-        image: "https://images.unsplash.com/photo-1598550832205-d41fcd752f81?auto=format&fit=crop&q=80&w=800"
+        image: "https://images.unsplash.com/photo-1573496733222-7773f324fc28?auto=format&fit=crop&q=80&w=800"
     }
 ];
 

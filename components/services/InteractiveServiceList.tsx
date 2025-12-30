@@ -28,7 +28,7 @@ const SERVICES = [
         jp: "採用実務アウトソーシング",
         desc: "説明会や面接を代行。\n単なる代行ではなく、自走用マニュアル作成をゴールに。",
         link: "/service/rpo",
-        image: "/assets/images/service-execution.png"
+        image: "/assets/images/service-execution.jpg"
     },
     {
         id: "04",

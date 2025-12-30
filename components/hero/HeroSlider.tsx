@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const SLIDES = [
     {
         id: 1,
-        image: "/assets/images/hero-team.png",
+        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=2000",
         subtitle: "採用成功パートナー",
         title: (
             <>
@@ -24,7 +24,7 @@ const SLIDES = [
     },
     {
         id: 2,
-        image: "/assets/images/hero-city.png",
+        image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=2000",
         subtitle: "戦略的コンサルティング",
         title: (
             <>
@@ -39,7 +39,7 @@ const SLIDES = [
     },
     {
         id: 3,
-        image: "/assets/images/hero-woman.png",
+        image: "https://images.unsplash.com/photo-1573496359142-8a8d5f309088?auto=format&fit=crop&q=80&w=2000",
         subtitle: "自走できる仕組み",
         title: (
             <>

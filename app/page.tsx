@@ -98,7 +98,7 @@ export default function Home() {
         {/* Background Hint Image */}
         <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none hidden md:block">
           <Image
-            src="https://images.unsplash.com/photo-1540959733332-e94e270b2d42?auto=format&fit=crop&q=80&w=2000"
+            src="https://images.unsplash.com/photo-1596463059283-da257325bee8?auto=format&fit=crop&q=80&w=2000"
             alt="Process"
             fill
             className="object-cover opacity-60"
@@ -150,7 +150,7 @@ export default function Home() {
       {/* 6. PHILOSOPHY */}
       <section className="py-24 md:py-60 px-6 relative overflow-hidden text-white">
         <Image
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000"
+          src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=2000"
           alt="Philosophy"
           fill
           className="object-cover"

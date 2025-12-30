@@ -14,7 +14,7 @@ export default function AboutPage() {
             {/* Hero Image */}
             <div className="relative min-h-[80vh] md:h-[70vh] w-full overflow-hidden">
                 <Image
-                    src="/assets/images/hero-team.png"
+                    src="https://images.unsplash.com/photo-1522071823942-0050acc2dfdb?auto=format&fit=crop&q=80&w=2000"
                     alt="About Hero"
                     fill
                     className="object-cover"
@@ -56,7 +56,7 @@ export default function AboutPage() {
                         </div>
                         <div className="relative aspect-square md:aspect-[4/5] bg-muted">
                             <Image
-                                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200"
+                                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1200"
                                 alt="Working"
                                 fill
                                 className="object-cover transition-all duration-1000 hover:scale-105"
