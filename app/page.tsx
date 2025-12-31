@@ -14,12 +14,12 @@ export default function Home() {
       <HeroSlider />
 
       {/* 2. VALUE SUMMARY */}
-      <section className="py-32 md:py-48 px-6 border-b border-border/40">
+      <section className="py-20 md:py-32 px-6 border-b border-border/40">
         <div className="max-w-screen-xl mx-auto">
           <ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 border-t border-border">
               {/* Item 01 */}
-              <div className="group pt-12 md:pr-12 md:border-r border-border min-h-[400px] flex flex-col justify-between relative transition-colors hover:bg-zinc-50/50">
+              <div className="group pt-8 md:pr-12 md:border-r border-border min-h-[280px] flex flex-col justify-between relative transition-colors hover:bg-zinc-50/50">
                 <div className="relative z-10">
                   <span className="text-sm font-black tracking-widest text-primary uppercase mb-6 block">01</span>
                   <h3 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-6 group-hover:translate-x-2 transition-transform duration-500">
@@ -33,7 +33,7 @@ export default function Home() {
               </div>
 
               {/* Item 02 */}
-              <div className="group pt-12 md:px-12 md:border-r border-border min-h-[400px] flex flex-col justify-between relative transition-colors hover:bg-zinc-50/50">
+              <div className="group pt-8 md:px-12 md:border-r border-border min-h-[280px] flex flex-col justify-between relative transition-colors hover:bg-zinc-50/50">
                 <div className="relative z-10">
                   <span className="text-sm font-black tracking-widest text-primary uppercase mb-6 block">02</span>
                   <h3 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-6 group-hover:translate-x-2 transition-transform duration-500">
@@ -47,7 +47,7 @@ export default function Home() {
               </div>
 
               {/* Item 03 */}
-              <div className="group pt-12 md:pl-12 min-h-[400px] flex flex-col justify-between relative transition-colors hover:bg-zinc-50/50">
+              <div className="group pt-8 md:pl-12 min-h-[280px] flex flex-col justify-between relative transition-colors hover:bg-zinc-50/50">
                 <div className="relative z-10">
                   <span className="text-sm font-black tracking-widest text-primary uppercase mb-6 block">03</span>
                   <h3 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-6 group-hover:translate-x-2 transition-transform duration-500">
@@ -65,9 +65,9 @@ export default function Home() {
       </section>
 
       {/* 3. PROVEN IMPACT */}
-      <section className="py-32 md:py-48 px-6 border-b border-border/40 bg-zinc-50/50">
+      <section className="py-20 md:py-32 px-6 border-b border-border/40 bg-zinc-50/50">
         <div className="max-w-screen-xl mx-auto">
-          <div className="flex items-baseline justify-between mb-24">
+          <div className="flex items-baseline justify-between mb-12">
             <h2 className="text-2xl md:text-3xl font-black tracking-wider">実績</h2>
           </div>
 
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* 4. PROCESS OF TRANSFORMATION */}
-      <section className="py-32 md:py-48 px-6 border-b border-border/40 relative overflow-hidden">
+      <section className="py-20 md:py-32 px-6 border-b border-border/40 relative overflow-hidden">
         {/* Background Hint Image */}
         <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none hidden md:block">
           <Image
@@ -107,7 +107,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-screen-xl mx-auto relative z-10">
-          <div className="mb-32">
+          <div className="mb-16">
             <h2 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9]">変革の<br />プロセス。</h2>
           </div>
 
@@ -136,7 +136,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-32 text-right">
+          <div className="mt-16 text-right">
             <Link href="/process" className="inline-flex items-center gap-4 text-sm font-black tracking-[0.2em] border-b border-transparent hover:border-foreground pb-1 transition-all text-muted-foreground hover:text-foreground">
               メソドロジーを見る <ArrowRight className="w-5 h-5" />
             </Link>
@@ -148,7 +148,7 @@ export default function Home() {
       <ServicesSection />
 
       {/* 6. PHILOSOPHY */}
-      <section className="py-24 md:py-60 px-6 relative overflow-hidden text-white">
+      <section className="py-20 md:py-40 px-6 relative overflow-hidden text-white">
         <Image
           src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=2000"
           alt="Philosophy"
@@ -159,11 +159,11 @@ export default function Home() {
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <ScrollReveal>
-            <p className="text-3xl md:text-8xl font-black leading-tight tracking-tight mb-8 md:mb-16">
+            <p className="text-3xl md:text-7xl font-black leading-tight tracking-tight mb-6 md:mb-12">
               採用は「人を集めること」<br className="md:hidden" />ではない。<br />
               <span className="text-white border-b-4 border-white/20 pb-2">未来に責任を持つことだ。</span>
             </p>
-            <p className="text-xl md:text-4xl text-white leading-relaxed mb-12 md:mb-24 font-bold">
+            <p className="text-xl md:text-3xl text-white leading-relaxed mb-8 md:mb-12 font-bold">
               私たちは、短期的な成果よりも、<br />
               組織に残る判断と仕組みを重視します。
             </p>
@@ -175,11 +175,11 @@ export default function Home() {
       </section>
 
       {/* 7. CTA */}
-      <section className="py-32 bg-foreground text-background px-6">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-end">
+      <section className="py-20 md:py-24 bg-foreground text-background px-6">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
           <div>
-            <h2 className="text-sm md:text-[10px] font-black tracking-[0.4em] text-background/60 mb-8">お問い合わせ</h2>
-            <p className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-12">
+            <h2 className="text-sm md:text-[10px] font-black tracking-[0.4em] text-background/60 mb-4">お問い合わせ</h2>
+            <p className="text-4xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-6">
               未来のための<br />
               対話を。
             </p>

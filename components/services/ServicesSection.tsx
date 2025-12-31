@@ -38,7 +38,7 @@ export function ServicesSection() {
   }, []);
 
   return (
-    <section className="relative py-20 md:py-32 px-6 border-b border-border/40 overflow-hidden min-h-[500px] md:min-h-[600px]">
+    <section className="relative py-16 md:py-24 px-6 border-b border-border/40 overflow-hidden min-h-[450px] md:min-h-[500px]">
       {/* Background Slideshow */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
