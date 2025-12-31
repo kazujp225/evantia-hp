@@ -3,7 +3,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
     title: "Company | 会社概要",
-    description: "株式会社アズライトの会社概要。",
+    description: "株式会社エバンティアの会社概要。",
 };
 
 export default function CompanyPage() {
@@ -16,7 +16,7 @@ export default function CompanyPage() {
                     <div className="border border-black p-8 md:p-16">
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Company Name</div>
-                            <div className="font-bold text-xl md:text-2xl">株式会社エバンティア (Evantia Inc.)</div>
+                            <div className="font-bold text-xl md:text-2xl">株式会社エバンティア (EVANTIA Inc.)</div>
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Founded</div>

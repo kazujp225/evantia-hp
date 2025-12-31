@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
@@ -55,10 +56,12 @@ export default function RecruitPage() {
                         ].map((member, i) => (
                             <ScrollReveal key={i} delay={i * 0.1}>
                                 <Link href="#" className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-gray-300 hover:border-black transition-colors">
-                                    <div className="md:w-[400px] aspect-[16/9] md:aspect-[3/2] overflow-hidden bg-gray-200 block md:order-2">
-                                        <div
-                                            className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-                                            style={{ backgroundImage: `url(${member.image})` }}
+                                    <div className="md:w-[400px] aspect-[16/9] md:aspect-[3/2] overflow-hidden bg-gray-200 block md:order-2 relative">
+                                        <Image
+                                            src={member.image}
+                                            alt={member.name}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>
 

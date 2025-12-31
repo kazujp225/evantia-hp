@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -81,12 +82,19 @@ export function HeroSlider() {
                             {/* Mobile: Full screen background image */}
                             <div className="absolute inset-0 lg:hidden">
                                 <motion.div
-                                    className="absolute inset-0 bg-cover bg-center"
-                                    style={{ backgroundImage: `url(${slide.image})` }}
+                                    className="absolute inset-0"
                                     initial={{ scale: 1.1, opacity: 0 }}
                                     animate={{ scale: 1, opacity: 1 }}
                                     transition={{ duration: 3, ease: [0.19, 1, 0.22, 1] }}
-                                />
+                                >
+                                    <Image
+                                        src={slide.image}
+                                        alt="Hero"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
+                                </motion.div>
                                 <div className="absolute inset-0 bg-black/70" />
                             </div>
 
@@ -145,12 +153,19 @@ export function HeroSlider() {
                                 {/* Right Image Column (Desktop only) */}
                                 <div className="hidden lg:block flex-1 relative h-full overflow-hidden">
                                     <motion.div
-                                        className="absolute inset-0 bg-cover bg-center"
-                                        style={{ backgroundImage: `url(${slide.image})` }}
+                                        className="absolute inset-0"
                                         initial={{ scale: 1.1, x: 40, opacity: 0 }}
                                         animate={{ scale: 1, x: 0, opacity: 1 }}
                                         transition={{ duration: 3, ease: [0.19, 1, 0.22, 1] }}
-                                    />
+                                    >
+                                        <Image
+                                            src={slide.image}
+                                            alt="Hero"
+                                            fill
+                                            className="object-cover"
+                                            priority
+                                        />
+                                    </motion.div>
                                     <div className="absolute inset-0 bg-black/5" />
 
                                     {/* Structural Chapter Indicator */}

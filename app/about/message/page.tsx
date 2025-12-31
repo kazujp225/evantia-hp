@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -14,9 +15,13 @@ export default function MessagePage() {
             <div className="container-custom max-w-5xl py-24">
                 <div className="flex flex-col md:flex-row gap-16 md:gap-24 items-start">
                     <ScrollReveal className="w-full md:w-1/3">
-                        <div className="aspect-[3/4] bg-gray-200 rounded-2xl relative overflow-hidden">
-                            {/* Placeholder for CEO Portrait */}
-                            <div className="absolute inset-0 bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800")' }} />
+                        <div className="aspect-[3/4] bg-gray-200 rounded-2xl relative overflow-hidden group">
+                            <Image
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+                                alt="CEO Portrait"
+                                fill
+                                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            />
                         </div>
                         <div className="mt-6">
                             <h3 className="text-2xl font-bold">新井 淳平</h3>

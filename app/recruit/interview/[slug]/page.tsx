@@ -33,9 +33,11 @@ export default function InterviewDetailPage({ params }: { params: { slug: string
                 <h1 className="text-3xl md:text-5xl font-black leading-tight mb-12">{interview.title}</h1>
 
                 <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden mb-16">
-                    <div
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: `url(${interview.image})` }}
+                    <Image
+                        src={interview.image}
+                        alt={interview.name}
+                        fill
+                        className="object-cover"
                     />
                 </div>
 

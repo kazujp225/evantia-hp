@@ -71,7 +71,7 @@ export default function AboutPage() {
                         <h2 className="text-sm md:text-[10px] font-black tracking-[0.4em] uppercase mb-12">会社概要</h2>
                         <div className="border-t border-border">
                             {[
-                                { label: "会社名", value: "株式会社エバンティア (Evantia Inc.)" },
+                                { label: "会社名", value: "株式会社エバンティア (EVANTIA Inc.)" },
                                 { label: "設立", value: "2026.01.05" },
                                 { label: "代表", value: "新井 淳平 (Junpei Arai)" },
                                 { label: "所在地", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F" },

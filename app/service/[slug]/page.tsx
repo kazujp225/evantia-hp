@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SERVICE_DATA } from "@/lib/service-data";
 import { PageHeader } from "@/components/ui/PageHeader";
@@ -22,10 +23,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         <div className="bg-white pb-40">
             {/* Hero Section - Full Screen Parallaxish */}
             <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${service.image})` }}
-                >
+                <div className="absolute inset-0">
+                    <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                        priority
+                    />
                     <div className="absolute inset-0 bg-black/60" />
                 </div>
 

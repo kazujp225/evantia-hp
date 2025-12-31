@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
@@ -51,12 +52,17 @@ export function InteractiveServiceList() {
                     <motion.div
                         key={hoveredService}
                         initial={{ opacity: 0, scale: 1.1 }}
-                        animate={{ opacity: 0.6, scale: 1.05 }} // subtle zoom
+                        animate={{ opacity: 0.6, scale: 1.05 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="absolute inset-0 z-0 bg-cover bg-center pointer-events-none"
-                        style={{ backgroundImage: `url(${SERVICES[hoveredService].image})` }}
+                        className="absolute inset-0 z-0 pointer-events-none"
                     >
+                        <Image
+                            src={SERVICES[hoveredService].image}
+                            alt="Service background"
+                            fill
+                            className="object-cover"
+                        />
                         <div className="absolute inset-0 bg-black/50" />
                     </motion.div>
                 )}
