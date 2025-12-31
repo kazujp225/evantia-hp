@@ -98,7 +98,7 @@ export default function Home() {
         {/* Background Hint Image */}
         <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none hidden md:block">
           <Image
-            src="https://images.unsplash.com/photo-1596463059283-da257325bee8?auto=format&fit=crop&q=80&w=2000"
+            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000"
             alt="Process"
             fill
             className="object-cover opacity-60"

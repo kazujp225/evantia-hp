@@ -40,7 +40,7 @@ const SLIDES = [
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1573496359142-8a8d5f309088?auto=format&fit=crop&q=80&w=2000",
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000",
         subtitle: "自走できる仕組み",
         title: (
             <>
