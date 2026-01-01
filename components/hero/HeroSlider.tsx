@@ -4,52 +4,56 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Minus } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+// Mock Data for News Ticker
+const NEWS_TICKER = [
+    { date: "2025.12.15", category: "PRESS", title: "株式会社エバンティア、本社オフィスを移転しました。" },
+    { date: "2025.12.01", category: "INFO", title: "年末年始の営業についてのお知らせ" },
+    { date: "2025.11.20", category: "MEDIA", title: "代表取締役のインタビューが『Business Insider』に掲載されました。" },
+];
 
 const SLIDES = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=2000",
-        subtitle: "採用成功パートナー",
+        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000",
+        label: "OUR PHILOSOPHY",
         title: (
             <>
-                挑戦の価値を<br />
-                <span className="text-primary max-lg:text-white">デザインする。</span>
+                挑戦の価値と<br />
+                <span className="text-zinc-400">面白さを最大化する</span>
             </>
         ),
-        description: "エバンティアは、人も企業も「より良い未来」を実現できる場所。\n「自走体制」の構築をゴールに、あらゆる採用課題を突破します。",
-        alignment: "left-bottom",
-        btnText: "私たちのミッション",
+        description: "人も企業も「より良い未来」を実現できる場として。\n挑戦する人の潜在力を\n最大限に引き出す場所でありたい。",
+        btnText: "私たちについて",
         btnLink: "/about"
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=2000",
-        subtitle: "戦略的コンサルティング",
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000",
+        label: "SELF-DRIVING",
         title: (
             <>
-                未来のシナジーを<br />
-                <span className="text-primary max-lg:text-white">設計する。</span>
+                一時的な成功より、<br />
+                <span className="text-zinc-400">勝ち続ける「自走力」を。</span>
             </>
         ),
-        description: "経営層はトップセールス出身。\n人の心の機微を突くシナリオ構築力で、\n確固たる動機形成を実現します。",
-        alignment: "right-center",
+        description: "表面ではなく本質から、貴社の採用を強くする。\n「自走体制を構築すること」を最終ミッションに\nあらゆる採用課題を突破します。",
         btnText: "サービスを見る",
         btnLink: "/service"
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000",
-        subtitle: "自走できる仕組み",
+        image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=2000",
+        label: "ELITE TEAM",
         title: (
             <>
-                持続可能な<br />
-                <span className="text-primary max-lg:text-white">自立を獲得する。</span>
+                大手のノウハウと<br />
+                <span className="text-zinc-400">少数精鋭の機動力。</span>
             </>
         ),
-        description: "一時的な成功ではなく、\n貴社だけで勝ち続けられる「仕組み」を構築します。",
-        alignment: "center-bottom",
+        description: "業界トップクラスの支援実績を誇る\nトップランナーが設立した少数精鋭チーム。\n「顔の見えるサービス」を武器に成果を最大化。",
         btnText: "お問い合わせ",
         btnLink: "/contact"
     }
@@ -62,159 +66,145 @@ export function HeroSlider() {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-        }, 6000); // 6 Sec per slide
+        }, 8000); // 8 Sec per slide (slower for corporate feel)
         return () => clearInterval(timer);
     }, []);
 
     return (
-        <section className="relative w-full h-screen overflow-hidden bg-white text-black">
+        <section className="relative w-full h-[100dvh] md:h-screen overflow-hidden bg-white text-zinc-900 border-b border-zinc-200">
+            {/* --- MEGA BRAND WATERMARK --- */}
+            <div className="absolute top-[15%] left-[-5%] z-0 select-none pointer-events-none opacity-[0.03]">
+                <span className="text-[25vw] font-black leading-none tracking-tighter text-black">
+                    EVANTIA
+                </span>
+            </div>
+
             <AnimatePresence mode="wait">
                 {SLIDES.map((slide, index) => (
                     index === currentSlide && (
-                        <motion.div
-                            key={slide.id}
-                            className="absolute inset-0 w-full h-full"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1] }}
-                        >
-                            {/* Mobile: Full screen background image */}
-                            <div className="absolute inset-0 lg:hidden">
-                                <motion.div
-                                    className="absolute inset-0"
-                                    initial={{ scale: 1.1, opacity: 0 }}
-                                    animate={{ scale: 1, opacity: 1 }}
-                                    transition={{ duration: 3, ease: [0.19, 1, 0.22, 1] }}
-                                >
-                                    <Image
-                                        src={slide.image}
-                                        alt="Hero"
-                                        fill
-                                        className="object-cover"
-                                        priority
-                                    />
-                                </motion.div>
-                                <div className="absolute inset-0 bg-black/70" />
-                            </div>
+                        <div key={slide.id} className="absolute inset-0 w-full h-full flex flex-col lg:flex-row">
 
-                            <div className="relative h-full flex flex-col lg:flex-row">
-                                {/* Text Column */}
-                                <div className="lg:w-[45%] h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-8 lg:px-20 z-10">
+                            {/* --- LEFT: CONTENT AREA (Corporate/Info) --- */}
+                            <div className="relative w-full lg:w-[45%] h-full bg-zinc-50/50 backdrop-blur-sm flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 border-r border-zinc-200/50">
+                                {/* Grid Texture Overlay */}
+                                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.4] pointer-events-none mix-blend-multiply" style={{ backgroundSize: '40px 40px' }} />
+
+                                {/* Slide Content Wrapper */}
+                                <div className="relative z-10 mt-[-60px] lg:mt-0">
                                     <motion.div
-                                        initial={{ opacity: 0, y: 10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.4, duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
-                                        className="mb-8 lg:mb-12 hidden lg:block"
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 0.3, duration: 0.8 }}
+                                        className="flex items-center gap-3 mb-8 md:mb-10"
                                     >
-                                        <span className="text-2xl font-black tracking-wide text-primary block mb-6 border-l-4 border-primary pl-6">
-                                            {slide.subtitle}
+                                        <div className="w-8 h-[1px] bg-zinc-400" />
+                                        <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-zinc-500">
+                                            0{slide.id} — {slide.label}
                                         </span>
                                     </motion.div>
 
-                                    <div className="space-y-6 lg:space-y-10">
-                                        <motion.h1
-                                            initial={{ opacity: 0, y: 30 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.6, duration: 1.5, ease: [0.19, 1, 0.22, 1] }}
-                                            className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.95] tracking-tighter font-serif text-white lg:text-black"
+                                    <div className="overflow-hidden">
+                                        <motion.h2
+                                            initial={{ y: "100%" }}
+                                            animate={{ y: 0 }}
+                                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                                            className="text-5xl md:text-7xl lg:text-[5.5rem] font-black tracking-tight leading-[1.05] text-zinc-900 mb-8 font-feature-settings-palt"
                                         >
                                             {slide.title}
-                                        </motion.h1>
-
-                                        <motion.p
-                                            initial={{ opacity: 0, y: 20 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.8, duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
-                                            className="text-lg lg:text-xl leading-relaxed lg:leading-relaxed max-w-lg whitespace-pre-wrap font-medium text-white lg:text-muted-foreground"
-                                        >
-                                            {slide.description}
-                                        </motion.p>
+                                        </motion.h2>
                                     </div>
+
+                                    <motion.p
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ delay: 0.6, duration: 1 }}
+                                        className="text-base md:text-lg text-zinc-600 font-medium leading-loose mb-10 md:mb-14 max-w-md"
+                                    >
+                                        {slide.description}
+                                    </motion.p>
 
                                     <motion.div
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 1.0, duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
-                                        className="mt-10 lg:mt-16"
+                                        transition={{ delay: 0.8 }}
                                     >
                                         <Link
                                             href={slide.btnLink}
-                                            className="inline-flex items-center gap-4 group bg-white/20 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none px-8 py-4 lg:px-0 lg:py-0 rounded-full lg:rounded-none"
+                                            className="group inline-flex items-center gap-4 text-sm font-bold tracking-[0.1em] text-zinc-900"
                                         >
-                                            <span className="text-lg lg:text-base font-black tracking-wide lg:tracking-widest lg:border-b-2 border-black pb-0 lg:pb-2 group-hover:border-primary transition-all text-white lg:text-black">
-                                                {slide.btnText}
-                                            </span>
-                                            <ArrowRight className="group-hover:translate-x-2 transition-transform text-white lg:text-primary" size={24} />
+                                            <div className="w-12 h-12 border border-zinc-300 rounded-full flex items-center justify-center group-hover:bg-zinc-900 group-hover:border-zinc-900 transition-all duration-300">
+                                                <ArrowRight className="w-4 h-4 group-hover:text-white transition-colors" />
+                                            </div>
+                                            <span className="group-hover:translate-x-1 transition-transform">{slide.btnText}</span>
                                         </Link>
                                     </motion.div>
                                 </div>
 
-                                {/* Right Image Column (Desktop only) */}
-                                <div className="hidden lg:block flex-1 relative h-full overflow-hidden">
-                                    <motion.div
-                                        className="absolute inset-0"
-                                        initial={{ scale: 1.1, x: 40, opacity: 0 }}
-                                        animate={{ scale: 1, x: 0, opacity: 1 }}
-                                        transition={{ duration: 3, ease: [0.19, 1, 0.22, 1] }}
-                                    >
-                                        <Image
-                                            src={slide.image}
-                                            alt="Hero"
-                                            fill
-                                            className="object-cover"
-                                            priority
-                                        />
-                                    </motion.div>
-                                    <div className="absolute inset-0 bg-black/5" />
-
-                                    {/* Structural Chapter Indicator */}
-                                    <div className="absolute bottom-10 left-10 text-white/40 flex items-center gap-6 text-[10px] font-black tracking-widest">
-                                        <span className="text-white">0{index + 1}</span>
-                                        <div className="w-12 h-[1px] bg-white/20" />
-                                        <span>0{SLIDES.length}</span>
+                                {/* --- NEWS TICKER (Bottom Left) --- */}
+                                <div className="absolute bottom-0 left-0 w-full border-t border-zinc-200 bg-white/80 backdrop-blur-md py-4 px-6 md:px-10 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 overflow-hidden z-20">
+                                    <span className="text-[10px] font-bold tracking-widest text-zinc-400 uppercase flex-shrink-0">Latest News</span>
+                                    <div className="flex-1 overflow-hidden relative h-6 w-full">
+                                        <AnimatePresence mode="popLayout">
+                                            <motion.div
+                                                key={currentSlide} // Rotate news with slides for demonstration (or independent timer)
+                                                initial={{ y: 20, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                exit={{ y: -20, opacity: 0 }}
+                                                transition={{ duration: 0.5 }}
+                                                className="absolute top-0 left-0 w-full flex items-center gap-3 truncate"
+                                            >
+                                                <span className="text-xs font-mono text-zinc-500">{NEWS_TICKER[index % NEWS_TICKER.length].date}</span>
+                                                <span className="text-[10px] px-1.5 py-0.5 border border-zinc-200 rounded text-zinc-500">{NEWS_TICKER[index % NEWS_TICKER.length].category}</span>
+                                                <span className="text-xs font-medium text-zinc-800 truncate hover:underline cursor-pointer">
+                                                    {NEWS_TICKER[index % NEWS_TICKER.length].title}
+                                                </span>
+                                            </motion.div>
+                                        </AnimatePresence>
                                     </div>
+                                    <Link href="/news" className="hidden md:flex items-center text-[10px] font-bold text-zinc-400 hover:text-zinc-900 transition-colors uppercase gap-1 shrink-0">
+                                        View All <ChevronRight className="w-3 h-3" />
+                                    </Link>
                                 </div>
                             </div>
 
-                        </motion.div>
+                            {/* --- RIGHT: VISUAL AREA (Cinematic) --- */}
+                            <div className="relative flex-1 h-full overflow-hidden bg-zinc-100">
+                                <motion.div
+                                    className="absolute inset-0"
+                                    initial={{ scale: 1.15, filter: "blur(10px)" }}
+                                    animate={{ scale: 1, filter: "blur(0px)" }}
+                                    transition={{ duration: 2.5, ease: "easeOut" }}
+                                >
+                                    <Image
+                                        src={slide.image}
+                                        alt={slide.label}
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
+                                    {/* Brand Tint Overlay */}
+                                    <div className="absolute inset-0 bg-zinc-900/10 mix-blend-overlay" />
+                                </motion.div>
+
+                                {/* Slide Progress / Navigation (Right Side) */}
+                                <div className="absolute bottom-10 right-10 flex gap-1 z-20">
+                                    {SLIDES.map((_, i) => (
+                                        <button
+                                            key={i}
+                                            onClick={() => setCurrentSlide(i)}
+                                            className={cn(
+                                                "h-1 transition-all duration-500",
+                                                currentSlide === i ? "w-12 bg-white" : "w-3 bg-white/40 hover:bg-white/60"
+                                            )}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+
+                        </div>
                     )
                 ))}
             </AnimatePresence>
-
-            {/* Vertical Chapter Navigation - Architectural Sidebar */}
-            <div className="absolute right-10 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-10 items-center hidden lg:flex">
-                {SLIDES.map((slide, index) => (
-                    <button
-                        key={slide.id}
-                        onClick={() => setCurrentSlide(index)}
-                        className="group flex flex-col items-center gap-3"
-                    >
-                        <span className={cn(
-                            "text-[10px] font-black transition-all rotate-90 mb-4",
-                            currentSlide === index ? "text-primary scale-125" : "text-black/20 opacity-0 group-hover:opacity-100"
-                        )}>
-                            0{slide.id}
-                        </span>
-                        <div className={cn(
-                            "w-[1.5px] h-10 transition-all duration-700",
-                            currentSlide === index ? "bg-primary h-20" : "bg-black/10 group-hover:bg-black/30"
-                        )} />
-                    </button>
-                ))}
-            </div>
-
-            {/* Subtle Bottom Scroll Prompt - Desktop only */}
-            <div className="absolute bottom-10 left-20 z-20 hidden lg:flex items-center gap-6 text-[10px] font-black tracking-[0.4em] text-black/30">
-                <div className="w-px h-16 bg-black/10 relative overflow-hidden">
-                    <motion.div
-                        className="absolute top-0 left-0 w-full h-1/2 bg-primary"
-                        animate={{ y: ["0%", "200%"] }}
-                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                    />
-                </div>
-                <span className="[writing-mode:vertical-rl] h-16">スクロール</span>
-            </div>
         </section>
     );
 }

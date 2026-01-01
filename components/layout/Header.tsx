@@ -126,20 +126,20 @@ export const Header = () => {
                             {/* Desktop Layout */}
                             <div className="hidden md:flex h-full items-center justify-center">
                                 <div className="grid grid-cols-[1fr_300px] items-center gap-0 max-w-6xl w-full px-8">
-                                    <nav className="flex flex-col gap-12">
+                                    <nav className="flex flex-col gap-6">
                                         {NAV_ITEMS.map((item, i) => (
                                             <motion.div
                                                 key={item.href}
-                                                initial={{ opacity: 0, y: 50 }}
+                                                initial={{ opacity: 0, y: 20 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 transition={{ delay: 0.1 + (i * 0.1) }}
                                             >
                                                 <Link
                                                     href={item.href}
-                                                    className="group flex items-baseline gap-6 text-8xl font-black tracking-tighter hover:text-white/50 transition-colors text-white py-2"
+                                                    className="group flex items-baseline gap-4 text-5xl font-black tracking-tighter hover:text-white/50 transition-colors text-white py-1"
                                                 >
                                                     {item.label}
-                                                    <span className="text-lg font-bold tracking-widest text-gray-500 group-hover:text-white transition-colors">
+                                                    <span className="text-sm font-bold tracking-widest text-gray-500 group-hover:text-white transition-colors">
                                                         {item.en}
                                                     </span>
                                                 </Link>

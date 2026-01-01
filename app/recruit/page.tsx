@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const metadata = {
     title: "Recruit | 採用情報",
-    description: "アズライトの採用情報ページです。",
+    description: "エバンティアの採用情報ページです。",
 };
 
 export default function RecruitPage() {

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const metadata = {
     title: "Interview | 社員インタビュー",
-    description: "アズライトで働く社員のインタビューをご紹介します。",
+    description: "エバンティアで働く社員のインタビューをご紹介します。",
 };
 
 const INTERVIEWS = [

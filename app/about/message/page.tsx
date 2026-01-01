@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
     title: "Message | 代表挨拶",
-    description: "アズライト代表取締役 新井淳平からのメッセージ。",
+    description: "エバンティア代表取締役 新井淳平からのメッセージ。",
 };
 
 export default function MessagePage() {

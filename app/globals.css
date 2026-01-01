@@ -25,6 +25,10 @@
   --color-ring: hsl(215 25% 27%);
   --radius: 0rem;
   /* Sharp, structural */
+
+  /* Fonts */
+  --font-manrope: var(--font-manrope);
+  --font-noto-sans-jp: var(--font-noto-sans-jp);
 }
 
 /* Base Styles */
@@ -35,6 +39,7 @@
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
+  font-family: var(--font-manrope), var(--font-noto-sans-jp), sans-serif;
   font-feature-settings: "palt" 1;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.04em;
@@ -60,7 +65,7 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.03;
+  opacity: 0.04;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: overlay;

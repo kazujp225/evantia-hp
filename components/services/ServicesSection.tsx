@@ -38,7 +38,7 @@ export function ServicesSection() {
   }, []);
 
   return (
-    <section className="relative py-16 md:py-24 px-6 border-b border-border/40 overflow-hidden min-h-[450px] md:min-h-[500px]">
+    <section className="relative py-20 px-6 border-b border-border/40 overflow-hidden min-h-[500px] md:min-h-[550px]">
       {/* Background Slideshow */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -58,65 +58,68 @@ export function ServicesSection() {
             />
           </motion.div>
         </AnimatePresence>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/70" />
+        {/* Overlay - Slightly lighter to see image details, but text still readable */}
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Content */}
       <div className="max-w-screen-xl mx-auto relative z-10 h-full flex flex-col">
-        <div className="mb-8 md:mb-12">
-          <h2 className="text-lg md:text-xl font-black tracking-wider mb-4 text-white/70">サービス</h2>
-          <p className="text-4xl md:text-6xl font-black tracking-tight leading-[0.9] text-white">
-            私たちの仕事。
-          </p>
+        <div className="mb-10 md:mb-16 flex justify-between items-start">
+          <div>
+            <span className="text-xs font-bold tracking-[0.2em] mb-4 text-white/60 block uppercase">Our Services</span>
+            <p className="text-4xl md:text-5xl font-extrabold tracking-tight leading-none text-white">
+              Our Work
+            </p>
+          </div>
+          <div className="hidden md:block text-right">
+            <span className="text-white/40 text-xs font-mono">0{currentIndex + 1} / 0{SERVICES.length}</span>
+          </div>
         </div>
 
         {/* Current Service - Large Display */}
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex-1 flex flex-col justify-center pl-0 md:pl-10">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
+              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, x: 20, filter: "blur(10px)" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className="text-white"
             >
-              <span className="text-sm md:text-base font-black tracking-widest uppercase text-white/50 block mb-4">
-                {SERVICES[currentIndex].en}
-              </span>
-              <h3 className="text-4xl md:text-7xl font-black mb-4 leading-tight">
+              <h3 className="text-3xl md:text-6xl font-extrabold mb-6 leading-tight">
                 {SERVICES[currentIndex].title}
               </h3>
-              <p className="text-xl md:text-2xl font-medium text-white/80 mb-8">
+              <p className="text-lg md:text-2xl font-medium text-white/80 mb-10 max-w-2xl border-l-2 border-white/20 pl-6 py-1">
                 {SERVICES[currentIndex].sub}
               </p>
               <Link
                 href="/service"
-                className="inline-flex items-center gap-3 text-white text-lg font-bold hover:gap-5 transition-all"
+                className="inline-flex items-center gap-3 text-white text-sm font-bold tracking-widest hover:gap-5 transition-all group"
               >
-                詳しく見る <ArrowRight size={20} />
+                <span className="border-b border-transparent group-hover:border-white pb-1">詳しく見る</span> <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Navigation Tabs */}
-        <div className="flex gap-2 md:gap-4 mt-8">
+        {/* Navigation Tabs - Refined Architectural List */}
+        <div className="grid grid-cols-3 gap-0 mt-12 md:mt-20 border-t border-white/10">
           {SERVICES.map((service, i) => (
             <button
               key={i}
               onClick={() => setCurrentIndex(i)}
-              className={`flex-1 py-4 px-4 rounded-lg text-left transition-all duration-500 ${
-                currentIndex === i
-                  ? "bg-white text-black"
-                  : "bg-white/10 text-white/60 hover:bg-white/20"
-              }`}
+              className={`pt-6 pb-2 px-2 text-left transition-all duration-300 relative group`}
             >
-              <span className="text-[10px] md:text-xs font-black tracking-wider uppercase block mb-1 opacity-60">
-                {service.en}
+              <div className={`absolute top-0 left-0 h-[2px] transition-all duration-500 ${currentIndex === i ? "w-full bg-white" : "w-0 bg-white/30 group-hover:w-full"
+                }`} />
+
+              <span className={`text-[10px] font-bold tracking-widest uppercase block mb-2 transition-colors ${currentIndex === i ? "text-white" : "text-white/40"
+                }`}>
+                0{i + 1} - {service.en}
               </span>
-              <span className="text-sm md:text-base font-black block truncate">
+              <span className={`text-sm md:text-base font-bold block truncate transition-colors ${currentIndex === i ? "text-white" : "text-white/40 group-hover:text-white/70"
+                }`}>
                 {service.title}
               </span>
             </button>

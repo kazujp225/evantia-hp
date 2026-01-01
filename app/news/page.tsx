@@ -5,36 +5,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ArrowUpRight } from "lucide-react";
 
-const NEWS = [
-    {
-        id: 1,
-        date: "2024.01.05",
-        cat: "RELEASE",
-        catJp: "リリース",
-        title: "公式サイトをリニューアルいたしました"
-    },
-    {
-        id: 2,
-        date: "2023.12.15",
-        cat: "EVENT",
-        catJp: "イベント",
-        title: "年末年始休業のお知らせ"
-    },
-    {
-        id: 3,
-        date: "2023.11.01",
-        cat: "MEDIA",
-        catJp: "メディア",
-        title: "HR Tech Magazineにて弊社代表 新井のインタビューが掲載されました"
-    },
-    {
-        id: 4,
-        date: "2023.10.01",
-        cat: "RELEASE",
-        catJp: "リリース",
-        title: "新サービス「採用ピッチ資料制作プラン」の提供を開始"
-    }
-];
+import { NEWS } from "@/lib/constants";
 
 const CATEGORIES = [
     { key: "all", label: "すべて" },
@@ -62,11 +33,10 @@ export default function NewsPage() {
                             <button
                                 key={cat.key}
                                 onClick={() => setActiveCategory(cat.key)}
-                                className={`text-base md:text-sm font-bold tracking-widest transition-colors whitespace-nowrap py-2 ${
-                                    activeCategory === cat.key
+                                className={`text-base md:text-sm font-bold tracking-widest transition-colors whitespace-nowrap py-2 ${activeCategory === cat.key
                                         ? 'text-black border-b-2 border-black -mb-[17px] pb-[15px]'
                                         : 'text-gray-400 hover:text-black'
-                                }`}
+                                    }`}
                             >
                                 {cat.label}
                             </button>

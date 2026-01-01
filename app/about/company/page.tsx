@@ -48,7 +48,7 @@ export default function CompanyPage() {
                             <div className="font-bold text-xl leading-relaxed">
                                 <div className="mb-4">
                                     <span className="block text-sm text-gray-400 mb-1">TOKYO HEADQUARTER</span>
-                                    〒100-0004 東京都千代田区大手町1-2-3 (Placeholder)
+                                    〒100-0004 東京都千代田区大手町1-2-3
                                 </div>
                                 <div>
                                     <span className="block text-sm text-gray-400 mb-1">OSAKA BRANCH</span>
