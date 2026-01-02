@@ -1,64 +1,73 @@
 import { PageHeader } from "@/components/ui/PageHeader";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
     title: "Privacy Policy | EVANTIA",
-    description: "個人情報の取り扱いについて",
+    description: "プライバシーポリシー",
 };
 
 export default function PrivacyPage() {
     return (
-        <div className="bg-white text-black pb-40">
+        <main className="bg-background min-h-screen pb-40">
             <PageHeader title="PRIVACY POLICY" subtitle="プライバシーポリシー" />
-            <section className="py-24">
-                <div className="container-custom max-w-4xl text-gray-600 leading-relaxed space-y-8">
-                    <p className="text-lg font-medium text-black">【個人情報の取り扱いについて】</p>
 
-                    <p>当社は、お客様の個人情報を適切に保護することを重要な責務と考え、以下の方針に基づき個人情報の保護に努めます。</p>
+            <div className="container-custom max-w-4xl py-24">
+                <ScrollReveal>
+                    <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-p:text-muted-foreground prose-p:leading-loose">
+                        <p className="lead">
+                            株式会社エバンティア（以下、「当社」といいます。）は、当社の提供するサービス（以下、「本サービス」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。
+                        </p>
 
-                    <div>
-                        <h3 className="text-lg font-bold text-black mb-2">1. 個人情報の収集について</h3>
-                        <p>当社は、適法かつ公正な手段によって個人情報を収集いたします。</p>
-                    </div>
+                        <h3>第1条（個人情報）</h3>
+                        <p>
+                            「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、連絡先その他の記述等により特定の個人を識別できる情報及び容貌、指紋、声紋にかかるデータ、及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
+                        </p>
 
-                    <div>
-                        <h3 className="text-lg font-bold text-black mb-2">2. 個人情報の利用目的</h3>
-                        <p>収集した個人情報は、以下の目的で利用いたします。</p>
-                        <ul className="list-disc list-inside mt-2 space-y-1">
-                            <li>お客様へのサービス提供</li>
-                            <li>お問い合わせへの対応</li>
-                            <li>サービス改善のための分析</li>
+                        <h3>第2条（個人情報の収集方法）</h3>
+                        <p>
+                            当社は、ユーザーが利用登録をする際に氏名、生年月日、住所、電話番号、メールアドレス、銀行口座番号、クレジットカード番号、運転免許証番号などの個人情報をお尋ねすることがあります。また、ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を、当社の提携先（情報提供元、広告主、広告配信先などを含みます。以下、｢提携先｣といいます。）などから収集することがあります。
+                        </p>
+
+                        <h3>第3条（個人情報を収集・利用する目的）</h3>
+                        <p>当社が個人情報を収集・利用する目的は、以下のとおりです。</p>
+                        <ul>
+                            <li>当社サービスの提供・運営のため</li>
+                            <li>ユーザーからのお問い合わせに回答するため（本人確認を行うことを含む）</li>
+                            <li>ユーザーが利用中のサービスの新機能、更新情報、キャンペーン等及び当社が提供する他のサービスの案内のメールを送付するため</li>
+                            <li>メンテナンス、重要なお知らせなど必要に応じたご連絡のため</li>
+                            <li>利用規約に違反したユーザーや、不正・不当な目的でサービスを利用しようとするユーザーの特定をし、ご利用をお断りするため</li>
+                            <li>ユーザーにご自身の登録情報の閲覧や変更、削除、ご利用状況の閲覧を行っていただくため</li>
+                            <li>有料サービスにおいて、ユーザーに利用料金を請求するため</li>
+                            <li>上記の利用目的に付随する目的</li>
                         </ul>
-                    </div>
 
-                    <div>
-                        <h3 className="text-lg font-bold text-black mb-2">3. 個人情報の第三者提供</h3>
-                        <p>当社は、法令に基づく場合を除き、お客様の同意なく個人情報を第三者に提供することはありません。</p>
-                    </div>
+                        <h3>第4条（利用目的の変更）</h3>
+                        <p>
+                            当社は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。
+                            利用目的の変更を行った場合には、変更後の目的について、当社所定の方法により、ユーザーに通知し、または本ウェブサイト上に公表するものとします。
+                        </p>
 
-                    <div>
-                        <h3 className="text-lg font-bold text-black mb-2">4. 個人情報の管理</h3>
-                        <p>当社は、個人情報の漏洩、滅失、毀損等を防止するため、適切な安全管理措置を講じます。</p>
-                    </div>
+                        <h3>第5条（個人情報の第三者提供）</h3>
+                        <p>
+                            当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます。
+                        </p>
+                        <ul>
+                            <li>人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+                            <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+                            <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</li>
+                        </ul>
 
-                    <div>
-                        <h3 className="text-lg font-bold text-black mb-2">5. お問い合わせ</h3>
-                        <p>個人情報の取り扱いに関するお問い合わせは、当社までご連絡ください。</p>
-                        <div className="mt-4 p-4 bg-gray-50 rounded">
-                            <p className="text-sm">
-                                メールアドレス: jyunpei.arai@evantia-co.jp<br />
-                                担当者: 新井淳平<br />
-                                電話番号: 090-2393-2820
-                            </p>
-                        </div>
+                        <h3>第6条（お問い合わせ窓口）</h3>
+                        <p>
+                            本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。<br /><br />
+                            住所：〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F<br />
+                            社名：株式会社エバンティア<br />
+                            担当部署：管理部<br />
+                            Eメールアドレス：jyunpei.arai@evantia-co.jp
+                        </p>
                     </div>
-
-                    <p className="text-sm border-t border-gray-200 pt-8 mt-8">
-                        制定日：2026年1月5日<br />
-                        株式会社エバンティア<br />
-                        代表取締役 新井 淳平
-                    </p>
-                </div>
-            </section>
-        </div>
+                </ScrollReveal>
+            </div>
+        </main>
     );
 }

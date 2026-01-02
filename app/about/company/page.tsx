@@ -28,11 +28,11 @@ export default function CompanyPage() {
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Director</div>
-                            <div className="font-bold text-xl md:text-2xl">取締役　豊島 玲</div>
+                            <div className="font-bold text-xl md:text-2xl">取締役　豊嶋 令</div>
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Capital</div>
-                            <div className="font-bold text-xl md:text-2xl">5,000,000円</div>
+                            <div className="font-bold text-xl md:text-2xl">500万円</div>
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Business</div>

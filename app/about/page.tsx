@@ -83,45 +83,60 @@ export default function AboutPage() {
                     </ScrollReveal>
                 </div>
 
-                {/* Company Profile */}
-                <div className="border-t border-border pt-20">
+                {/* Company Profile - High Impact List */}
+                <div className="border-t border-black pt-20">
                     <ScrollReveal>
-                        <h2 className="text-sm md:text-[10px] font-black tracking-[0.4em] uppercase mb-12">会社概要</h2>
-                        <div className="border-t border-border">
+                        <h2 className="text-xs font-bold tracking-[0.2em] text-[var(--color-brand-accent)] uppercase mb-10 flex items-center gap-3">
+                            <span className="w-4 h-4 rounded-full border border-[var(--color-brand-accent)]"></span>
+                            Company Profile
+                        </h2>
+                        <div className="border-t border-black/10">
                             {[
-                                { label: "会社名", value: "株式会社エバンティア (EVANTIA Inc.)" },
+                                { label: "会社名", value: "株式会社エバンティア", sub: "EVANTIA Inc." },
                                 { label: "設立", value: "2026年1月5日" },
-                                { label: "資本金", value: "1,000万円" },
-                                { label: "代表", value: "新井 淳平 (Junpei Arai)" },
-                                { label: "取締役", value: "豊嶋 令" },
-                                { label: "所在地", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F" },
-                                { label: "連絡先", value: "jyunpei.arai@evantia-co.jp / 090-2393-2820" }
+                                { label: "資本金", value: "500万円" },
+                                { label: "代表取締役", value: "新井 淳平", sub: "Junpei Arai" },
+                                { label: "取締役", value: "豊嶋 令", sub: "Ryo Toyoshima" },
+                                { label: "所在地", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F", link: "https://maps.google.com" },
+                                { label: "連絡先", value: "jyunpei.arai@evantia-co.jp", sub: "090-2393-2820" }
                             ].map((row, i) => (
-                                <div key={i} className="grid grid-cols-1 md:grid-cols-4 py-8 border-b border-border/60 gap-4 md:gap-0">
-                                    <div className="md:col-span-1 text-sm md:text-xs font-bold uppercase tracking-widest text-muted-foreground">{row.label}</div>
-                                    <div className="md:col-span-3 font-medium">{row.value}</div>
+                                <div key={i} className="group grid grid-cols-1 md:grid-cols-4 py-8 border-b border-black/10 hover:border-[var(--color-brand-accent)] transition-colors duration-500 items-baseline gap-2 md:gap-0">
+                                    <div className="md:col-span-1 text-xs font-bold uppercase tracking-widest text-muted-foreground group-hover:text-[var(--color-brand-accent)] transition-colors">
+                                        {row.label}
+                                    </div>
+                                    <div className="md:col-span-3">
+                                        <div className="text-xl md:text-2xl font-bold tracking-tight">{row.value}</div>
+                                        {row.sub && <div className="text-sm text-muted-foreground font-mono mt-1">{row.sub}</div>}
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </ScrollReveal>
                 </div>
 
-                {/* Business Details */}
-                <div className="border-t border-border pt-20 mt-20">
+                {/* Business Details - High Impact Grid */}
+                <div className="pt-32 mt-20 border-t border-black relative">
                     <ScrollReveal>
-                        <h2 className="text-sm md:text-[10px] font-black tracking-[0.4em] uppercase mb-12">事業内容</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="mb-16">
+                            <h2 className="text-xs font-bold tracking-[0.2em] text-[var(--color-brand-accent)] uppercase mb-4 flex items-center gap-3">
+                                <span className="w-4 h-4 rounded-full border border-[var(--color-brand-accent)]"></span>
+                                Services
+                            </h2>
+                            <p className="text-3xl md:text-5xl font-black">事業内容</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
                             {[
                                 "採用コンサルティング事業",
-                                "採用戦略立案・採用プロセス設計支援",
+                                "採用戦略立案・プロセス設計",
                                 "求人媒体選定・運用支援",
                                 "面接設計・選考フロー改善",
                                 "採用ブランディング支援",
-                                "人材定着・組織開発コンサルティング"
+                                "人材定着・組織開発コンサル"
                             ].map((item, i) => (
-                                <div key={i} className="flex items-center gap-4 p-6 border border-border/40 hover:bg-zinc-50 transition-colors">
-                                    <span className="text-primary font-bold">0{i + 1}</span>
-                                    <span className="font-medium">{item}</span>
+                                <div key={i} className="group flex items-baseline gap-6 py-8 border-b border-black/10 hover:border-[var(--color-brand-accent)] transition-colors duration-300">
+                                    <span className="text-xs font-mono font-bold text-[var(--color-brand-accent)]">0{i + 1}</span>
+                                    <h3 className="text-xl font-bold tracking-tight group-hover:translate-x-2 transition-transform duration-300">{item}</h3>
                                 </div>
                             ))}
                         </div>

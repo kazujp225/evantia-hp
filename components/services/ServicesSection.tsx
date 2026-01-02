@@ -40,14 +40,15 @@ export function ServicesSection() {
   return (
     <section className="relative py-20 px-6 border-b border-border/40 overflow-hidden min-h-[500px] md:min-h-[550px]">
       {/* Background Slideshow */}
+      {/* Background Slideshow */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0, scale: 1.05 }}
+            initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             className="absolute inset-0"
           >
             <Image
@@ -58,15 +59,19 @@ export function ServicesSection() {
             />
           </motion.div>
         </AnimatePresence>
-        {/* Overlay - Slightly lighter to see image details, but text still readable */}
-        <div className="absolute inset-0 bg-black/60" />
+        {/* Overlay - Radial for depth */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.3)_0%,rgba(0,0,0,0.8)_100%)] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content */}
       <div className="max-w-screen-xl mx-auto relative z-10 h-full flex flex-col">
         <div className="mb-10 md:mb-16 flex justify-between items-start">
           <div>
-            <span className="text-xs font-bold tracking-[0.2em] mb-4 text-white/60 block uppercase">Our Services</span>
+            <span className="text-xs font-bold tracking-[0.2em] mb-4 text-[var(--color-brand-accent)] block uppercase flex items-center gap-2">
+              <span className="w-8 h-[1px] bg-[var(--color-brand-accent)] inline-block"></span>
+              Our Services
+            </span>
             <p className="text-4xl md:text-5xl font-extrabold tracking-tight leading-none text-white">
               Our Work
             </p>
@@ -90,35 +95,35 @@ export function ServicesSection() {
               <h3 className="text-3xl md:text-6xl font-extrabold mb-6 leading-tight">
                 {SERVICES[currentIndex].title}
               </h3>
-              <p className="text-lg md:text-2xl font-medium text-white/80 mb-10 max-w-2xl border-l-2 border-white/20 pl-6 py-1">
+              <p className="text-lg md:text-2xl font-medium text-white/80 mb-10 max-w-2xl border-l-2 border-[var(--color-brand-accent)] pl-6 py-1">
                 {SERVICES[currentIndex].sub}
               </p>
               <Link
                 href="/service"
-                className="inline-flex items-center gap-3 text-white text-sm font-bold tracking-widest hover:gap-5 transition-all group"
+                className="inline-flex items-center gap-3 text-white text-sm font-bold tracking-widest hover:gap-5 transition-all group hover:text-[var(--color-brand-accent)]"
               >
-                <span className="border-b border-transparent group-hover:border-white pb-1">詳しく見る</span> <ArrowRight className="w-4 h-4" />
+                <span className="border-b border-transparent group-hover:border-[var(--color-brand-accent)] pb-1">詳しく見る</span> <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
           </AnimatePresence>
         </div>
 
         {/* Navigation Tabs - Refined Architectural List */}
-        <div className="grid grid-cols-3 gap-0 mt-12 md:mt-20 border-t border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mt-12 md:mt-20 border-t border-white/10">
           {SERVICES.map((service, i) => (
             <button
               key={i}
               onClick={() => setCurrentIndex(i)}
               className={`pt-6 pb-2 px-2 text-left transition-all duration-300 relative group`}
             >
-              <div className={`absolute top-0 left-0 h-[2px] transition-all duration-500 ${currentIndex === i ? "w-full bg-white" : "w-0 bg-white/30 group-hover:w-full"
+              <div className={`absolute top-0 left-0 h-[3px] transition-all duration-500 ${currentIndex === i ? "w-full bg-[var(--color-brand-accent)] shadow-[0_0_15px_rgba(var(--color-brand-accent),0.6)]" : "w-0 bg-white/30 group-hover:w-full"
                 }`} />
 
-              <span className={`text-[10px] font-bold tracking-widest uppercase block mb-2 transition-colors ${currentIndex === i ? "text-white" : "text-white/40"
+              <span className={`text-[10px] font-bold tracking-widest uppercase block mb-2 transition-colors ${currentIndex === i ? "text-[var(--color-brand-accent)]" : "text-white/40 group-hover:text-[var(--color-brand-accent)]"
                 }`}>
                 0{i + 1} - {service.en}
               </span>
-              <span className={`text-sm md:text-base font-bold block truncate transition-colors ${currentIndex === i ? "text-white" : "text-white/40 group-hover:text-white/70"
+              <span className={`text-sm md:text-lg font-black block truncate transition-colors ${currentIndex === i ? "text-white scale-105 origin-left" : "text-white/40 group-hover:text-white"
                 }`}>
                 {service.title}
               </span>

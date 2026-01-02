@@ -49,7 +49,7 @@ export default function ServicePage() {
         {
             num: "04",
             title: "採用事務アウトソーシング",
-            desc: "集客サービスの運用やATSの構築等を戦略コンサルタントと専任のチームが運用成果最大化を軸とした代行サービスを提供"
+            desc: "戦略コンサルタントと専任チームが、集客サービスの運用やATSの構築等を成果最大化を軸に代行いたします"
         },
         {
             num: "05",
@@ -118,19 +118,19 @@ export default function ServicePage() {
                         </div>
                     </ScrollReveal>
 
-                    <div className="grid grid-cols-1 gap-12 md:gap-16">
+                    <div className="grid grid-cols-1 gap-0 border-t border-black/10">
                         {features.map((feature, i) => (
                             <ScrollReveal key={i} delay={i * 0.1}>
-                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start p-8 md:p-12 bg-white border border-border/40 hover:shadow-lg transition-shadow">
+                                <div className="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-start p-8 md:p-12 border-b border-black/10 hover:bg-[var(--color-brand-accent)]/5 transition-colors duration-500">
                                     <div className="lg:col-span-1">
-                                        <span className="text-4xl md:text-5xl font-black text-primary/20">{feature.num}</span>
+                                        <span className="text-4xl md:text-5xl font-black text-[var(--color-primary)]/20 group-hover:text-[var(--color-brand-accent)] transition-colors">{feature.num}</span>
                                     </div>
                                     <div className="lg:col-span-11">
                                         <div className="flex items-center gap-4 mb-6">
-                                            <feature.icon className="w-6 h-6 text-primary" />
-                                            <h3 className="text-xl md:text-2xl font-bold">{feature.title}</h3>
+                                            <feature.icon className="w-6 h-6 text-[var(--color-brand-accent)]" />
+                                            <h3 className="text-xl md:text-2xl font-bold group-hover:text-[var(--color-primary)] transition-colors">{feature.title}</h3>
                                         </div>
-                                        <p className="text-muted-foreground font-medium leading-relaxed text-base md:text-lg">
+                                        <p className="text-muted-foreground font-medium leading-relaxed text-base md:text-lg group-hover:text-foreground/80">
                                             {feature.desc}
                                         </p>
                                     </div>

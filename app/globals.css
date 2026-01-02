@@ -8,23 +8,30 @@
   --color-card-foreground: hsl(210 20% 15%);
   --color-popover: hsl(0 0% 100%);
   --color-popover-foreground: hsl(210 20% 15%);
-  --color-primary: hsl(215 25% 27%);
-  /* Quiet Intellectual Navy */
+  --color-primary: hsl(212 90% 20%);
+  /* Deep Corporate Blue - Dominant Authority */
   --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(0 0% 98%);
-  --color-secondary-foreground: hsl(210 20% 15%);
-  --color-muted: hsl(0 0% 96%);
-  --color-muted-foreground: hsl(210 10% 55%);
-  --color-accent: hsl(0 0% 98%);
-  --color-accent-foreground: hsl(210 20% 15%);
+  --color-secondary: hsl(210 30% 96%);
+  /* Very light cool gray */
+  --color-secondary-foreground: hsl(212 90% 20%);
+  --color-muted: hsl(210 20% 96%);
+  --color-muted-foreground: hsl(215 20% 45%);
+  /* Cooler text */
+  --color-accent: hsl(212 90% 20%);
+  --color-accent-foreground: hsl(0 0% 100%);
   --color-destructive: hsl(0 84.2% 60.2%);
   --color-destructive-foreground: hsl(0 0% 98%);
-  --color-border: hsl(210 10% 90%);
-  /* Very subtle */
-  --color-input: hsl(210 10% 90%);
-  --color-ring: hsl(215 25% 27%);
+  --color-border: hsl(215 20% 88%);
+  /* Cool gray border */
+  --color-input: hsl(215 20% 88%);
+  --color-ring: hsl(212 90% 20%);
   --radius: 0rem;
-  /* Sharp, structural */
+
+  /* Premium Accents */
+  --color-brand-accent: hsl(200 90% 45%);
+  /* Keeping Electric Blue as a highlight */
+  --color-brand-gold: hsl(40 60% 50%);
+  /* Subtle Gold - for premium feel */
 
   /* Fonts */
   --font-manrope: var(--font-manrope);
@@ -42,7 +49,8 @@ body {
   font-family: var(--font-manrope), var(--font-noto-sans-jp), sans-serif;
   font-feature-settings: "palt" 1;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: 0.04em;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.03em;
 }
 
 /* Typography Refinements */
@@ -52,7 +60,8 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: -0.025em;
+  letter-spacing: -0.04em;
+  /* Tighter headings for Swiss style */
   font-feature-settings: "palt" 1;
 }
 

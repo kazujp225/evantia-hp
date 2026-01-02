@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { PageHeader } from "@/components/ui/PageHeader";
 
 export const metadata = {
     title: "Contact | EVANTIA",
@@ -9,79 +10,62 @@ export const metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="bg-background min-h-screen pt-24 md:pt-32 pb-40 px-6">
-            <div className="max-w-screen-xl mx-auto">
+        <div className="bg-bg-alt pb-40">
+            <PageHeader title="CONTACT" subtitle="お問い合わせ" />
 
-                <ScrollReveal>
-                    <div className="mb-24 border-b border-border/40 pb-12">
-                        <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
-                            Get in Touch.
-                        </h1>
-                        <p className="text-muted-foreground font-medium tracking-wide">
-                            まずは対話から始めませんか。
-                        </p>
+            <div className="max-w-4xl mx-auto px-6 -mt-10 relative z-20">
+                <div className="bg-white p-8 md:p-16 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border-t-4 border-[var(--color-brand-accent)]">
+                    <ScrollReveal>
+                        <div className="mb-12 text-center">
+                            <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
+                            <p className="text-muted-foreground font-medium">採用課題のご相談、お仕事のご依頼など、<br />お気軽にお問い合わせください。</p>
+                        </div>
+
+                        <form className="space-y-8">
+                            <div className="grid grid-cols-1 gap-8">
+                                <div>
+                                    <label htmlFor="company" className="block text-xs font-bold tracking-widest mb-3 uppercase text-[var(--color-brand-accent)]">Company</label>
+                                    <input type="text" id="company" className="w-full bg-zinc-50 border-b border-border p-4 font-bold focus:outline-none focus:border-[var(--color-brand-accent)] focus:bg-white transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="御社名" />
+                                </div>
+                                <div>
+                                    <label htmlFor="email" className="block text-xs font-bold tracking-widest mb-3 uppercase text-[var(--color-brand-accent)]">Email</label>
+                                    <input type="email" id="email" className="w-full bg-zinc-50 border-b border-border p-4 font-bold focus:outline-none focus:border-[var(--color-brand-accent)] focus:bg-white transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="メールアドレス" />
+                                </div>
+                                <div>
+                                    <label htmlFor="content" className="block text-xs font-bold tracking-widest mb-3 uppercase text-[var(--color-brand-accent)]">Detail</label>
+                                    <textarea id="content" rows={6} className="w-full bg-zinc-50 border-b border-border p-4 font-bold focus:outline-none focus:border-[var(--color-brand-accent)] focus:bg-white transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="ご相談内容"></textarea>
+                                </div>
+                            </div>
+
+                            <div className="pt-8 text-center">
+                                <button type="submit" className="inline-flex items-center gap-4 bg-[var(--color-primary)] text-white px-12 py-5 text-sm font-black tracking-widest hover:bg-[var(--color-brand-accent)] transition-all duration-300 shadow-lg hover:shadow-[var(--color-brand-accent)]/40 hover:-translate-y-1">
+                                    送信する <ArrowRight className="w-4 h-4" />
+                                </button>
+                            </div>
+                        </form>
+                    </ScrollReveal>
+                </div>
+            </div>
+
+            <div className="max-w-4xl mx-auto px-6 mt-20">
+                <ScrollReveal delay={0.2}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+                        <div className="p-8 border border-border bg-white">
+                            <h3 className="font-bold mb-2">Office</h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                〒541-0047<br />大阪府大阪市中央区淡路町1-4-9<br />TPR北浜ビル 6F
+                            </p>
+                        </div>
+                        <div className="p-8 border border-border bg-white">
+                            <h3 className="font-bold mb-2">Direct Contact</h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                jyunpei.arai@evantia-co.jp<br />
+                                090-2393-2820
+                            </p>
+                        </div>
                     </div>
                 </ScrollReveal>
-
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
-                    {/* Left: Context & Anxieties */}
-                    <div className="lg:col-span-5">
-                        <ScrollReveal delay={0.1}>
-                            <h3 className="text-lg font-bold mb-8">このような相談を受けています</h3>
-                            <ul className="space-y-6">
-                                {[
-                                    "採用が属人化している",
-                                    "戦略と実行が分断されている",
-                                    "外注に依存している",
-                                    "母集団形成がうまくいかない",
-                                    "採用ブランディングを見直したい"
-                                ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-4 text-muted-foreground font-medium border-b border-border/50 pb-4 last:border-0">
-                                        <span className="w-1.5 h-1.5 bg-foreground rounded-full" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <div className="mt-16 text-sm text-foreground/60 leading-relaxed">
-                                <p>
-                                    具体的な依頼内容が決まっていなくても構いません。<br />
-                                    現状の課題感や、理想の状態についてお聞かせください。
-                                </p>
-                            </div>
-                        </ScrollReveal>
-                    </div>
-
-                    {/* Right: Anxiety-free Form */}
-                    <div className="lg:col-span-7">
-                        <ScrollReveal delay={0.2}>
-                            <form className="space-y-8 bg-zinc-50 p-8 md:p-12 rounded-none border border-border/50">
-                                <div className="grid grid-cols-1 gap-8">
-                                    <div>
-                                        <label htmlFor="company" className="block text-sm md:text-xs font-black tracking-widest mb-3">会社名</label>
-                                        <input type="text" id="company" className="w-full bg-background border border-border/60 p-4 font-medium focus:outline-none focus:border-primary transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="御社名" />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="email" className="block text-sm md:text-xs font-black tracking-widest mb-3">メールアドレス</label>
-                                        <input type="email" id="email" className="w-full bg-background border border-border/60 p-4 font-medium focus:outline-none focus:border-primary transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="メールアドレス" />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="content" className="block text-sm md:text-xs font-black tracking-widest mb-3">ご相談内容</label>
-                                        <textarea id="content" rows={6} className="w-full bg-background border border-border/60 p-4 font-medium focus:outline-none focus:border-primary transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="ご相談内容（簡単で構いません）"></textarea>
-                                    </div>
-                                </div>
-
-                                <div className="pt-4 text-right">
-                                    <button type="submit" className="inline-flex items-center gap-4 bg-foreground text-background px-10 py-4 text-base md:text-sm font-black tracking-widest hover:bg-primary transition-colors">
-                                        送信する <ArrowRight className="w-4 h-4" />
-                                    </button>
-                                </div>
-                            </form>
-                        </ScrollReveal>
-                    </div>
-                </div>
-
             </div>
-        </main>
+        </div>
     );
 }

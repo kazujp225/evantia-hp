@@ -85,24 +85,28 @@ export default function RecruitPage() {
                 </div>
             </section>
 
-            {/* Open Positions - Minimal List */}
-            <section className="py-32 bg-black text-white">
-                <div className="container-custom max-w-5xl">
+            {/* Open Positions - High Impact List */}
+            <section className="py-32 bg-[var(--color-primary)] text-white relative overflow-hidden">
+                {/* Texture Overlay */}
+                <div className="absolute inset-0 opacity-[0.1] pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }}></div>
+
+                <div className="container-custom max-w-5xl relative z-10">
                     <ScrollReveal className="text-center mb-20">
-                        <h2 className="text-4xl font-black mb-4">OPEN POSITIONS</h2>
-                        <p className="text-gray-400">現在募集中のポジション</p>
+                        <span className="text-[var(--color-brand-accent)] font-bold tracking-[0.3em] text-xs uppercase mb-4 block animate-pulse">Hiring</span>
+                        <h2 className="text-4xl md:text-6xl font-black mb-4">OPEN POSITIONS</h2>
+                        <p className="text-white/60 font-bold">現在募集中のポジション</p>
                     </ScrollReveal>
 
                     <div className="border-t border-white/20">
                         {['Recruitment Consultant', 'RPO Specialist', 'Career Advisor', 'Corporate Staff'].map((job, i) => (
                             <ScrollReveal key={i} delay={i * 0.1}>
-                                <Link href="#" className="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-white/20 hover:bg-white hover:text-black transition-all duration-300 px-6 md:px-10">
+                                <Link href="#" className="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-white/20 hover:bg-white/5 transition-all duration-300 px-6 md:px-10">
                                     <div className="mb-4 md:mb-0">
-                                        <h3 className="text-2xl font-bold mb-2">{job}</h3>
-                                        <span className="text-base md:text-sm font-mono opacity-50 group-hover:opacity-100">正社員 / 東京, 大阪</span>
+                                        <h3 className="text-2xl font-bold mb-2 group-hover:text-[var(--color-brand-accent)] transition-colors">{job}</h3>
+                                        <span className="text-base md:text-sm font-mono opacity-50 group-hover:opacity-100 text-[var(--color-brand-accent)]">正社員 / 東京, 大阪</span>
                                     </div>
-                                    <div className="w-12 h-12 rounded-full border border-white/30 group-hover:border-black flex items-center justify-center transition-colors">
-                                        <ArrowUpRight size={20} />
+                                    <div className="w-12 h-12 rounded-full border border-white/30 group-hover:border-[var(--color-brand-accent)] group-hover:bg-[var(--color-brand-accent)] flex items-center justify-center transition-all duration-500">
+                                        <ArrowUpRight size={20} className="text-white" />
                                     </div>
                                 </Link>
                             </ScrollReveal>

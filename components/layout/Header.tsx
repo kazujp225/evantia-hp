@@ -13,7 +13,6 @@ const NAV_ITEMS = [
     { label: "私たちについて", href: "/about", en: "ABOUT" },
     { label: "採用情報", href: "/recruit", en: "RECRUIT" },
     { label: "コラム", href: "/column", en: "COLUMN" },
-    { label: "導入事例", href: "/case", en: "CASE" },
 ];
 
 export const Header = () => {

@@ -19,47 +19,63 @@ export default function Home() {
       <section className="py-16 md:py-24 px-6 border-b border-border/40">
         <div className="max-w-screen-xl mx-auto">
           <ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-t border-border">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-border mt-10">
               {/* Item 01 */}
-              <div className="group pt-8 md:pr-10 md:border-r border-border min-h-[280px] flex flex-col justify-between relative transition-all duration-500 hover:bg-zinc-50/80">
-                <div className="relative z-10">
-                  <span className="text-xs font-bold tracking-[0.2em] text-primary/60 uppercase mb-6 block group-hover:text-primary transition-colors">01 - Strategy</span>
-                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-1 transition-transform duration-500">
+              <div className="group pt-12 pb-12 md:pr-12 md:border-r border-border min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
+                {/* Accent Top Line on Hover */}
+                <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
+
+                <div className="relative z-10 px-6 md:px-0">
+                  <span className="text-xs font-bold tracking-[0.2em] text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
+                    Strategy
+                  </span>
+                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
                     行動の前に、<br />戦略を。
                   </h3>
-                  <p className="text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500">
+                  <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">
                     Strategy before action.
                   </p>
                 </div>
-                <span className="hidden md:block text-[180px] leading-none font-bold text-foreground/[0.02] absolute bottom-[-40px] right-2 select-none pointer-events-none group-hover:text-foreground/[0.05] transition-colors duration-500">01</span>
+                <span className="block text-[100px] md:text-[180px] leading-none font-bold text-foreground/[0.03] absolute bottom-2 right-4 md:bottom-[-40px] md:right-2 select-none pointer-events-none group-hover:text-[var(--color-brand-accent)]/[0.05] transition-colors duration-500">01</span>
               </div>
 
               {/* Item 02 */}
-              <div className="group pt-8 md:px-10 md:border-r border-border min-h-[280px] flex flex-col justify-between relative transition-all duration-500 hover:bg-zinc-50/80">
-                <div className="relative z-10">
-                  <span className="text-xs font-bold tracking-[0.2em] text-primary/60 uppercase mb-6 block group-hover:text-primary transition-colors">02 - Execution</span>
-                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-1 transition-transform duration-500">
+              <div className="group pt-12 pb-12 md:px-12 md:border-r border-border min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
+                <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
+
+                <div className="relative z-10 px-6 md:px-0">
+                  <span className="text-xs font-bold tracking-[0.2em] text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
+                    Execution
+                  </span>
+                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
                     混沌なき<br />実行。
                   </h3>
-                  <p className="text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500">
+                  <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">
                     Execution without chaos.
                   </p>
                 </div>
-                <span className="hidden md:block text-[180px] leading-none font-bold text-foreground/[0.02] absolute bottom-[-40px] right-2 select-none pointer-events-none group-hover:text-foreground/[0.05] transition-colors duration-500">02</span>
+                <span className="block text-[100px] md:text-[180px] leading-none font-bold text-foreground/[0.03] absolute bottom-2 right-4 md:bottom-[-40px] md:right-2 select-none pointer-events-none group-hover:text-[var(--color-brand-accent)]/[0.05] transition-colors duration-500">02</span>
               </div>
 
               {/* Item 03 */}
-              <div className="group pt-8 md:pl-10 min-h-[280px] flex flex-col justify-between relative transition-all duration-500 hover:bg-zinc-50/80">
-                <div className="relative z-10">
-                  <span className="text-xs font-bold tracking-[0.2em] text-primary/60 uppercase mb-6 block group-hover:text-primary transition-colors">03 - Asset</span>
-                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-1 transition-transform duration-500">
+              <div className="group pt-12 pb-12 md:pl-12 min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
+                <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
+
+                <div className="relative z-10 px-6 md:px-0">
+                  <span className="text-xs font-bold tracking-[0.2em] text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
+                    Asset
+                  </span>
+                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
                     成果を、<br />資産にする。
                   </h3>
-                  <p className="text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500">
+                  <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">
                     Results that remain.
                   </p>
                 </div>
-                <span className="hidden md:block text-[180px] leading-none font-bold text-foreground/[0.02] absolute bottom-[-40px] right-2 select-none pointer-events-none group-hover:text-foreground/[0.05] transition-colors duration-500">03</span>
+                <span className="block text-[100px] md:text-[180px] leading-none font-bold text-foreground/[0.03] absolute bottom-2 right-4 md:bottom-[-40px] md:right-2 select-none pointer-events-none group-hover:text-[var(--color-brand-accent)]/[0.05] transition-colors duration-500">03</span>
               </div>
             </div>
           </ScrollReveal>
@@ -69,53 +85,97 @@ export default function Home() {
 
 
       {/* 4. PROCESS OF TRANSFORMATION */}
-      <section className="py-24 md:py-32 px-6 border-b border-border/40 relative overflow-hidden bg-zinc-50/50">
+      <section className="py-24 md:py-40 px-6 border-b border-border/40 relative overflow-hidden bg-background">
         <div className="max-w-screen-xl mx-auto relative z-10">
-          <div className="mb-24 text-center md:text-left">
-            <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.1]">変革の<br />プロセス。</h2>
-            <p className="text-muted-foreground font-medium tracking-wider">The Process of Transformation</p>
+          <div className="mb-20 md:mb-32">
+            <span className="text-xs font-bold tracking-[0.2em] text-[var(--color-brand-accent)] uppercase mb-6 block flex items-center gap-4">
+              <span className="w-12 h-[2px] bg-[var(--color-brand-accent)]"></span>
+              Process of Transformation
+            </span>
+            <h2 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] text-foreground mb-8">
+              変革のプロセス<span className="text-[var(--color-brand-accent)]">.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground font-medium max-w-xl leading-relaxed">
+              感覚的な採用から、科学的な採用へ。<br />
+              EVANTIAが提供する、確実な変革へのロードマップ。
+            </p>
           </div>
 
-          <div className="relative max-w-4xl mx-auto">
-            {/* Vertical Line */}
-            <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-px bg-border -z-10 md:-translate-x-1/2" />
-
+          <div className="flex flex-col border-t border-foreground/10">
             {[
-              { step: "01", title: "戦略設計", sub: "採用が「感覚」から「言語」になる", align: "left" },
-              { step: "02", title: "実行＆仕組み化", sub: "属人性が「仕組み」に変わる", align: "right" },
-              { step: "03", title: "移管＆自走", sub: "外注が不要になる", align: "left" }
+              {
+                step: "01",
+                title: "戦略設計",
+                en: "Commitment Strategy",
+                desc: "「なんとなく」の採用を終わらせる。\n事業目標から逆算した、勝てる採用要件の定義。",
+                tags: ["Market Research", "Persona Design", "KPI Setting"]
+              },
+              {
+                step: "02",
+                title: "実行＆仕組み化",
+                en: "Execution System",
+                desc: "属人性を排除し、誰がやっても成果が出る\n「再現性の高い仕組み」を構築する。",
+                tags: ["Operation Flow", "Scout Manual", "ATS Implementation"]
+              },
+              {
+                step: "03",
+                title: "移管＆自走",
+                en: "In-house Transfer",
+                desc: "最終ゴールは、我々の支援が不要になること。\nノウハウを全て貴社にインストールする。",
+                tags: ["Onboarding", "Knowledge Transfer", "Full Autonomy"]
+              }
             ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 0.2}>
-                <div className={`flex flex-col md:flex-row items-center gap-8 md:gap-24 mb-20 md:mb-32 last:mb-0 ${item.align === "right" ? "md:flex-row-reverse" : ""
-                  }`}>
+              <div key={i} className="group relative border-b border-foreground/10 transition-all duration-500 hover:border-[var(--color-brand-accent)]">
+                {/* Hover Background */}
+                <div className="absolute inset-0 bg-[var(--color-brand-accent)]/5 scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top z-0" />
 
-                  {/* Step Number Circle (Center Anchor) */}
-                  <div className="flex-shrink-0 relative z-10 w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center font-bold text-sm tracking-widest border-4 border-zinc-50 outline outline-1 outline-border">
-                    {item.step}
+                <div className="relative z-10 py-12 md:py-16 flex flex-col md:flex-row md:items-start md:justify-between gap-6 px-4 md:px-8">
+
+                  {/* Left: Number & Main Title */}
+                  <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 flex-1">
+                    <span className="text-5xl md:text-7xl font-black text-foreground/10 group-hover:text-[var(--color-brand-accent)] transition-colors duration-500 font-mono tracking-tighter">
+                      {item.step}
+                    </span>
+                    <div>
+                      <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-2 group-hover:translate-x-2 transition-transform duration-500">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase group-hover:text-[var(--color-brand-accent)] transition-colors">
+                        {item.en}
+                      </p>
+                    </div>
                   </div>
 
-                  {/* Content Box */}
-                  <div className={`flex-1 text-left ${item.align === "right" ? "md:text-left" : "md:text-right"}`}>
-                    <h3 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-lg text-muted-foreground font-medium">
-                      {item.sub}
+                  {/* Right: Description & Tags */}
+                  <div className="md:w-[40%] flex flex-col justify-between h-full pt-2 md:pt-4">
+                    <p className="text-sm md:text-base font-medium leading-loose text-muted-foreground whitespace-pre-line mb-8 group-hover:text-foreground transition-colors">
+                      {item.desc}
                     </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag, t) => (
+                        <span key={t} className="text-[10px] font-bold border border-foreground/10 px-3 py-1 rounded-full text-muted-foreground group-hover:border-[var(--color-brand-accent)]/30 group-hover:text-[var(--color-brand-accent)] transition-colors bg-white">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Spacer for opposite side to balance flex */}
-                  <div className="flex-1 hidden md:block" />
+                  {/* Arrow Icon Reveal */}
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--color-brand-accent)] hidden md:block">
+                    <ArrowRight className="w-8 h-8" />
+                  </div>
 
                 </div>
-              </ScrollReveal>
+              </div>
             ))}
           </div>
 
-          <div className="mt-32 text-center">
-            <Link href="/process" className="inline-flex items-center gap-3 text-sm font-bold tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors group">
-              <span className="border-b border-transparent group-hover:border-primary pb-0.5 transition-all">ドキュメントを見る</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          <div className="mt-20 md:mt-32 flex justify-center">
+            <Link href="/process" className="group relative inline-flex items-center gap-4 px-8 py-4 overflow-hidden border border-foreground/10 rounded-full hover:border-[var(--color-brand-accent)] transition-colors duration-500 bg-white">
+              <span className="relative z-10 text-xs font-bold tracking-[0.2em] uppercase group-hover:text-[var(--color-brand-accent)] transition-colors">View Full Process</span>
+              <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-[var(--color-brand-accent)] group-hover:translate-x-1 transition-transform relative z-10" />
+              <div className="absolute inset-0 bg-[var(--color-brand-accent)]/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </Link>
           </div>
         </div>
@@ -183,9 +243,9 @@ export default function Home() {
             まずはカジュアルにお話ししませんか？
           </p>
 
-          <Link href="/contact" className="group inline-flex items-center justify-center px-12 py-6 bg-black text-white text-sm font-bold tracking-[0.2em] hover:bg-primary transition-all duration-300 relative overflow-hidden rounded-full">
+          <Link href="/contact" className="group inline-flex items-center justify-center px-12 py-6 bg-black text-white text-sm font-bold tracking-[0.2em] hover:bg-[var(--color-brand-accent)] transition-all duration-500 relative overflow-hidden rounded-full shadow-lg hover:shadow-[var(--color-brand-accent)]/40 hover:-translate-y-1">
             <span className="relative z-10">お問い合わせ</span>
-            <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
+            <div className="absolute inset-0 bg-[var(--color-brand-accent)] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
           </Link>
         </div>
       </section>
