@@ -21,7 +21,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-border mt-10">
               {/* Item 01 */}
-              <div className="group pt-12 pb-12 md:pr-12 md:border-r border-border min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
+              <div className="group py-8 md:py-12 md:pr-12 border-b md:border-b-0 md:border-r border-border min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
                 {/* Accent Top Line on Hover */}
                 <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
 
@@ -30,7 +30,7 @@ export default function Home() {
                     <span className="w-2 h-2 rounded-full bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
                     Strategy
                   </span>
-                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
+                  <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
                     行動の前に、<br />戦略を。
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">
@@ -41,7 +41,7 @@ export default function Home() {
               </div>
 
               {/* Item 02 */}
-              <div className="group pt-12 pb-12 md:px-12 md:border-r border-border min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
+              <div className="group py-8 md:py-12 md:px-12 border-b md:border-b-0 md:border-r border-border min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
                 <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
 
                 <div className="relative z-10 px-6 md:px-0">
@@ -49,7 +49,7 @@ export default function Home() {
                     <span className="w-2 h-2 rounded-full bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
                     Execution
                   </span>
-                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
+                  <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
                     混沌なき<br />実行。
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">
@@ -60,7 +60,7 @@ export default function Home() {
               </div>
 
               {/* Item 03 */}
-              <div className="group pt-12 pb-12 md:pl-12 min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
+              <div className="group py-8 md:py-12 md:pl-12 min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
                 <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
 
                 <div className="relative z-10 px-6 md:px-0">
@@ -68,7 +68,7 @@ export default function Home() {
                     <span className="w-2 h-2 rounded-full bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
                     Asset
                   </span>
-                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
+                  <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
                     成果を、<br />資産にする。
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">

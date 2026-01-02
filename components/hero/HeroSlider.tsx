@@ -90,7 +90,7 @@ export function HeroSlider() {
                                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.4] pointer-events-none mix-blend-multiply" style={{ backgroundSize: '40px 40px' }} />
 
                                 {/* Slide Content Wrapper */}
-                                <div className="relative z-10 mt-[-60px] lg:mt-0">
+                                <div className="relative z-10 mt-0 pt-16 md:pt-0 lg:mt-0">
                                     <motion.div
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
