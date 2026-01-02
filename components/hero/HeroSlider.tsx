@@ -85,7 +85,7 @@ export function HeroSlider() {
                         <div key={slide.id} className="absolute inset-0 w-full h-full flex flex-col lg:flex-row">
 
                             {/* --- LEFT: CONTENT AREA (Corporate/Info) --- */}
-                            <div className="relative w-full h-[55%] lg:h-full lg:w-[45%] bg-zinc-50/50 backdrop-blur-sm flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 lg:border-r border-zinc-200/50 border-b lg:border-b-0">
+                            <div className="relative w-full h-auto min-h-[55%] lg:h-full lg:w-[45%] bg-zinc-50 md:bg-zinc-50/50 md:backdrop-blur-sm flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 lg:border-r border-zinc-200/50 border-b lg:border-b-0 pb-24 md:pb-0 transition-all duration-300">
                                 {/* Grid Texture Overlay */}
                                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.4] pointer-events-none mix-blend-multiply" style={{ backgroundSize: '40px 40px' }} />
 
@@ -95,7 +95,7 @@ export function HeroSlider() {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: 0.3, duration: 0.8 }}
-                                        className="flex items-center gap-3 mb-8 md:mb-10"
+                                        className="flex items-center gap-3 mb-6 md:mb-10"
                                     >
                                         <div className="w-8 h-[1px] bg-[var(--color-brand-accent)]" />
                                         <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-[var(--color-brand-accent)]">
@@ -103,12 +103,12 @@ export function HeroSlider() {
                                         </span>
                                     </motion.div>
 
-                                    <div className="overflow-hidden">
+                                    <div className="overflow-hidden pb-1">
                                         <motion.h2
                                             initial={{ y: "100%" }}
                                             animate={{ y: 0 }}
                                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-                                            className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] text-zinc-900 mb-8 font-feature-settings-palt"
+                                            className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] text-zinc-900 mb-6 md:mb-8 font-feature-settings-palt"
                                         >
                                             {slide.title}
                                         </motion.h2>

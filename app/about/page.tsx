@@ -12,7 +12,7 @@ export default function AboutPage() {
         <main className="bg-background min-h-screen">
 
             {/* Hero Image */}
-            <div className="relative min-h-[80vh] md:h-[70vh] w-full overflow-hidden">
+            <div className="relative min-h-[80vh] md:h-[70vh] w-full overflow-hidden bg-zinc-900">
                 <Image
                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
                     alt="About Hero"
@@ -21,7 +21,7 @@ export default function AboutPage() {
                     priority
                 />
                 <div className="absolute inset-0 bg-black/60 md:bg-black/40" />
-                <div className="absolute bottom-0 left-0 w-full px-6 pb-16 md:pb-20">
+                <div className="absolute bottom-0 left-0 w-full px-6 pb-16 md:pb-20 z-20">
                     <div className="max-w-screen-xl mx-auto">
                         <ScrollReveal>
                             <h1 className="text-xl font-black tracking-widest uppercase mb-6 md:mb-8 text-white">Philosophy</h1>
