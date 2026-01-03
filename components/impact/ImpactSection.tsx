@@ -31,7 +31,7 @@ export function ImpactSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-black">
                     {STATS.map((stat, i) => (
                         <ScrollReveal key={i} delay={i * 0.1} className="group border-b md:border-b-0 md:border-r border-black last:border-r-0 p-8 md:p-12 hover:bg-black hover:text-white transition-colors duration-500 relative">
-                            <span className="text-[10px] font-bold tracking-[0.2em] mb-4 block opacity-50">{stat.caption}</span>
+                            <span className="text-xs font-bold tracking-[0.2em] mb-4 block opacity-50">{stat.caption}</span>
                             <div className="flex items-baseline mb-4">
                                 <span className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none group-hover:text-primary transition-colors duration-300">
                                     {stat.value}

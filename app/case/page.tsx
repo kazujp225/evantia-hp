@@ -71,7 +71,7 @@ export default function CasePage() {
                             <button
                                 key={cat.key}
                                 onClick={() => setActiveCategory(cat.key)}
-                                className={`whitespace-nowrap px-4 py-2 rounded-full text-base md:text-sm font-bold transition-colors ${
+                                className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition-colors ${
                                     activeCategory === cat.key
                                         ? 'bg-black text-white'
                                         : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
@@ -90,7 +90,7 @@ export default function CasePage() {
                                     <div className="block bg-gray-50 rounded-2xl p-6 md:p-10">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="px-3 py-1 bg-primary/10 text-primary text-sm md:text-xs font-bold rounded-full">{item.industry}</span>
-                                            <span className="text-base md:text-sm text-gray-500 font-medium">{item.company}</span>
+                                            <span className="text-sm text-gray-500 font-medium">{item.company}</span>
                                         </div>
 
                                         <h2 className="text-2xl md:text-4xl font-black leading-tight mb-4">

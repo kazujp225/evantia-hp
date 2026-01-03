@@ -36,7 +36,7 @@ export function NewsSection() {
                                     <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10">
                                         <div className="flex items-center gap-6 min-w-[200px]">
                                             <span className="font-mono text-xs md:text-sm text-muted-foreground group-hover:text-black transition-colors">{item.date}</span>
-                                            <span className={`text-[10px] font-bold px-2 py-0.5 border ${item.cat === 'RELEASE' ? 'bg-black text-white border-black' : 'text-gray-500 border-gray-200 bg-gray-50'}`}>
+                                            <span className={`text-xs font-bold px-2 py-0.5 border ${item.cat === 'RELEASE' ? 'bg-black text-white border-black' : 'text-gray-500 border-gray-200 bg-gray-50'}`}>
                                                 {item.cat}
                                             </span>
                                         </div>

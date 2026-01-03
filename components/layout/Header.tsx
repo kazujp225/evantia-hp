@@ -196,8 +196,8 @@ export const Header = () => {
                                             <span>090-2393-2820</span>
                                         </div>
                                         <div className="flex gap-6 mt-8">
-                                            <a href="#" className="hover:text-[hsl(150_50%_50%)] transition-colors">X (Twitter)</a>
-                                            <a href="#" className="hover:text-[hsl(150_50%_50%)] transition-colors">LinkedIn</a>
+                                            <Link href="/contact" className="hover:text-[hsl(150_50%_50%)] transition-colors">お問い合わせ</Link>
+                                            <Link href="/news" className="hover:text-[hsl(150_50%_50%)] transition-colors">ニュース</Link>
                                         </div>
                                     </motion.div>
                                 </div>

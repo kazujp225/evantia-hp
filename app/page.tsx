@@ -154,7 +154,7 @@ export default function Home() {
 
                     <div className="flex flex-wrap gap-2">
                       {item.tags.map((tag, t) => (
-                        <span key={t} className="text-[10px] font-bold border border-foreground/10 px-3 py-1 rounded-full text-muted-foreground group-hover:border-[var(--color-brand-accent)]/30 group-hover:text-[var(--color-brand-accent)] transition-colors bg-white">
+                        <span key={t} className="text-xs font-bold border border-foreground/10 px-3 py-1 rounded-full text-muted-foreground group-hover:border-[var(--color-brand-accent)]/30 group-hover:text-[var(--color-brand-accent)] transition-colors bg-white">
                           {tag}
                         </span>
                       ))}

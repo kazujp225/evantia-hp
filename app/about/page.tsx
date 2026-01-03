@@ -78,7 +78,7 @@ export default function AboutPage() {
                 {/* Corporate Philosophy */}
                 <div className="border-t border-border pt-20 mb-20">
                     <ScrollReveal>
-                        <h2 className="text-sm md:text-[10px] font-black tracking-[0.4em] uppercase mb-12">企業理念</h2>
+                        <h2 className="text-xs font-black tracking-[0.4em] uppercase mb-12">企業理念</h2>
                         <div className="max-w-3xl">
                             <p className="text-2xl md:text-3xl font-bold leading-relaxed mb-8">
                                 採用は「人を集めること」ではなく、<br />
@@ -153,7 +153,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="mt-40 text-center">
-                    <Link href="/contact" className="inline-flex items-center justify-center px-12 py-6 bg-foreground text-background text-base md:text-sm font-black tracking-[0.2em] hover:bg-primary hover:text-white transition-all">
+                    <Link href="/contact" className="inline-flex items-center justify-center px-12 py-6 bg-foreground text-background text-sm font-black tracking-[0.2em] hover:bg-primary hover:text-white transition-all">
                         お問い合わせ
                     </Link>
                 </div>

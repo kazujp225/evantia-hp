@@ -129,7 +129,7 @@ export function ServicesSection() {
               <div className={`absolute top-0 left-0 h-[3px] transition-all duration-500 ${currentIndex === i ? "w-full bg-[var(--color-brand-accent)] shadow-[0_0_15px_rgba(var(--color-brand-accent),0.6)]" : "w-0 bg-white/30 group-hover:w-full"
                 }`} aria-hidden="true" />
 
-              <span className={`text-[10px] font-bold tracking-widest uppercase block mb-2 transition-colors ${currentIndex === i ? "text-[var(--color-brand-accent)]" : "text-white/40 group-hover:text-[var(--color-brand-accent)]"
+              <span className={`text-xs font-bold tracking-widest uppercase block mb-2 transition-colors ${currentIndex === i ? "text-[var(--color-brand-accent)]" : "text-white/40 group-hover:text-[var(--color-brand-accent)]"
                 }`}>
                 0{i + 1} - {service.en}
               </span>

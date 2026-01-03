@@ -33,7 +33,7 @@ export default function NewsPage() {
                             <button
                                 key={cat.key}
                                 onClick={() => setActiveCategory(cat.key)}
-                                className={`text-base md:text-sm font-bold tracking-widest transition-colors whitespace-nowrap py-2 ${activeCategory === cat.key
+                                className={`text-sm font-bold tracking-widest transition-colors whitespace-nowrap py-2 ${activeCategory === cat.key
                                     ? 'text-black border-b-2 border-black -mb-[17px] pb-[15px]'
                                     : 'text-gray-400 hover:text-black'
                                     }`}
@@ -50,8 +50,8 @@ export default function NewsPage() {
                                     <div className="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-gray-200 hover:border-[var(--color-brand-accent)] transition-all duration-300 px-4 hover:bg-zinc-50">
                                         <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12">
                                             <div className="flex items-center gap-4">
-                                                <span className="font-mono text-base md:text-sm text-gray-400 group-hover:text-[var(--color-brand-accent)] transition-colors">{item.date}</span>
-                                                <span className={`text-sm md:text-[10px] font-bold px-3 py-1 border ${item.cat === 'RELEASE' ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]' : 'text-gray-500 border-gray-200 bg-white group-hover:border-[var(--color-brand-accent)] group-hover:text-[var(--color-brand-accent)]'} transition-colors uppercase tracking-wider`}>
+                                                <span className="font-mono text-sm text-gray-400 group-hover:text-[var(--color-brand-accent)] transition-colors">{item.date}</span>
+                                                <span className={`text-xs font-bold px-3 py-1 border ${item.cat === 'RELEASE' ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]' : 'text-gray-500 border-gray-200 bg-white group-hover:border-[var(--color-brand-accent)] group-hover:text-[var(--color-brand-accent)]'} transition-colors uppercase tracking-wider`}>
                                                     {item.cat}
                                                 </span>
                                             </div>
@@ -71,7 +71,7 @@ export default function NewsPage() {
 
                     {filteredNews.length > 0 && (
                         <div className="mt-20 text-center">
-                            <button className="px-12 py-4 border border-gray-200 hover:border-black rounded-full transition-all duration-300 text-base md:text-sm font-bold tracking-widest hover:bg-black hover:text-white">
+                            <button className="px-12 py-4 border border-gray-200 hover:border-black rounded-full transition-all duration-300 text-sm font-bold tracking-widest hover:bg-black hover:text-white">
                                 もっと見る
                             </button>
                         </div>

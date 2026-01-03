@@ -46,7 +46,7 @@ export default function RecruitPage() {
                 <div className="container-custom">
                     <ScrollReveal className="flex justify-between items-end mb-24 border-b border-black pb-8">
                         <h2 className="text-4xl font-black">INTERVIEW</h2>
-                        <Link href="/recruit/interview" className="font-bold text-base md:text-sm tracking-widest hover:text-primary transition-colors flex items-center gap-2">
+                        <Link href="/recruit/interview" className="font-bold text-sm tracking-widest hover:text-primary transition-colors flex items-center gap-2">
                             すべて見る <ArrowRight size={16} />
                         </Link>
                     </ScrollReveal>
@@ -77,7 +77,7 @@ export default function RecruitPage() {
                                         <h3 className="text-2xl md:text-4xl font-bold leading-tight group-hover:text-primary transition-colors">
                                             {member.title}
                                         </h3>
-                                        <div className="mt-8 flex items-center gap-2 font-bold text-base md:text-sm opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                                        <div className="mt-8 flex items-center gap-2 font-bold text-sm opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
                                             記事を読む <ArrowRight size={16} />
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@ export default function RecruitPage() {
                                 <Link href="/recruit/entry" className="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-white/20 hover:bg-white/5 transition-all duration-300 px-6 md:px-10">
                                     <div className="mb-4 md:mb-0">
                                         <h3 className="text-2xl font-bold mb-2 group-hover:text-[var(--color-brand-accent)] transition-colors">{job}</h3>
-                                        <span className="text-base md:text-sm font-mono opacity-50 group-hover:opacity-100 text-[var(--color-brand-accent)]">正社員 / 東京, 大阪</span>
+                                        <span className="text-sm font-mono opacity-50 group-hover:opacity-100 text-[var(--color-brand-accent)]">正社員 / 東京, 大阪</span>
                                     </div>
                                     <div className="w-12 h-12 rounded-full border border-white/30 group-hover:border-[var(--color-brand-accent)] group-hover:bg-[var(--color-brand-accent)] flex items-center justify-center transition-all duration-500">
                                         <ArrowUpRight size={20} className="text-white" />

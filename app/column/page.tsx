@@ -9,7 +9,7 @@ import Link from "next/link";
 const ARTICLES = [
     {
         id: 1,
-        date: "2024.01.05",
+        date: "2026.01.05",
         cat: "KNOW-HOW",
         catJp: "ノウハウ",
         title: "エンジニア採用におけるスカウトメールの開封率を改善する3つのポイント",
@@ -17,7 +17,7 @@ const ARTICLES = [
     },
     {
         id: 2,
-        date: "2023.12.20",
+        date: "2026.01.03",
         cat: "TREND",
         catJp: "トレンド",
         title: "2026年新卒採用予測：早期化する市場で成果を出すためのロードマップ",
@@ -25,7 +25,7 @@ const ARTICLES = [
     },
     {
         id: 3,
-        date: "2023.12.10",
+        date: "2026.01.02",
         cat: "INTERVIEW",
         catJp: "インタビュー",
         title: "「採用広報」はなぜ失敗するのか？PV数だけを追わない本質的なブランディング手法",
@@ -33,7 +33,7 @@ const ARTICLES = [
     },
     {
         id: 4,
-        date: "2023.11.28",
+        date: "2026.01.01",
         cat: "KNOW-HOW",
         catJp: "ノウハウ",
         title: "面接官トレーニングの重要性：見極めと魅力付けを両立する技術",
@@ -41,7 +41,7 @@ const ARTICLES = [
     },
     {
         id: 5,
-        date: "2023.11.15",
+        date: "2026.01.01",
         cat: "NEWS",
         catJp: "ニュース",
         title: "株式会社エバンティア、シリーズA調達完了のお知らせ",
@@ -49,7 +49,7 @@ const ARTICLES = [
     },
     {
         id: 6,
-        date: "2023.11.01",
+        date: "2026.01.01",
         cat: "CULTURE",
         catJp: "カルチャー",
         title: "成長を文化にするために。私たちが大切にしている7つの行動指針",
@@ -85,7 +85,7 @@ export default function ColumnPage() {
                             <button
                                 key={cat.key}
                                 onClick={() => setActiveCategory(cat.key)}
-                                className={`text-base md:text-sm font-bold tracking-widest transition-colors whitespace-nowrap py-2 ${
+                                className={`text-sm font-bold tracking-widest transition-colors whitespace-nowrap py-2 ${
                                     activeCategory === cat.key
                                         ? 'text-black border-b-2 border-black -mb-[17px] pb-[15px]'
                                         : 'text-gray-400 hover:text-black'
@@ -103,7 +103,7 @@ export default function ColumnPage() {
                                     <div className="group block py-12 border-b border-border">
                                         <div className="grid md:grid-cols-[200px_1fr] gap-8">
                                             <div className="flex flex-col gap-2">
-                                                <span className="font-mono text-base md:text-sm text-gray-400">{article.date}</span>
+                                                <span className="font-mono text-sm text-gray-400">{article.date}</span>
                                                 <span className="font-bold text-sm md:text-xs tracking-widest text-primary uppercase">{article.catJp}</span>
                                             </div>
 
@@ -128,7 +128,7 @@ export default function ColumnPage() {
 
                     {filteredArticles.length > 0 && (
                         <div className="mt-20 text-center">
-                            <button className="px-12 py-4 border border-border rounded-full hover:bg-black hover:text-white transition-all duration-300 text-base md:text-sm font-bold tracking-widest">
+                            <button className="px-12 py-4 border border-border rounded-full hover:bg-black hover:text-white transition-all duration-300 text-sm font-bold tracking-widest">
                                 もっと見る
                             </button>
                         </div>

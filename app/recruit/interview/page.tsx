@@ -67,7 +67,7 @@ export default function InterviewPage() {
 
             {/* Back to Recruit */}
             <div className="container-custom py-8">
-                <Link href="/recruit" className="inline-flex items-center gap-2 text-base md:text-sm font-bold text-gray-400 hover:text-black transition-colors">
+                <Link href="/recruit" className="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-black transition-colors">
                     <ArrowLeft size={16} /> 採用トップへ
                 </Link>
             </div>
@@ -90,13 +90,13 @@ export default function InterviewPage() {
 
                                     <div className="flex flex-col">
                                         <div className="flex justify-between items-baseline mb-3">
-                                            <p className="font-bold text-base md:text-sm tracking-widest uppercase text-gray-400 group-hover:text-primary transition-colors">{interview.role}</p>
+                                            <p className="font-bold text-sm tracking-widest uppercase text-gray-400 group-hover:text-primary transition-colors">{interview.role}</p>
                                             <span className="font-mono text-sm md:text-xs text-gray-300">{interview.joined}</span>
                                         </div>
                                         <h3 className="font-bold text-xl md:text-2xl leading-snug mb-4 group-hover:text-primary transition-colors min-h-[3.5em]">
                                             {interview.title}
                                         </h3>
-                                        <div className="mt-auto flex items-center gap-2 font-bold text-base md:text-sm opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                                        <div className="mt-auto flex items-center gap-2 font-bold text-sm opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
                                             記事を読む <ArrowRight size={16} />
                                         </div>
                                     </div>
