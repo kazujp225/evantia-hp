@@ -17,7 +17,8 @@ const NEWS_TICKER = [
 const SLIDES = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000",
+        image: "/assets/images/hero-philosophy.jpg",
+        imageAlt: "ビジネスミーティングの様子 - チームが戦略について議論している",
         label: "OUR PHILOSOPHY",
         title: (
             <>
@@ -25,13 +26,15 @@ const SLIDES = [
                 <span className="text-zinc-400">最大化する</span>
             </>
         ),
+        titleText: "挑戦の価値と面白さを最大化する",
         description: "人も企業も「より良い未来」を実現できる場として。\n挑戦する人の潜在力を\n最大限に引き出す場所でありたい。",
         btnText: "私たちについて",
         btnLink: "/about"
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000",
+        image: "/assets/images/hero-selfdriving.jpg",
+        imageAlt: "モダンなオフィスビル - 企業の成長と自立を象徴",
         label: "SELF-DRIVING",
         title: (
             <>
@@ -39,13 +42,15 @@ const SLIDES = [
                 <span className="text-zinc-400">持続的な「自走力」を。</span>
             </>
         ),
+        titleText: "一時的な成功より、持続的な自走力を",
         description: "本質的な課題解決で、貴社の採用力を強化。\n「自走体制の構築」を最終目標に\n採用課題の解決を支援します。",
         btnText: "サービスを見る",
         btnLink: "/service"
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=2000",
+        image: "/assets/images/hero-team.jpg",
+        imageAlt: "プロフェッショナルチームの協働 - 少数精鋭による高品質なサービス",
         label: "ELITE TEAM",
         title: (
             <>
@@ -53,6 +58,7 @@ const SLIDES = [
                 <span className="text-zinc-400">少数精鋭の機動力。</span>
             </>
         ),
+        titleText: "豊富な経験と少数精鋭の機動力",
         description: "採用支援の豊富な実績を持つ\n経験豊かなメンバーで構成されたチーム。\n「顔の見えるサービス」で成果を追求します。",
         btnText: "お問い合わせ",
         btnLink: "/contact"
@@ -71,16 +77,20 @@ export function HeroSlider() {
     }, []);
 
     return (
-        <section className="relative w-full h-[100dvh] md:h-screen overflow-hidden bg-white text-zinc-900 border-b border-zinc-200">
+        <section
+            className="relative w-full h-[100dvh] md:h-screen overflow-hidden bg-white text-zinc-900 border-b border-zinc-200"
+            aria-label="ヒーロースライダー"
+            aria-roledescription="カルーセル"
+        >
             {/* --- MEGA BRAND WATERMARK --- */}
-            <div className="absolute top-[15%] left-[-5%] z-0 select-none pointer-events-none opacity-[0.03]">
+            <div className="absolute top-[15%] left-[-5%] z-0 select-none pointer-events-none opacity-[0.03]" aria-hidden="true">
                 <span className="text-[25vw] font-black leading-none tracking-tighter text-primary">
                     EVANTIA
                 </span>
             </div>
 
             {/* --- LOGO WATERMARK --- */}
-            <div className="absolute bottom-[10%] right-[5%] z-0 select-none pointer-events-none opacity-[0.04]">
+            <div className="absolute bottom-[10%] right-[5%] z-0 select-none pointer-events-none opacity-[0.04]" aria-hidden="true">
                 <Image
                     src="/logo.png"
                     alt=""
@@ -92,7 +102,13 @@ export function HeroSlider() {
             <AnimatePresence mode="wait">
                 {SLIDES.map((slide, index) => (
                     index === currentSlide && (
-                        <div key={slide.id} className="absolute inset-0 w-full h-full flex flex-col lg:flex-row">
+                        <div
+                            key={slide.id}
+                            className="absolute inset-0 w-full h-full flex flex-col lg:flex-row"
+                            role="group"
+                            aria-roledescription="スライド"
+                            aria-label={`${index + 1}/${SLIDES.length}: ${slide.titleText}`}
+                        >
 
                             {/* --- LEFT: CONTENT AREA (Corporate/Info) --- */}
                             <div className="relative w-full h-auto min-h-[55%] lg:h-full lg:w-[45%] bg-zinc-50 md:bg-zinc-50/50 md:backdrop-blur-sm flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 lg:border-r border-zinc-200/50 border-b lg:border-b-0 pb-24 md:pb-0 transition-all duration-300">
@@ -141,8 +157,9 @@ export function HeroSlider() {
                                         <Link
                                             href={slide.btnLink}
                                             className="group inline-flex items-center gap-4 text-sm font-black tracking-[0.2em] text-[var(--color-primary)] uppercase"
+                                            aria-label={`${slide.btnText}ページへ`}
                                         >
-                                            <div className="w-14 h-14 border-2 border-[var(--color-primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:text-white group-hover:shadow-lg transition-all duration-300">
+                                            <div className="w-14 h-14 border-2 border-[var(--color-primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:text-white group-hover:shadow-lg transition-all duration-300" aria-hidden="true">
                                                 <ArrowRight className="w-5 h-5 transition-colors" />
                                             </div>
                                             <span className="group-hover:translate-x-2 transition-transform duration-300">{slide.btnText}</span>
@@ -171,8 +188,8 @@ export function HeroSlider() {
                                             </motion.div>
                                         </AnimatePresence>
                                     </div>
-                                    <Link href="/news" className="hidden md:flex items-center text-[10px] font-bold text-zinc-400 hover:text-zinc-900 transition-colors uppercase gap-1 shrink-0">
-                                        View All <ChevronRight className="w-3 h-3" />
+                                    <Link href="/news" className="hidden md:flex items-center text-[10px] font-bold text-zinc-400 hover:text-zinc-900 transition-colors uppercase gap-1 shrink-0" aria-label="すべてのニュースを見る">
+                                        View All <ChevronRight className="w-3 h-3" aria-hidden="true" />
                                     </Link>
                                 </div>
                             </div>
@@ -187,7 +204,7 @@ export function HeroSlider() {
                                 >
                                     <Image
                                         src={slide.image}
-                                        alt={slide.label}
+                                        alt={slide.imageAlt}
                                         fill
                                         className="object-cover"
                                         priority
@@ -197,11 +214,14 @@ export function HeroSlider() {
                                 </motion.div>
 
                                 {/* Slide Progress / Navigation (Right Side) */}
-                                <div className="absolute bottom-10 right-10 flex gap-1 z-20">
-                                    {SLIDES.map((_, i) => (
+                                <div className="absolute bottom-10 right-10 flex gap-1 z-20" role="tablist" aria-label="スライド選択">
+                                    {SLIDES.map((s, i) => (
                                         <button
                                             key={i}
                                             onClick={() => setCurrentSlide(i)}
+                                            role="tab"
+                                            aria-selected={currentSlide === i}
+                                            aria-label={`スライド${i + 1}: ${s.titleText}`}
                                             className={cn(
                                                 "h-1 transition-all duration-500",
                                                 currentSlide === i ? "w-12 bg-white" : "w-3 bg-white/40 hover:bg-white/60"

@@ -40,13 +40,13 @@ const FOOTER_MAP = [
 
 export const Footer = () => {
     return (
-        <footer className="bg-[var(--color-primary)] text-white pt-32 pb-6 relative overflow-hidden border-t-2 border-[var(--color-brand-accent)] h-full">
+        <footer role="contentinfo" className="bg-[var(--color-primary)] text-white pt-32 pb-6 relative overflow-hidden border-t-2 border-[var(--color-brand-accent)] h-full">
             {/* Texture Overlay */}
             <div className="absolute inset-0 bg-[#050505] opacity-90 z-0" />
-            <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-0 mix-blend-overlay" style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }}></div>
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-0 mix-blend-overlay" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }}></div>
 
             {/* Massive Background Logo Anchoring - with Gradient */}
-            <div className="absolute bottom-[-5%] left-[-2%] select-none pointer-events-none z-0 overflow-hidden w-full">
+            <div className="absolute bottom-[-5%] left-[-2%] select-none pointer-events-none z-0 overflow-hidden w-full" aria-hidden="true">
                 <span className="text-[25vw] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white/[0.05] to-transparent leading-none whitespace-nowrap">
                     EVANTIA
                 </span>
@@ -71,8 +71,8 @@ export const Footer = () => {
                                 まずはお気軽にご相談ください。
                             </p>
                         </div>
-                        <Link href="/contact" className="group flex items-center justify-center gap-4 bg-white text-black px-12 py-5 text-lg font-bold tracking-widest hover:bg-[var(--color-brand-accent)] hover:text-white transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(0,100,200,0.4)]">
-                            お問い合わせ <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        <Link href="/contact" className="group flex items-center justify-center gap-4 bg-white text-black px-12 py-5 text-lg font-bold tracking-widest hover:bg-[var(--color-brand-accent)] hover:text-white transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(0,100,200,0.4)]" aria-label="お問い合わせページへ">
+                            お問い合わせ <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
                         </Link>
                     </div>
                 </div>
@@ -101,12 +101,12 @@ export const Footer = () => {
                         </address>
                     </div>
 
-                    <div className="col-span-2 md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <nav className="col-span-2 md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8" role="navigation" aria-label="フッターナビゲーション">
                         {FOOTER_MAP.map((section, i) => (
                             <div key={i} className="flex flex-col">
-                                <div className="h-px w-8 bg-white/30 mb-6 group-hover:w-12 transition-all duration-300"></div>
+                                <div className="h-px w-8 bg-white/30 mb-6 group-hover:w-12 transition-all duration-300" aria-hidden="true"></div>
                                 <h3 className="font-extrabold text-sm tracking-[0.2em] text-[var(--color-brand-accent)] mb-6 uppercase">{section.category}</h3>
-                                <ul className="space-y-3">
+                                <ul className="space-y-3" role="list">
                                     {section.links.map((link) => (
                                         <li key={link.href}>
                                             <Link href={link.href} className="text-base font-bold text-white hover:text-[var(--color-brand-accent)] hover:pl-2 transition-all duration-300 block py-0.5">
@@ -117,7 +117,7 @@ export const Footer = () => {
                                 </ul>
                             </div>
                         ))}
-                    </div>
+                    </nav>
                 </div>
 
                 {/* 3. Bottom Legal */}
@@ -126,7 +126,7 @@ export const Footer = () => {
                         <Link href="/privacy" className="hover:text-[var(--color-brand-accent)] transition-colors">プライバシーポリシー</Link>
                         <Link href="/security" className="hover:text-[var(--color-brand-accent)] transition-colors">情報セキュリティ基本方針</Link>
                         <Link href="/terms" className="hover:text-[var(--color-brand-accent)] transition-colors">利用規約</Link>
-                        <Link href="/sitemap" className="hover:text-[var(--color-brand-accent)] transition-colors">サイトマップ</Link>
+                        <Link href="/site-map" className="hover:text-[var(--color-brand-accent)] transition-colors">サイトマップ</Link>
                     </div>
                     <p>© 2026 EVANTIA Inc. All Rights Reserved.</p>
                 </div>

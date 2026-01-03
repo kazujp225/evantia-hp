@@ -1,9 +1,12 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-export const metadata = {
-    title: "RPO (Recruitment Process Outsourcing) | Service",
-    description: "採用代行（RPO）",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "RPO（採用代行）",
+    description: "採用業務のプロフェッショナル代行。応募者対応、面接調整、選考管理など採用プロセス全体をサポート。貴社の採用担当者の負担を軽減します。",
+    alternates: { canonical: "/service/rpo" },
 };
 
 export default function ServiceRPOPage() {

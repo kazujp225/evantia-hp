@@ -3,9 +3,18 @@ import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PageHeader } from "@/components/ui/PageHeader";
 
-export const metadata = {
-    title: "Contact | EVANTIA",
-    description: "対話から始めませんか。",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "お問い合わせ",
+    description: "採用課題のご相談、採用コンサルティング・RPO・スカウト代行のお見積もり依頼など、お気軽にお問い合わせください。株式会社エバンティアが貴社の採用課題解決をサポートします。",
+    openGraph: {
+        title: "お問い合わせ | 株式会社エバンティア",
+        description: "採用課題のご相談、サービスのお見積もり依頼など、お気軽にお問い合わせください。",
+    },
+    alternates: {
+        canonical: "/contact",
+    },
 };
 
 export default function ContactPage() {

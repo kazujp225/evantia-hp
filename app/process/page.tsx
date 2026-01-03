@@ -3,9 +3,12 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-export const metadata = {
-    title: "Process | EVANTIA",
-    description: "再現性のある採用体制構築のプロセスをご紹介します。",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "ご支援の流れ",
+    description: "エバンティアの採用支援プロセス。戦略設計→実行・仕組み化→移管・自走の3ステップで、再現性のある採用体制を構築します。",
+    alternates: { canonical: "/process" },
 };
 
 export default function ProcessPage() {

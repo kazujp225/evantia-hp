@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 
 export const ScrollReveal = ({
@@ -14,6 +14,16 @@ export const ScrollReveal = ({
 }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const prefersReducedMotion = useReducedMotion();
+
+    // Skip animations if user prefers reduced motion
+    if (prefersReducedMotion) {
+        return (
+            <div className={className}>
+                {children}
+            </div>
+        );
+    }
 
     return (
         <motion.div

@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 株式会社エバンティア コーポレートサイト
 
-## Getting Started
+株式会社エバンティアの公式コーポレートサイトです。
 
-First, run the development server:
+## 技術スタック
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Animation**: Framer Motion
+- **Typography**: Noto Sans JP + Manrope
+- **Language**: TypeScript
+
+## 機能
+
+- レスポンシブデザイン
+- SEO最適化（メタデータ、構造化データ、サイトマップ）
+- アクセシビリティ対応（WCAG準拠）
+- パフォーマンス最適化
+
+## ディレクトリ構成
+
+```
+├── app/                    # ページコンポーネント
+│   ├── about/             # 会社概要
+│   ├── service/           # 事業内容
+│   ├── recruit/           # 採用情報
+│   ├── contact/           # お問い合わせ
+│   └── ...
+├── components/            # 共通コンポーネント
+│   ├── layout/           # Header, Footer
+│   ├── ui/               # UI部品
+│   ├── hero/             # ヒーローセクション
+│   ├── services/         # サービスセクション
+│   ├── home/             # ホームページ専用
+│   └── seo/              # SEO関連
+├── lib/                   # ユーティリティ
+└── public/               # 静的ファイル
+    └── assets/images/    # 画像
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 開発
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# 依存関係のインストール
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 開発サーバー起動
+npm run dev
 
-## Learn More
+# ビルド
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# 本番サーバー起動
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO対策
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 全ページに最適化されたメタデータ
+- Open Graph / Twitter Card対応
+- JSON-LD構造化データ（Organization, LocalBusiness, Service）
+- 動的サイトマップ生成
+- robots.txt自動生成
 
-## Deploy on Vercel
+## アクセシビリティ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- WCAG 2.1 AA準拠
+- スキップリンク
+- 適切なaria属性
+- reduced motion対応
+- キーボードナビゲーション
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## デプロイ
+
+Render.comでホスティング。`render.yaml`で設定済み。
+
+## ライセンス
+
+All Rights Reserved - 株式会社エバンティア

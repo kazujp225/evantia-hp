@@ -36,6 +36,7 @@ export const Header = () => {
     return (
         <>
             <header
+                role="banner"
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out px-4 md:px-8",
                     isScrolled
@@ -50,17 +51,21 @@ export const Header = () => {
                         <Link
                             href="/contact"
                             className="hidden md:flex relative overflow-hidden bg-primary text-white px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
+                            aria-label="お問い合わせページへ"
                         >
                             <span className="relative z-10 flex items-center gap-2">
-                                CONTACT <ArrowUpRight size={16} />
+                                CONTACT <ArrowUpRight size={16} aria-hidden="true" />
                             </span>
                         </Link>
 
                         <button
                             className="w-12 h-12 rounded-full border border-primary/20 bg-white/50 backdrop-blur hover:bg-primary hover:text-white transition-all flex items-center justify-center relative z-50"
                             onClick={() => setIsOpen(!isOpen)}
+                            aria-expanded={isOpen}
+                            aria-controls="main-navigation"
+                            aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
                         >
-                            {isOpen ? <X size={24} /> : <Menu size={24} />}
+                            {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
                         </button>
                     </div>
                 </div>
@@ -70,6 +75,10 @@ export const Header = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
+                        id="main-navigation"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="メインナビゲーション"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -90,7 +99,7 @@ export const Header = () => {
                         <div className="h-full flex flex-col">
                             {/* Mobile Layout */}
                             <div className="flex-1 flex flex-col px-8 pt-28 pb-8 md:hidden">
-                                <nav className="flex flex-col gap-4">
+                                <nav role="navigation" aria-label="モバイルメニュー" className="flex flex-col gap-4">
                                     {NAV_ITEMS.map((item, i) => (
                                         <motion.div
                                             key={item.href}
@@ -106,7 +115,7 @@ export const Header = () => {
                                                     <span className="text-2xl font-black block">{item.label}</span>
                                                     <span className="text-xs font-bold tracking-widest text-white/40">{item.en}</span>
                                                 </div>
-                                                <ArrowUpRight size={20} className="text-white/40 group-hover:text-[hsl(150_50%_50%)] transition-colors" />
+                                                <ArrowUpRight size={20} className="text-white/40 group-hover:text-[hsl(150_50%_50%)] transition-colors" aria-hidden="true" />
                                             </Link>
                                         </motion.div>
                                     ))}
@@ -140,7 +149,7 @@ export const Header = () => {
                             {/* Desktop Layout */}
                             <div className="hidden md:flex h-full items-center justify-center">
                                 <div className="grid grid-cols-[1fr_300px] items-center gap-0 max-w-6xl w-full px-8">
-                                    <nav className="flex flex-col gap-6">
+                                    <nav role="navigation" aria-label="メインメニュー" className="flex flex-col gap-6">
                                         {NAV_ITEMS.map((item, i) => (
                                             <motion.div
                                                 key={item.href}

@@ -3,9 +3,18 @@ import Image from "next/image";
 import { ArrowRight, Target, Layers, Trophy } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-export const metadata = {
-    title: "Services | EVANTIA",
-    description: "一時的な成功より、持続的な「自走力」を。本質的な課題解決で、貴社の採用力を強化します。",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "事業内容・サービス",
+    description: "採用コンサルティング、RPO（採用代行）、スカウト代行、採用ブランディング。戦略設計から実行、内製化支援まで一貫してサポート。貴社の採用力を強化し、自走体制の構築を支援します。",
+    openGraph: {
+        title: "事業内容・サービス | 株式会社エバンティア",
+        description: "採用コンサルティング、RPO（採用代行）、スカウト代行。戦略設計から実行、内製化支援まで一貫サポート。",
+    },
+    alternates: {
+        canonical: "/service",
+    },
 };
 
 export default function ServicePage() {

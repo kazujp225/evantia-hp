@@ -1,9 +1,12 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-export const metadata = {
-    title: "Company | 会社概要",
-    description: "株式会社エバンティアの会社概要。",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "会社情報",
+    description: "株式会社エバンティアの会社概要。所在地：大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル6F。採用コンサルティング・RPO・スカウト代行を提供する採用支援の専門企業です。",
+    alternates: { canonical: "/about/company" },
 };
 
 export default function CompanyPage() {

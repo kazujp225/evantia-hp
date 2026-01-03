@@ -1,9 +1,12 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-export const metadata = {
-    title: "Creative / Branding | Service",
-    description: "クリエイティブ・ブランディング",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "クリエイティブ・ブランディング",
+    description: "採用ブランドを強化するクリエイティブ制作。採用サイト、求人原稿、会社説明資料など、候補者の心に響くコンテンツを制作します。",
+    alternates: { canonical: "/service/creative" },
 };
 
 export default function ServiceCreativePage() {

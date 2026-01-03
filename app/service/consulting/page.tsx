@@ -1,9 +1,12 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-export const metadata = {
-    title: "Recruitment Consulting | Service",
-    description: "採用コンサルティング",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "採用コンサルティング",
+    description: "採用戦略の構築から実行支援まで。市場分析、ペルソナ設計、採用フロー設計、KPI設定など、貴社の採用課題を根本から解決します。",
+    alternates: { canonical: "/service/consulting" },
 };
 
 export default function ServiceConsultingPage() {

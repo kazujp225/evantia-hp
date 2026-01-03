@@ -8,20 +8,21 @@ export function NewsSection() {
     const latestNews = NEWS.slice(0, 3);
 
     return (
-        <section className="py-20 md:py-32 px-6 border-b border-border/40">
+        <section className="py-20 md:py-32 px-6 border-b border-border/40" aria-labelledby="news-heading">
             <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24">
 
                 {/* Header */}
                 <div className="md:w-1/4">
                     <ScrollReveal>
-                        <h2 className="text-sm font-bold tracking-[0.3em] uppercase text-muted-foreground mb-4">Latest Info</h2>
-                        <p className="text-4xl font-extrabold tracking-tight mb-8">News</p>
+                        <span className="text-sm font-bold tracking-[0.3em] uppercase text-muted-foreground mb-4 block">Latest Info</span>
+                        <h2 id="news-heading" className="text-4xl font-extrabold tracking-tight mb-8">News</h2>
                         <Link
                             href="/news"
                             className="inline-flex items-center gap-2 text-sm font-bold tracking-widest hover:text-primary transition-colors group"
+                            aria-label="すべてのニュースを見る"
                         >
                             <span className="border-b border-transparent group-hover:border-primary pb-0.5 transition-all">VIEW ALL</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                         </Link>
                     </ScrollReveal>
                 </div>

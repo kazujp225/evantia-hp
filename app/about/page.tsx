@@ -2,9 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-export const metadata = {
-    title: "About | EVANTIA",
-    description: "未来に責任を持つことだ。",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "会社概要・ミッション",
+    description: "株式会社エバンティアの企業理念・ミッション。「挑戦の価値と面白さを最大化する」をビジョンに、採用コンサルティング・RPO・スカウト代行を通じて企業の成長を支援します。",
+    openGraph: {
+        title: "会社概要・ミッション | 株式会社エバンティア",
+        description: "「挑戦の価値と面白さを最大化する」をビジョンに、採用支援を通じて企業の成長を支援します。",
+    },
+    alternates: {
+        canonical: "/about",
+    },
 };
 
 export default function AboutPage() {

@@ -1,9 +1,12 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-export const metadata = {
-    title: "Scout Agency | Service",
-    description: "スカウト代行",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "スカウト代行",
+    description: "ダイレクトリクルーティングのプロフェッショナル代行。ビズリーチ、Wantedly、Green等各種媒体でのスカウト送信・返信対応を代行します。",
+    alternates: { canonical: "/service/scout" },
 };
 
 export default function ServiceScoutPage() {

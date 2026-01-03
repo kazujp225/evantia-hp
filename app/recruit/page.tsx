@@ -4,9 +4,12 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-export const metadata = {
-    title: "Recruit | 採用情報",
-    description: "エバンティアの採用情報ページです。",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "採用情報",
+    description: "株式会社エバンティアの採用情報。成長意欲が高く、課題解決に真摯に向き合う仲間を募集中。採用コンサルタント、RPO担当、スカウト代行担当など。",
+    alternates: { canonical: "/recruit" },
 };
 
 export default function RecruitPage() {

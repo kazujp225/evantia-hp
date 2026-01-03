@@ -11,19 +11,22 @@ const SERVICES = [
     title: "採用戦略を設計する",
     en: "Strategy Design",
     sub: "採用を経営戦略と連動させる",
-    image: "/assets/images/service-strategy.jpg"
+    image: "/assets/images/service-strategy.jpg",
+    imageAlt: "採用戦略設計 - ビジネス戦略と採用の連携を表すイメージ"
   },
   {
     title: "実行を担う",
     en: "Execution",
     sub: "現場の負担を軽減しながら推進する",
-    image: "/assets/images/service-execution.jpg"
+    image: "/assets/images/service-execution.jpg",
+    imageAlt: "採用実行支援 - チームによる効率的な採用活動を表すイメージ"
   },
   {
     title: "仕組みにする",
     en: "Systematization",
     sub: "持続可能な採用体制を構築する",
-    image: "/assets/images/service-marketing.jpg"
+    image: "/assets/images/service-marketing.jpg",
+    imageAlt: "採用の仕組み化 - 持続可能な採用体制の構築を表すイメージ"
   }
 ];
 
@@ -38,10 +41,13 @@ export function ServicesSection() {
   }, []);
 
   return (
-    <section className="relative py-20 px-6 border-b border-border/40 overflow-hidden min-h-[500px] md:min-h-[550px]">
+    <section
+      className="relative py-20 px-6 border-b border-border/40 overflow-hidden min-h-[500px] md:min-h-[550px]"
+      aria-label="サービス紹介"
+      aria-roledescription="カルーセル"
+    >
       {/* Background Slideshow */}
-      {/* Background Slideshow */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" aria-hidden="true">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -53,7 +59,7 @@ export function ServicesSection() {
           >
             <Image
               src={SERVICES[currentIndex].image}
-              alt="Background"
+              alt={SERVICES[currentIndex].imageAlt}
               fill
               className="object-cover"
             />
@@ -101,23 +107,27 @@ export function ServicesSection() {
               <Link
                 href="/service"
                 className="inline-flex items-center gap-3 text-white text-sm font-bold tracking-widest hover:gap-5 transition-all group hover:text-[var(--color-brand-accent)]"
+                aria-label="サービス詳細ページへ"
               >
-                <span className="border-b border-transparent group-hover:border-[var(--color-brand-accent)] pb-1">詳しく見る</span> <ArrowRight className="w-4 h-4" />
+                <span className="border-b border-transparent group-hover:border-[var(--color-brand-accent)] pb-1">詳しく見る</span> <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
             </motion.div>
           </AnimatePresence>
         </div>
 
         {/* Navigation Tabs - Refined Architectural List */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mt-12 md:mt-20 border-t border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mt-12 md:mt-20 border-t border-white/10" role="tablist" aria-label="サービス選択">
           {SERVICES.map((service, i) => (
             <button
               key={i}
               onClick={() => setCurrentIndex(i)}
+              role="tab"
+              aria-selected={currentIndex === i}
+              aria-label={`${service.title}を表示`}
               className={`pt-6 pb-2 px-2 text-left transition-all duration-300 relative group`}
             >
               <div className={`absolute top-0 left-0 h-[3px] transition-all duration-500 ${currentIndex === i ? "w-full bg-[var(--color-brand-accent)] shadow-[0_0_15px_rgba(var(--color-brand-accent),0.6)]" : "w-0 bg-white/30 group-hover:w-full"
-                }`} />
+                }`} aria-hidden="true" />
 
               <span className={`text-[10px] font-bold tracking-widest uppercase block mb-2 transition-colors ${currentIndex === i ? "text-[var(--color-brand-accent)]" : "text-white/40 group-hover:text-[var(--color-brand-accent)]"
                 }`}>

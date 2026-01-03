@@ -16,7 +16,7 @@ export default function Home() {
       <HeroSlider />
 
       {/* 2. VALUE SUMMARY */}
-      <section className="py-16 md:py-24 px-6 border-b border-border/40">
+      <section className="py-16 md:py-24 px-6 border-b border-border/40" aria-label="バリューサマリー">
         <div className="max-w-screen-xl mx-auto">
           <ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-border mt-10">
@@ -85,15 +85,15 @@ export default function Home() {
 
 
       {/* 4. PROCESS OF TRANSFORMATION */}
-      <section className="py-24 md:py-40 px-6 border-b border-border/40 relative overflow-hidden bg-background">
+      <section className="py-24 md:py-40 px-6 border-b border-border/40 relative overflow-hidden bg-background" aria-labelledby="process-heading">
         <div className="max-w-screen-xl mx-auto relative z-10">
           <div className="mb-20 md:mb-32">
             <span className="text-xs font-bold tracking-[0.2em] text-[var(--color-brand-accent)] uppercase mb-6 block flex items-center gap-4">
               <span className="w-12 h-[2px] bg-[var(--color-brand-accent)]"></span>
               Process of Transformation
             </span>
-            <h2 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] text-foreground mb-8">
-              変革のプロセス<span className="text-[var(--color-brand-accent)]">.</span>
+            <h2 id="process-heading" className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] text-foreground mb-8">
+              変革のプロセス<span className="text-[var(--color-brand-accent)]" aria-hidden="true">.</span>
             </h2>
             <p className="text-lg text-muted-foreground font-medium max-w-xl leading-relaxed">
               場当たり的な採用から、計画的な採用へ。<br />
@@ -162,7 +162,7 @@ export default function Home() {
                   </div>
 
                   {/* Arrow Icon Reveal */}
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--color-brand-accent)] hidden md:block">
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--color-brand-accent)] hidden md:block" aria-hidden="true">
                     <ArrowRight className="w-8 h-8" />
                   </div>
 
@@ -172,10 +172,10 @@ export default function Home() {
           </div>
 
           <div className="mt-20 md:mt-32 flex justify-center">
-            <Link href="/process" className="group relative inline-flex items-center gap-4 px-8 py-4 overflow-hidden border border-foreground/10 rounded-full hover:border-[var(--color-brand-accent)] transition-colors duration-500 bg-white">
+            <Link href="/process" className="group relative inline-flex items-center gap-4 px-8 py-4 overflow-hidden border border-foreground/10 rounded-full hover:border-[var(--color-brand-accent)] transition-colors duration-500 bg-white" aria-label="プロセスの詳細を見る">
               <span className="relative z-10 text-xs font-bold tracking-[0.2em] uppercase group-hover:text-[var(--color-brand-accent)] transition-colors">View Full Process</span>
-              <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-[var(--color-brand-accent)] group-hover:translate-x-1 transition-transform relative z-10" />
-              <div className="absolute inset-0 bg-[var(--color-brand-accent)]/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-[var(--color-brand-accent)] group-hover:translate-x-1 transition-transform relative z-10" aria-hidden="true" />
+              <div className="absolute inset-0 bg-[var(--color-brand-accent)]/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300" aria-hidden="true" />
             </Link>
           </div>
         </div>
@@ -188,10 +188,10 @@ export default function Home() {
       <NewsSection />
 
       {/* 7. PHILOSOPHY */}
-      <section className="py-20 md:py-32 px-6 relative overflow-hidden text-white">
+      <section className="py-20 md:py-32 px-6 relative overflow-hidden text-white" aria-labelledby="philosophy-heading">
         <Image
-          src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=2000"
-          alt="Philosophy"
+          src="/assets/images/philosophy-bg.jpg"
+          alt="チームが協力して目標に向かう様子 - エバンティアの企業哲学を表現"
           fill
           className="object-cover"
         />
@@ -201,13 +201,13 @@ export default function Home() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <ScrollReveal>
             <span className="inline-block border border-white/30 px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] mb-8 uppercase backdrop-blur-sm">Philosophy</span>
-            <p className="text-3xl md:text-6xl font-extrabold leading-tight tracking-tight mb-8 md:mb-12">
+            <h2 id="philosophy-heading" className="text-3xl md:text-6xl font-extrabold leading-tight tracking-tight mb-8 md:mb-12">
               挑戦の価値と面白さを<br className="md:hidden" />
               <span className="text-white relative inline-block">
                 最大化する
-                <span className="absolute bottom-1 left-0 w-full h-3 bg-white/20 -z-10 -rotate-1"></span>
+                <span className="absolute bottom-1 left-0 w-full h-3 bg-white/20 -z-10 -rotate-1" aria-hidden="true"></span>
               </span>
-            </p>
+            </h2>
             <p className="text-lg md:text-2xl text-white/90 leading-relaxed mb-10 md:mb-16 font-medium">
               挑戦する人の潜在力を最大限に引き出す場所。<br />
               それがエバンティアの理想です。
@@ -223,9 +223,9 @@ export default function Home() {
       <RecruitSection />
 
       {/* 9. CTA */}
-      <section className="py-24 md:py-32 bg-white px-6 border-t border-zinc-200 relative overflow-hidden">
+      <section className="py-24 md:py-32 bg-white px-6 border-t border-zinc-200 relative overflow-hidden" aria-labelledby="cta-heading">
         {/* Decorative Background Text (Marquee-like static) */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full select-none pointer-events-none opacity-[0.03]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full select-none pointer-events-none opacity-[0.03]" aria-hidden="true">
           <span className="text-[12vw] font-black whitespace-nowrap leading-none text-black tracking-tighter">
             LET'S CREATE FUTURE
           </span>
@@ -234,7 +234,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <span className="inline-block text-xs font-bold tracking-[0.3em] text-primary uppercase mb-8">Let's Create Future</span>
 
-          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-zinc-900">
+          <h2 id="cta-heading" className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-zinc-900">
             未来を、<br className="md:hidden" />共に創る。
           </h2>
 
@@ -243,9 +243,9 @@ export default function Home() {
             まずはお気軽にご相談ください。
           </p>
 
-          <Link href="/contact" className="group inline-flex items-center justify-center px-12 py-6 bg-primary text-white text-sm font-bold tracking-[0.2em] hover:bg-[var(--color-brand-accent)] transition-all duration-500 relative overflow-hidden rounded-full shadow-lg hover:shadow-[var(--color-brand-accent)]/40 hover:-translate-y-1">
+          <Link href="/contact" className="group inline-flex items-center justify-center px-12 py-6 bg-primary text-white text-sm font-bold tracking-[0.2em] hover:bg-[var(--color-brand-accent)] transition-all duration-500 relative overflow-hidden rounded-full shadow-lg hover:shadow-[var(--color-brand-accent)]/40 hover:-translate-y-1" aria-label="お問い合わせページへ">
             <span className="relative z-10">お問い合わせ</span>
-            <div className="absolute inset-0 bg-[var(--color-brand-accent)] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
+            <div className="absolute inset-0 bg-[var(--color-brand-accent)] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" aria-hidden="true" />
           </Link>
         </div>
       </section>
