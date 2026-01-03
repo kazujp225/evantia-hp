@@ -1,9 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const Logo = () => {
     return (
-        <Link href="/" className="flex items-center gap-2 group">
-            <div className="text-2xl font-bold tracking-tighter text-primary group-hover:opacity-80 transition-opacity">
+        <Link href="/" className="flex items-center gap-3 group">
+            <Image
+                src="/logo.png"
+                alt="株式会社エバンティア"
+                width={48}
+                height={48}
+                className="group-hover:opacity-80 transition-opacity"
+            />
+            <div className="text-xl font-bold tracking-tighter text-primary group-hover:opacity-80 transition-opacity">
                 株式会社エバンティア
             </div>
         </Link>

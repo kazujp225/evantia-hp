@@ -76,7 +76,7 @@ export const AsymmetricalHero = () => {
             </div>
 
             {/* Background Noise/Texture handled globally in CSS, but adding specific shapes here */}
-            <div className="absolute top-1/4 left-0 w-1/3 h-1/2 bg-gradient-to-r from-blue-50 to-transparent blur-3xl opacity-60 -z-10 pointer-events-none" />
+            <div className="absolute top-1/4 left-0 w-1/3 h-1/2 bg-gradient-to-r from-emerald-50 to-transparent blur-3xl opacity-60 -z-10 pointer-events-none" />
         </section>
     );
 };

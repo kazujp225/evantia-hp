@@ -2,36 +2,36 @@
 
 @theme {
   --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(210 20% 15%);
-  /* Slightly softer than pure black */
+  --color-foreground: hsl(145 30% 12%);
+  /* Deep forest tone */
   --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(210 20% 15%);
+  --color-card-foreground: hsl(145 30% 12%);
   --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(210 20% 15%);
-  --color-primary: hsl(212 90% 20%);
-  /* Deep Corporate Blue - Dominant Authority */
+  --color-popover-foreground: hsl(145 30% 12%);
+  --color-primary: hsl(145 45% 16%);
+  /* Deep Forest Green - 深緑 */
   --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(210 30% 96%);
-  /* Very light cool gray */
-  --color-secondary-foreground: hsl(212 90% 20%);
-  --color-muted: hsl(210 20% 96%);
-  --color-muted-foreground: hsl(215 20% 45%);
-  /* Cooler text */
-  --color-accent: hsl(212 90% 20%);
+  --color-secondary: hsl(145 20% 96%);
+  /* Very light green-gray */
+  --color-secondary-foreground: hsl(145 45% 16%);
+  --color-muted: hsl(145 15% 95%);
+  --color-muted-foreground: hsl(145 20% 35%);
+  /* Muted green text */
+  --color-accent: hsl(145 45% 16%);
   --color-accent-foreground: hsl(0 0% 100%);
   --color-destructive: hsl(0 84.2% 60.2%);
   --color-destructive-foreground: hsl(0 0% 98%);
-  --color-border: hsl(215 20% 88%);
-  /* Cool gray border */
-  --color-input: hsl(215 20% 88%);
-  --color-ring: hsl(212 90% 20%);
+  --color-border: hsl(145 12% 86%);
+  /* Subtle green-gray border */
+  --color-input: hsl(145 12% 86%);
+  --color-ring: hsl(145 45% 16%);
   --radius: 0rem;
 
   /* Premium Accents */
-  --color-brand-accent: hsl(200 90% 45%);
-  /* Keeping Electric Blue as a highlight */
-  --color-brand-gold: hsl(40 60% 50%);
-  /* Subtle Gold - for premium feel */
+  --color-brand-accent: hsl(150 50% 28%);
+  /* Rich forest accent */
+  --color-brand-gold: hsl(45 55% 48%);
+  /* Warm gold - complements deep green */
 
   /* Fonts */
   --font-manrope: var(--font-manrope);

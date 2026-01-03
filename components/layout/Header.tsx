@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
@@ -48,7 +49,7 @@ export const Header = () => {
                     <div className="flex items-center gap-4 md:gap-8">
                         <Link
                             href="/contact"
-                            className="hidden md:flex relative overflow-hidden bg-black text-white px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
+                            className="hidden md:flex relative overflow-hidden bg-primary text-white px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
                         >
                             <span className="relative z-10 flex items-center gap-2">
                                 CONTACT <ArrowUpRight size={16} />
@@ -56,7 +57,7 @@ export const Header = () => {
                         </Link>
 
                         <button
-                            className="w-12 h-12 rounded-full border border-black/10 bg-white/50 backdrop-blur hover:bg-black hover:text-white transition-all flex items-center justify-center relative z-50"
+                            className="w-12 h-12 rounded-full border border-primary/20 bg-white/50 backdrop-blur hover:bg-primary hover:text-white transition-all flex items-center justify-center relative z-50"
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,11 +74,38 @@ export const Header = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 bg-black text-white z-40"
+                        className="fixed inset-0 bg-[hsl(145_45%_12%)] text-white z-40"
                     >
+                        {/* Background Logo Watermark */}
+                        <div className="absolute bottom-0 right-0 opacity-[0.03] pointer-events-none">
+                            <Image
+                                src="/logo.png"
+                                alt=""
+                                width={600}
+                                height={600}
+                                className="translate-x-1/4 translate-y-1/4"
+                            />
+                        </div>
+
                         <div className="h-full flex flex-col">
                             {/* Mobile Layout */}
                             <div className="flex-1 flex flex-col justify-center px-8 pt-24 pb-8 md:hidden">
+                                {/* Mobile Logo */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.05 }}
+                                    className="flex items-center gap-3 mb-8"
+                                >
+                                    <Image
+                                        src="/logo.png"
+                                        alt="EVANTIA"
+                                        width={40}
+                                        height={40}
+                                    />
+                                    <span className="text-lg font-bold tracking-tight text-white/80">EVANTIA</span>
+                                </motion.div>
+
                                 <nav className="flex flex-col gap-6">
                                     {NAV_ITEMS.map((item, i) => (
                                         <motion.div
@@ -91,7 +119,7 @@ export const Header = () => {
                                                 className="flex items-center justify-between py-4 border-b border-white/10 group"
                                             >
                                                 <span className="text-2xl font-black">{item.label}</span>
-                                                <ArrowUpRight size={20} className="text-white/40 group-hover:text-white transition-colors" />
+                                                <ArrowUpRight size={20} className="text-white/40 group-hover:text-[hsl(150_50%_50%)] transition-colors" />
                                             </Link>
                                         </motion.div>
                                     ))}
@@ -105,7 +133,7 @@ export const Header = () => {
                                 >
                                     <Link
                                         href="/contact"
-                                        className="flex items-center justify-center w-full bg-white text-black py-5 rounded-full font-black text-xl hover:bg-white/90 transition-colors"
+                                        className="flex items-center justify-center w-full bg-white text-[hsl(145_45%_16%)] py-5 rounded-full font-black text-xl hover:bg-[hsl(150_50%_50%)] hover:text-white transition-colors"
                                     >
                                         お問い合わせ
                                     </Link>
@@ -135,10 +163,10 @@ export const Header = () => {
                                             >
                                                 <Link
                                                     href={item.href}
-                                                    className="group flex items-baseline gap-4 text-5xl font-black tracking-tighter hover:text-white/50 transition-colors text-white py-1"
+                                                    className="group flex items-baseline gap-4 text-5xl font-black tracking-tighter hover:text-[hsl(150_50%_50%)] transition-colors text-white py-1"
                                                 >
                                                     {item.label}
-                                                    <span className="text-sm font-bold tracking-widest text-gray-500 group-hover:text-white transition-colors">
+                                                    <span className="text-sm font-bold tracking-widest text-[hsl(150_30%_50%)] group-hover:text-white transition-colors">
                                                         {item.en}
                                                     </span>
                                                 </Link>
@@ -150,8 +178,18 @@ export const Header = () => {
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ delay: 0.6 }}
-                                        className="flex flex-col justify-center gap-8 text-gray-400 text-sm font-bold tracking-widest border-l border-white/20 pl-24 h-full"
+                                        className="flex flex-col justify-center gap-8 text-[hsl(150_20%_60%)] text-sm font-bold tracking-widest border-l border-white/20 pl-24 h-full"
                                     >
+                                        {/* Logo in sidebar */}
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <Image
+                                                src="/logo.png"
+                                                alt="EVANTIA"
+                                                width={48}
+                                                height={48}
+                                            />
+                                            <span className="text-xl font-extrabold tracking-tight text-white">EVANTIA</span>
+                                        </div>
                                         <div className="flex flex-col gap-2">
                                             <span className="text-white">株式会社エバンティア</span>
                                             <span>TPR北浜ビル 6F</span>
@@ -162,8 +200,8 @@ export const Header = () => {
                                             <span>090-2393-2820</span>
                                         </div>
                                         <div className="flex gap-6 mt-8">
-                                            <a href="#" className="hover:text-white transition-colors">X (Twitter)</a>
-                                            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+                                            <a href="#" className="hover:text-[hsl(150_50%_50%)] transition-colors">X (Twitter)</a>
+                                            <a href="#" className="hover:text-[hsl(150_50%_50%)] transition-colors">LinkedIn</a>
                                         </div>
                                     </motion.div>
                                 </div>
