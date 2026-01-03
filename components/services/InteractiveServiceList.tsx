@@ -80,8 +80,8 @@ export function InteractiveServiceList() {
                         <h2 className="text-4xl md:text-6xl font-bold leading-tight">Our Services</h2>
                     </div>
                     <p className="text-gray-400 font-medium mt-6 md:mt-0 max-w-md text-right md:text-left">
-                        一時的な成功より、勝ち続ける「自走力」を。<br />
-                        表面ではなく本質から、貴社の採用を強くします。
+                        一時的な成功より、持続的な「自走力」を。<br />
+                        本質的な課題解決で、貴社の採用力を強化します。
                     </p>
                 </div>
 

@@ -5,7 +5,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
     title: "Process | EVANTIA",
-    description: "再現性があることを理解させる。",
+    description: "再現性のある採用体制構築のプロセスをご紹介します。",
 };
 
 export default function ProcessPage() {
@@ -14,21 +14,21 @@ export default function ProcessPage() {
             step: "01",
             title: "Strategy & Design",
             desc: "採用が「感覚」から「言語」になる",
-            detail: "経営目標からブレイクダウンした採用要件を定義。曖昧な「いい人」を排除し、評価基準を言語化することで、ジャッジの精度を劇的に向上させる。",
+            detail: "経営目標から逆算した採用要件を定義。評価基準を明確に言語化することで、選考の精度を向上させます。",
             image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600"
         },
         {
             step: "02",
             title: "Execution & System",
             desc: "属人性が「仕組み」に変わる",
-            detail: "スカウト、日程調整、面接フィードバック。すべての工程を型化し、誰がやっても成果が出る仕組みを構築。依存を断ち切る。",
+            detail: "スカウト、日程調整、面接フィードバック。すべての工程を標準化し、再現性のある採用体制を構築します。",
             image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1600"
         },
         {
             step: "03",
             title: "Transfer & Self-Run",
-            desc: "外注が不要になる",
-            detail: "最終的なゴールは、私たちが去ること。構築したノウハウと仕組みを社内に完全移管し、自社だけで回り続ける強い採用チームを残す。",
+            desc: "自社での運用が可能になる",
+            detail: "最終的な目標は、貴社での自走体制の確立です。構築したノウハウと仕組みを社内に移管し、持続的に成果を出せる採用チームを実現します。",
             image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600"
         }
     ];

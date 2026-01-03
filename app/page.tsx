@@ -50,10 +50,10 @@ export default function Home() {
                     Execution
                   </span>
                   <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
-                    混沌なき<br />実行。
+                    確実な<br />実行。
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">
-                    Execution without chaos.
+                    Reliable execution.
                   </p>
                 </div>
                 <span className="block text-[100px] md:text-[180px] leading-none font-bold text-foreground/[0.03] absolute bottom-2 right-4 md:bottom-[-40px] md:right-2 select-none pointer-events-none group-hover:text-[var(--color-brand-accent)]/[0.05] transition-colors duration-500">02</span>
@@ -96,8 +96,8 @@ export default function Home() {
               変革のプロセス<span className="text-[var(--color-brand-accent)]">.</span>
             </h2>
             <p className="text-lg text-muted-foreground font-medium max-w-xl leading-relaxed">
-              感覚的な採用から、科学的な採用へ。<br />
-              EVANTIAが提供する、確実な変革へのロードマップ。
+              場当たり的な採用から、計画的な採用へ。<br />
+              EVANTIAが提供する、成果へのロードマップ。
             </p>
           </div>
 
@@ -107,21 +107,21 @@ export default function Home() {
                 step: "01",
                 title: "戦略設計",
                 en: "Commitment Strategy",
-                desc: "「なんとなく」の採用を終わらせる。\n事業目標から逆算した、勝てる採用要件の定義。",
+                desc: "採用課題を明確にし、目標を設定する。\n事業目標から逆算した、最適な採用要件の定義。",
                 tags: ["Market Research", "Persona Design", "KPI Setting"]
               },
               {
                 step: "02",
                 title: "実行＆仕組み化",
                 en: "Execution System",
-                desc: "属人性を排除し、誰がやっても成果が出る\n「再現性の高い仕組み」を構築する。",
+                desc: "属人化を防ぎ、再現性のある採用体制を構築。\n標準化されたオペレーションで安定した成果を実現。",
                 tags: ["Operation Flow", "Scout Manual", "ATS Implementation"]
               },
               {
                 step: "03",
                 title: "移管＆自走",
                 en: "In-house Transfer",
-                desc: "最終ゴールは、我々の支援が不要になること。\nノウハウを全て貴社にインストールする。",
+                desc: "最終目標は、貴社での自走体制の確立。\nノウハウを貴社に移管し、内製化を支援します。",
                 tags: ["Onboarding", "Knowledge Transfer", "Full Autonomy"]
               }
             ].map((item, i) => (
@@ -239,8 +239,8 @@ export default function Home() {
           </h2>
 
           <p className="text-lg md:text-xl text-zinc-600 font-medium leading-relaxed mb-12">
-            貴社の成長を加速させるパートナーとして。<br className="hidden md:block" />
-            まずはカジュアルにお話ししませんか？
+            貴社の成長を支えるパートナーとして。<br className="hidden md:block" />
+            まずはお気軽にご相談ください。
           </p>
 
           <Link href="/contact" className="group inline-flex items-center justify-center px-12 py-6 bg-primary text-white text-sm font-bold tracking-[0.2em] hover:bg-[var(--color-brand-accent)] transition-all duration-500 relative overflow-hidden rounded-full shadow-lg hover:shadow-[var(--color-brand-accent)]/40 hover:-translate-y-1">

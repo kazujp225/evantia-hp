@@ -31,8 +31,8 @@ export function RecruitSection() {
                                 RECRUIT
                             </h2>
                             <p className="text-lg font-medium text-white/80 mb-10 max-w-md leading-relaxed border-l-2 border-[var(--color-brand-accent)] pl-6">
-                                私たちは、常識を疑い、本質を追求する仲間を求めています。<br />
-                                景色を変える挑戦を、共に。
+                                私たちは、成長意欲が高く、課題解決に真摯に向き合う仲間を求めています。<br />
+                                新しい価値を創造する仕事を、共に。
                             </p>
                             <Link href="/recruit" className="inline-flex items-center justify-center px-10 py-5 bg-white text-[var(--color-primary)] text-sm font-bold tracking-[0.2em] hover:bg-[var(--color-brand-accent)] hover:text-white transition-all duration-300 group shadow-lg">
                                 採用情報を見る

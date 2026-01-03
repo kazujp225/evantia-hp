@@ -20,18 +20,18 @@ export default function RecruitPage() {
                     <ScrollReveal className="max-w-6xl">
                         <p className="text-primary font-bold tracking-widest mb-6 uppercase text-sm">仲間を募集しています</p>
                         <h2 className="text-4xl md:text-7xl font-black leading-[1.1] mb-12 tracking-tight">
-                            常識を超えて、<br />
+                            課題に向き合い、<br />
                             本質を追求する。
                         </h2>
                         <p className="text-xl md:text-2xl font-bold leading-relaxed mb-12 max-w-2xl">
-                            これまでの「採用」の常識を疑い、本質的な価値を追求する。
+                            採用の本質的な価値を追求し、クライアントの成長に貢献する。
                         </p>
                         <div className="space-y-6 text-lg text-gray-600 leading-relaxed max-w-3xl">
                             <p>
-                                私たちは、ただの人材会社ではありません。企業の成長エンジンであり、個人のキャリアの伴走者です。
+                                私たちは、企業の採用活動を支援するパートナーとして、また個人のキャリアに寄り添う存在として活動しています。
                             </p>
                             <p>
-                                「自走」というゴールに向かって、クライアントと共に汗をかき、痛みも喜びも分かち合う。そんなヒリヒリするような挑戦を、楽しみながら乗り越えられる仲間を求めています。
+                                クライアントの「自走体制の構築」という目標に向かって、共に取り組み、成果を分かち合う。そんなやりがいのある仕事を、一緒に楽しめる仲間を求めています。
                             </p>
                         </div>
                     </ScrollReveal>
@@ -50,8 +50,8 @@ export default function RecruitPage() {
 
                     <div className="flex flex-col">
                         {[
-                            { name: "TANAKA TARO", role: "Consultant", title: "「クライアントの事業成長」こそが我々のゴールである。", image: "https://images.unsplash.com/photo-1507679799987-c7377ec48696?auto=format&fit=crop&q=80&w=800" },
-                            { name: "SUZUKI HANAKO", role: "RPO Specialist", title: "「代行」ではなく「パートナー」。泥臭い現場にこそ答えがある。", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800" },
+                            { name: "TANAKA TARO", role: "Consultant", title: "クライアントの事業成長に貢献することが、私たちの目標です。", image: "https://images.unsplash.com/photo-1507679799987-c7377ec48696?auto=format&fit=crop&q=80&w=800" },
+                            { name: "SUZUKI HANAKO", role: "RPO Specialist", title: "「代行」ではなく「パートナー」。現場にこそ答えがある。", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800" },
                             { name: "SATO ICHIRO", role: "Designer", title: "言葉にできない魅力を、デザインの力で可視化する。", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" }
                         ].map((member, i) => (
                             <ScrollReveal key={i} delay={i * 0.1}>

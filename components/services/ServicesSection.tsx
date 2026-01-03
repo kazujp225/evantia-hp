@@ -10,19 +10,19 @@ const SERVICES = [
   {
     title: "採用戦略を設計する",
     en: "Strategy Design",
-    sub: "採用を、事業の意思決定にする",
+    sub: "採用を経営戦略と連動させる",
     image: "/assets/images/service-strategy.jpg"
   },
   {
     title: "実行を担う",
     en: "Execution",
-    sub: "現場を止めずに回しきる",
+    sub: "現場の負担を軽減しながら推進する",
     image: "/assets/images/service-execution.jpg"
   },
   {
     title: "仕組みにする",
     en: "Systematization",
-    sub: "属人性を残さない",
+    sub: "持続可能な採用体制を構築する",
     image: "/assets/images/service-marketing.jpg"
   }
 ];

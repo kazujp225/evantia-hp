@@ -5,7 +5,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
     title: "Services | EVANTIA",
-    description: "一時的な成功より、勝ち続ける「自走力」を。表面ではなく本質から、貴社の採用を強くする。",
+    description: "一時的な成功より、持続的な「自走力」を。本質的な課題解決で、貴社の採用力を強化します。",
 };
 
 export default function ServicePage() {
@@ -13,20 +13,20 @@ export default function ServicePage() {
         {
             icon: Target,
             num: "01",
-            title: "トップセールス流のストーリー設計型戦略構築",
-            desc: "経営層は業界のトップセールス。だからこそ描ける、人の心の機微を突くシナリオ構築が強みです。候補者の志向と貴社のビジョンを重ね合わせ、「なぜ貴社なのか」を語り切る力で、競合他社に埋もれない確固たる動機形成を軸としたご提案が可能です。"
+            title: "ストーリー設計型の戦略構築",
+            desc: "候補者の志向と貴社のビジョンを重ね合わせ、「なぜ貴社なのか」を明確に伝える採用戦略を構築します。競合他社との差別化を図り、候補者の心に響くアプローチをご提案します。"
         },
         {
             icon: Layers,
             num: "02",
-            title: "戦略立案・集客実務代行までの幅広いソリューション",
-            desc: "集客媒体、イベント、ツール等の入り口施策から、前提の戦略立案、実行までの採用の一気通貫サービスを取り扱っております。これにより貴社の現状とビジョン、市場動向に合わせた柔軟な支援が可能です。"
+            title: "戦略立案から実務代行までの幅広いソリューション",
+            desc: "集客媒体、イベント、ツール等の施策から、戦略立案、実行までの一気通貫サービスをご提供しています。貴社の現状とビジョン、市場動向に合わせた柔軟な支援が可能です。"
         },
         {
             icon: Trophy,
             num: "03",
-            title: "勝てるノウハウを資産として残す「自走体制」の構築力",
-            desc: "私たちのゴールは貴社だけで勝ち続けられる「自走体制」の確立です。数多くの成功事例から導き出した「再現性の高い勝ちパターン」を、貴社の組織文化に合わせて移植。成果を生み出し続ける強い採用チームを共に創り上げます。"
+            title: "実践的なノウハウを資産として残す「自走体制」の構築",
+            desc: "私たちの目標は、貴社が自立して採用活動を行える「自走体制」の確立です。多くの成功事例から導き出した再現性の高い手法を、貴社の組織文化に合わせて導入し、持続的に成果を出せる採用チームづくりを支援します。"
         }
     ];
 
@@ -81,10 +81,10 @@ export default function ServicePage() {
                             <span className="text-xs font-bold tracking-[0.3em] text-white/60 uppercase mb-6 block">Recruitment Consulting</span>
                             <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.15] max-w-4xl text-white mb-6">
                                 一時的な成功より、<br />
-                                勝ち続ける「自走力」を。
+                                持続的な「自走力」を。
                             </h1>
                             <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl">
-                                表面ではなく本質から、貴社の採用を強くする。
+                                本質的な課題解決で、貴社の採用力を強化します。
                             </p>
                         </ScrollReveal>
                     </div>
@@ -97,9 +97,9 @@ export default function ServicePage() {
                     <ScrollReveal>
                         <div className="max-w-4xl">
                             <p className="text-xl md:text-2xl font-bold text-muted-foreground leading-relaxed">
-                                業界トップクラスの支援実績を誇る企業のトップランナーが顧客フォローの成果を最大化するために設立した少数精鋭チームです。
-                                大手の戦略的ノウハウと、少数精鋭ならではの圧倒的な機動力と「顔の見えるサービス」を武器に、
-                                "自走体制を構築すること"を最終ミッションにあらゆる採用課題を突破します。
+                                採用支援の豊富な経験を持つメンバーで構成された少数精鋭チームです。
+                                確かな戦略ノウハウと、少数精鋭ならではの機動力、「顔の見えるサービス」を強みに、
+                                貴社の自走体制構築を最終目標として採用課題の解決を支援します。
                             </p>
                         </div>
                     </ScrollReveal>

@@ -23,7 +23,7 @@ export function ImpactSection() {
                     <ScrollReveal delay={0.2} className="flex flex-col justify-end">
                         <p className="text-lg font-medium leading-relaxed max-w-lg border-l-4 border-primary pl-6">
                             感覚や経験則だけに頼らない。<br />
-                            データと行動量に裏打ちされた確かな成果をお約束します。
+                            データと実績に基づいた採用支援を提供します。
                         </p>
                     </ScrollReveal>
                 </div>

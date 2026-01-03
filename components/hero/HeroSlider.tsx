@@ -36,10 +36,10 @@ const SLIDES = [
         title: (
             <>
                 一時的な成功より、<br />
-                <span className="text-zinc-400">勝ち続ける「自走力」を。</span>
+                <span className="text-zinc-400">持続的な「自走力」を。</span>
             </>
         ),
-        description: "表面ではなく本質から、貴社の採用を強くする。\n「自走体制を構築すること」を最終ミッションに\nあらゆる採用課題を突破します。",
+        description: "本質的な課題解決で、貴社の採用力を強化。\n「自走体制の構築」を最終目標に\n採用課題の解決を支援します。",
         btnText: "サービスを見る",
         btnLink: "/service"
     },
@@ -49,11 +49,11 @@ const SLIDES = [
         label: "ELITE TEAM",
         title: (
             <>
-                大手のノウハウと<br />
+                豊富な経験と<br />
                 <span className="text-zinc-400">少数精鋭の機動力。</span>
             </>
         ),
-        description: "業界トップクラスの支援実績を誇る\nトップランナーが設立した少数精鋭チーム。\n「顔の見えるサービス」を武器に成果を最大化。",
+        description: "採用支援の豊富な実績を持つ\n経験豊かなメンバーで構成されたチーム。\n「顔の見えるサービス」で成果を追求します。",
         btnText: "お問い合わせ",
         btnLink: "/contact"
     }

@@ -67,8 +67,8 @@ export const Footer = () => {
                                 共に創る。
                             </h2>
                             <p className="text-white/70 font-medium text-lg md:text-xl max-w-xl leading-relaxed">
-                                貴社の成長を加速させるパートナーとして。<br />
-                                まずはカジュアルにお話ししませんか？
+                                貴社の成長を支えるパートナーとして。<br />
+                                まずはお気軽にご相談ください。
                             </p>
                         </div>
                         <Link href="/contact" className="group flex items-center justify-center gap-4 bg-white text-black px-12 py-5 text-lg font-bold tracking-widest hover:bg-[var(--color-brand-accent)] hover:text-white transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(0,100,200,0.4)]">

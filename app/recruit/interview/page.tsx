@@ -15,7 +15,7 @@ const INTERVIEWS = [
         name: "田中 太郎",
         role: "Recruitment Consultant",
         joined: "2026",
-        title: "「クライアントの事業成長」こそが、我々のゴールである。",
+        title: "クライアントの事業成長に貢献することが、私たちの目標です。",
         image: "https://images.unsplash.com/photo-1507679799987-c7377ec48696?auto=format&fit=crop&q=80&w=800"
     },
     {
@@ -23,7 +23,7 @@ const INTERVIEWS = [
         name: "鈴木 花子",
         role: "RPO Specialist",
         joined: "2026",
-        title: "現場にこそ答えがある。泥臭い改善が組織を変える。",
+        title: "現場にこそ答えがある。地道な改善が組織を変える。",
         image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800"
     },
     {
@@ -39,7 +39,7 @@ const INTERVIEWS = [
         name: "高橋 由美",
         role: "Career Advisor",
         joined: "2025",
-        title: "「転職」という人生の分岐点に、誰よりも真剣に向き向き合う。",
+        title: "「転職」という人生の分岐点に、真摯に向き合う。",
         image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800"
     },
     {
@@ -47,7 +47,7 @@ const INTERVIEWS = [
         name: "伊藤 健太",
         role: "Corporate Staff",
         joined: "2026",
-        title: "急成長する組織の「守り」と「攻め」を同時に担う面白さ。",
+        title: "成長する組織の管理と推進を同時に担うやりがい。",
         image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
     },
     {
@@ -55,7 +55,7 @@ const INTERVIEWS = [
         name: "渡辺 さくら",
         role: "HR Tech Engineer",
         joined: "2026",
-        title: "テクノロジーで採用の不確実性を減らし、マッチングの精度を上げる。",
+        title: "テクノロジーで採用プロセスを効率化し、マッチングの精度を高める。",
         image: "https://images.unsplash.com/photo-1573496733222-7773f324fc28?auto=format&fit=crop&q=80&w=800"
     }
 ];

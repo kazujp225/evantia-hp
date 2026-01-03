@@ -71,7 +71,7 @@ export function BrokenGridServices() {
                         <p className="text-muted-foreground font-medium leading-loose">
                             採用活動における課題は、企業ステージや市場環境によって異なります。
                             エバンティアは、戦略策定から実務実行まで、貴社のフェーズに合わせた最適なソリューションを組み合わせ、
-                            組織の成長を加速させます。
+                            組織の成長を支援します。
                         </p>
                     </motion.div>
                 </div>

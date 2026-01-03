@@ -67,8 +67,8 @@ export const AsymmetricalHero = () => {
                         >
                             <p className="text-sm font-bold text-primary mb-1">DATA DRIVEN</p>
                             <p className="text-xs text-foreground font-medium">
-                                数理的根拠に基づく<br />
-                                確実な成長戦略
+                                データに基づく<br />
+                                成長戦略
                             </p>
                         </motion.div>
                     </div>
