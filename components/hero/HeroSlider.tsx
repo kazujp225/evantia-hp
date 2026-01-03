@@ -111,12 +111,12 @@ export function HeroSlider() {
                         >
 
                             {/* --- LEFT: CONTENT AREA (Corporate/Info) --- */}
-                            <div className="relative w-full h-[55%] lg:h-full lg:w-[45%] bg-zinc-50 md:bg-zinc-50/50 md:backdrop-blur-sm flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 lg:border-r border-zinc-200/50 border-b lg:border-b-0 pb-20 md:pb-0 transition-all duration-300">
+                            <div className="relative w-full h-[60%] lg:h-full lg:w-[45%] bg-zinc-50 md:bg-zinc-50/50 md:backdrop-blur-sm flex flex-col justify-start lg:justify-center px-6 md:px-12 lg:px-20 z-10 lg:border-r border-zinc-200/50 border-b lg:border-b-0 pt-28 pb-16 md:py-0 transition-all duration-300">
                                 {/* Grid Texture Overlay */}
                                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.4] pointer-events-none mix-blend-multiply" style={{ backgroundSize: '40px 40px' }} />
 
                                 {/* Slide Content Wrapper */}
-                                <div className="relative z-10 mt-0 pt-12 md:pt-0 lg:mt-0">
+                                <div className="relative z-10 mt-0 lg:mt-0">
                                     <motion.div
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}

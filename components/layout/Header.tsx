@@ -40,8 +40,8 @@ export const Header = () => {
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out px-4 md:px-8",
                     isScrolled
-                        ? "bg-white/90 backdrop-blur-md py-4 border-b border-border/50"
-                        : "bg-transparent py-6"
+                        ? "bg-white/90 backdrop-blur-md py-3 border-b border-border/50"
+                        : "bg-transparent py-4"
                 )}
             >
                 <div className="flex items-center justify-between">
