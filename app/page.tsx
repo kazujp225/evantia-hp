@@ -26,14 +26,14 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
 
                 <div className="relative z-10 px-6 md:px-0">
-                  <span className="text-xs font-bold tracking-[0.2em] text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
+                  <span className="text-xs font-bold tracking-[0.2em] text-primary md:text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary md:bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
                     Strategy
                   </span>
                   <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
                     行動の前に、<br />戦略を。
                   </h3>
-                  <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">
+                  <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-2 border-l-2 border-primary/30 md:border-transparent group-hover:border-[var(--color-brand-accent)]/30">
                     Strategy before action.
                   </p>
                 </div>
@@ -45,14 +45,14 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
 
                 <div className="relative z-10 px-6 md:px-0">
-                  <span className="text-xs font-bold tracking-[0.2em] text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
+                  <span className="text-xs font-bold tracking-[0.2em] text-primary md:text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary md:bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
                     Execution
                   </span>
                   <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
                     確実な<br />実行。
                   </h3>
-                  <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">
+                  <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-2 border-l-2 border-primary/30 md:border-transparent group-hover:border-[var(--color-brand-accent)]/30">
                     Reliable execution.
                   </p>
                 </div>
@@ -64,14 +64,14 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
 
                 <div className="relative z-10 px-6 md:px-0">
-                  <span className="text-xs font-bold tracking-[0.2em] text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
+                  <span className="text-xs font-bold tracking-[0.2em] text-primary md:text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary md:bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
                     Asset
                   </span>
                   <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
                     成果を、<br />資産にする。
                   </h3>
-                  <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-1 border-l-2 border-transparent group-hover:border-[var(--color-brand-accent)]/30">
+                  <p className="text-sm md:text-base text-muted-foreground font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-2 border-l-2 border-primary/30 md:border-transparent group-hover:border-[var(--color-brand-accent)]/30">
                     Results that remain.
                   </p>
                 </div>
@@ -133,14 +133,14 @@ export default function Home() {
 
                   {/* Left: Number & Main Title */}
                   <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 flex-1">
-                    <span className="text-5xl md:text-7xl font-black text-foreground/10 group-hover:text-[var(--color-brand-accent)] transition-colors duration-500 font-mono tracking-tighter">
+                    <span className="text-5xl md:text-7xl font-black text-primary/30 md:text-foreground/10 group-hover:text-[var(--color-brand-accent)] transition-colors duration-500 font-mono tracking-tighter">
                       {item.step}
                     </span>
                     <div>
                       <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-2 group-hover:translate-x-2 transition-transform duration-500">
                         {item.title}
                       </h3>
-                      <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase group-hover:text-[var(--color-brand-accent)] transition-colors">
+                      <p className="text-xs font-bold tracking-[0.2em] text-primary md:text-muted-foreground uppercase group-hover:text-[var(--color-brand-accent)] transition-colors">
                         {item.en}
                       </p>
                     </div>
@@ -154,7 +154,7 @@ export default function Home() {
 
                     <div className="flex flex-wrap gap-2">
                       {item.tags.map((tag, t) => (
-                        <span key={t} className="text-xs font-bold border border-foreground/10 px-3 py-1 rounded-full text-muted-foreground group-hover:border-[var(--color-brand-accent)]/30 group-hover:text-[var(--color-brand-accent)] transition-colors bg-white">
+                        <span key={t} className="text-xs font-bold border border-primary/20 md:border-foreground/10 px-3 py-1 rounded-full text-primary/70 md:text-muted-foreground group-hover:border-[var(--color-brand-accent)]/30 group-hover:text-[var(--color-brand-accent)] transition-colors bg-white">
                           {tag}
                         </span>
                       ))}

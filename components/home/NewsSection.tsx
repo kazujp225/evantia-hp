@@ -14,7 +14,10 @@ export function NewsSection() {
                 {/* Header */}
                 <div className="md:w-1/4">
                     <ScrollReveal>
-                        <span className="text-sm font-bold tracking-[0.3em] uppercase text-muted-foreground mb-4 block">Latest Info</span>
+                        <span className="text-sm font-bold tracking-[0.3em] uppercase text-primary md:text-muted-foreground mb-4 block flex items-center gap-2">
+                            <span className="w-6 h-[2px] bg-primary md:hidden"></span>
+                            Latest Info
+                        </span>
                         <h2 id="news-heading" className="text-4xl font-extrabold tracking-tight mb-8">News</h2>
                         <Link
                             href="/news"

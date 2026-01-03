@@ -33,7 +33,10 @@ export function ProcessSection() {
             <div className="container-custom">
                 <ScrollReveal className="mb-24 flex flex-col md:flex-row justify-between items-end">
                     <div>
-                        <span className="text-primary font-bold tracking-widest text-xs mb-4 block uppercase">The EVANTIA Method</span>
+                        <span className="text-primary font-bold tracking-widest text-xs mb-4 block uppercase flex items-center gap-2">
+                        <span className="w-6 h-[2px] bg-primary"></span>
+                        The EVANTIA Method
+                    </span>
                         <h2 className="text-4xl md:text-5xl font-black leading-tight">
                             Process of<br />Transformation.
                         </h2>
@@ -62,7 +65,7 @@ export function ProcessSection() {
 
                                     <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
                                     <p className="text-sm font-bold text-primary mb-4">{step.jp}</p>
-                                    <p className="text-gray-500 text-sm leading-relaxed border-l-2 border-gray-100 pl-4 group-hover:border-primary transition-colors duration-300">
+                                    <p className="text-gray-500 text-sm leading-relaxed border-l-2 border-primary/30 md:border-gray-100 pl-4 group-hover:border-primary transition-colors duration-300">
                                         {step.desc}
                                     </p>
                                 </div>

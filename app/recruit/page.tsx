@@ -21,7 +21,10 @@ export default function RecruitPage() {
             <section className="py-32 md:py-48 bg-white border-b border-black">
                 <div className="container-custom">
                     <ScrollReveal className="max-w-6xl">
-                        <p className="text-primary font-bold tracking-widest mb-6 uppercase text-sm">仲間を募集しています</p>
+                        <p className="text-primary font-bold tracking-widest mb-6 uppercase text-sm flex items-center gap-3">
+                            <span className="w-8 h-[2px] bg-primary"></span>
+                            仲間を募集しています
+                        </p>
                         <h2 className="text-4xl md:text-7xl font-black leading-[1.1] mb-12 tracking-tight">
                             課題に向き合い、<br />
                             本質を追求する。
@@ -70,7 +73,7 @@ export default function RecruitPage() {
 
                                     <div className="flex-1 flex flex-col justify-center">
                                         <div className="flex items-center gap-4 mb-6">
-                                            <span className="font-mono text-primary font-bold tracking-widest text-sm md:text-xs uppercase">{member.role}</span>
+                                            <span className="font-mono text-primary font-bold tracking-widest text-xs uppercase">{member.role}</span>
                                             <span className="w-10 h-px bg-gray-300" />
                                             <span className="font-mono font-bold text-sm md:text-xs uppercase">{member.name}</span>
                                         </div>

@@ -95,8 +95,8 @@ export default function AboutPage() {
                 {/* Company Profile - High Impact List */}
                 <div className="border-t border-black pt-20">
                     <ScrollReveal>
-                        <h2 className="text-xs font-bold tracking-[0.2em] text-[var(--color-brand-accent)] uppercase mb-10 flex items-center gap-3">
-                            <span className="w-4 h-4 rounded-full border border-[var(--color-brand-accent)]"></span>
+                        <h2 className="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-10 flex items-center gap-3">
+                            <span className="w-8 h-[2px] bg-primary"></span>
                             Company Profile
                         </h2>
                         <div className="border-t border-black/10">
@@ -127,8 +127,8 @@ export default function AboutPage() {
                 <div className="pt-32 mt-20 border-t border-black relative">
                     <ScrollReveal>
                         <div className="mb-16">
-                            <h2 className="text-xs font-bold tracking-[0.2em] text-[var(--color-brand-accent)] uppercase mb-4 flex items-center gap-3">
-                                <span className="w-4 h-4 rounded-full border border-[var(--color-brand-accent)]"></span>
+                            <h2 className="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4 flex items-center gap-3">
+                                <span className="w-8 h-[2px] bg-primary"></span>
                                 Services
                             </h2>
                             <p className="text-3xl md:text-5xl font-black">事業内容</p>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                                 "人材定着・組織開発コンサル"
                             ].map((item, i) => (
                                 <div key={i} className="group flex items-baseline gap-6 py-8 border-b border-black/10 hover:border-[var(--color-brand-accent)] transition-colors duration-300">
-                                    <span className="text-xs font-mono font-bold text-[var(--color-brand-accent)]">0{i + 1}</span>
+                                    <span className="text-xs font-mono font-bold text-primary">0{i + 1}</span>
                                     <h3 className="text-xl font-bold tracking-tight group-hover:translate-x-2 transition-transform duration-300">{item}</h3>
                                 </div>
                             ))}
