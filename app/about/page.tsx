@@ -20,7 +20,7 @@ export default function AboutPage() {
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/60 md:bg-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/70 to-black/60" />
                 <div className="absolute bottom-0 left-0 w-full px-6 pb-16 md:pb-20 z-20">
                     <div className="max-w-screen-xl mx-auto">
                         <ScrollReveal>

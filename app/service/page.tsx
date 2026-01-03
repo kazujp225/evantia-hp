@@ -74,7 +74,7 @@ export default function ServicePage() {
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/60" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-black/70" />
                 <div className="absolute bottom-0 left-0 w-full px-6 pb-16 md:pb-20">
                     <div className="max-w-screen-xl mx-auto">
                         <ScrollReveal>
@@ -174,8 +174,10 @@ export default function ServicePage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 md:py-32 px-6 bg-foreground text-background">
-                <div className="max-w-screen-xl mx-auto text-center">
+            <section className="py-20 md:py-32 px-6 bg-primary text-white relative overflow-hidden">
+                {/* Texture */}
+                <div className="absolute inset-0 opacity-[0.1] pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }}></div>
+                <div className="max-w-screen-xl mx-auto text-center relative z-10">
                     <ScrollReveal>
                         <h2 className="text-3xl md:text-5xl font-black mb-8">
                             採用課題、<br className="md:hidden" />ご相談ください。
@@ -186,7 +188,7 @@ export default function ServicePage() {
                         </p>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-3 px-12 py-6 bg-white text-foreground text-sm font-black tracking-[0.2em] hover:bg-primary hover:text-white transition-all"
+                            className="inline-flex items-center gap-3 px-12 py-6 bg-white text-primary text-sm font-black tracking-[0.2em] hover:bg-[var(--color-brand-accent)] hover:text-white transition-all"
                         >
                             お問い合わせ
                             <ArrowRight className="w-4 h-4" />

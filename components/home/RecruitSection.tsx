@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -7,6 +8,16 @@ export function RecruitSection() {
         <section className="py-24 md:py-40 px-6 border-b border-border/40 bg-[var(--color-primary)] text-white relative overflow-hidden">
             {/* Texture Overlay */}
             <div className="absolute inset-0 opacity-[0.1] pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }}></div>
+
+            {/* Logo Watermark */}
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/4 opacity-[0.03] pointer-events-none">
+                <Image
+                    src="/logo.png"
+                    alt=""
+                    width={500}
+                    height={500}
+                />
+            </div>
 
             <div className="max-w-screen-xl mx-auto relative z-10">
                 <ScrollReveal>

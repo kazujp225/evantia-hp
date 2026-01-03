@@ -74,9 +74,19 @@ export function HeroSlider() {
         <section className="relative w-full h-[100dvh] md:h-screen overflow-hidden bg-white text-zinc-900 border-b border-zinc-200">
             {/* --- MEGA BRAND WATERMARK --- */}
             <div className="absolute top-[15%] left-[-5%] z-0 select-none pointer-events-none opacity-[0.03]">
-                <span className="text-[25vw] font-black leading-none tracking-tighter text-black">
+                <span className="text-[25vw] font-black leading-none tracking-tighter text-primary">
                     EVANTIA
                 </span>
+            </div>
+
+            {/* --- LOGO WATERMARK --- */}
+            <div className="absolute bottom-[10%] right-[5%] z-0 select-none pointer-events-none opacity-[0.04]">
+                <Image
+                    src="/logo.png"
+                    alt=""
+                    width={300}
+                    height={300}
+                />
             </div>
 
             <AnimatePresence mode="wait">
@@ -183,7 +193,7 @@ export function HeroSlider() {
                                         priority
                                     />
                                     {/* Brand Tint Overlay */}
-                                    <div className="absolute inset-0 bg-zinc-900/10 mix-blend-overlay" />
+                                    <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
                                 </motion.div>
 
                                 {/* Slide Progress / Navigation (Right Side) */}

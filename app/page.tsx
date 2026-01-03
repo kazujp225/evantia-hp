@@ -21,7 +21,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-border mt-10">
               {/* Item 01 */}
-              <div className="group py-8 md:py-12 md:pr-12 border-b md:border-b-0 md:border-r border-border min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
+              <div className="group py-8 md:py-12 md:pr-12 border-b md:border-b-0 md:border-r border-border min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/30">
                 {/* Accent Top Line on Hover */}
                 <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
 
@@ -41,7 +41,7 @@ export default function Home() {
               </div>
 
               {/* Item 02 */}
-              <div className="group py-8 md:py-12 md:px-12 border-b md:border-b-0 md:border-r border-border min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
+              <div className="group py-8 md:py-12 md:px-12 border-b md:border-b-0 md:border-r border-border min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/30">
                 <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
 
                 <div className="relative z-10 px-6 md:px-0">
@@ -60,7 +60,7 @@ export default function Home() {
               </div>
 
               {/* Item 03 */}
-              <div className="group py-8 md:py-12 md:pl-12 min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-blue-50/30">
+              <div className="group py-8 md:py-12 md:pl-12 min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/30">
                 <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
 
                 <div className="relative z-10 px-6 md:px-0">
@@ -212,7 +212,7 @@ export default function Home() {
               挑戦する人の潜在力を最大限に引き出す場所。<br />
               それがエバンティアの理想です。
             </p>
-            <Link href="/about" className="inline-flex items-center gap-4 text-sm font-bold tracking-[0.2em] px-10 py-5 border border-white/40 hover:bg-white hover:text-black hover:border-white transition-all duration-300">
+            <Link href="/about" className="inline-flex items-center gap-4 text-sm font-bold tracking-[0.2em] px-10 py-5 border border-white/40 hover:bg-[var(--color-brand-accent)] hover:text-white hover:border-[var(--color-brand-accent)] transition-all duration-300">
               私たちの哲学について
             </Link>
           </ScrollReveal>
@@ -243,7 +243,7 @@ export default function Home() {
             まずはカジュアルにお話ししませんか？
           </p>
 
-          <Link href="/contact" className="group inline-flex items-center justify-center px-12 py-6 bg-black text-white text-sm font-bold tracking-[0.2em] hover:bg-[var(--color-brand-accent)] transition-all duration-500 relative overflow-hidden rounded-full shadow-lg hover:shadow-[var(--color-brand-accent)]/40 hover:-translate-y-1">
+          <Link href="/contact" className="group inline-flex items-center justify-center px-12 py-6 bg-primary text-white text-sm font-bold tracking-[0.2em] hover:bg-[var(--color-brand-accent)] transition-all duration-500 relative overflow-hidden rounded-full shadow-lg hover:shadow-[var(--color-brand-accent)]/40 hover:-translate-y-1">
             <span className="relative z-10">お問い合わせ</span>
             <div className="absolute inset-0 bg-[var(--color-brand-accent)] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
           </Link>

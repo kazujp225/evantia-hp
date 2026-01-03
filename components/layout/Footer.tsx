@@ -89,13 +89,13 @@ export const Footer = () => {
                             />
                             <span className="text-3xl font-extrabold tracking-tighter">EVANTIA</span>
                         </div>
-                        <address className="not-italic text-sm text-gray-500 space-y-6 leading-relaxed font-medium">
+                        <address className="not-italic text-base text-white space-y-6 leading-relaxed font-bold">
                             <div className="border-l border-[var(--color-brand-accent)] pl-4">
-                                <strong className="text-white block mb-1 text-xs tracking-widest uppercase">Head Office</strong>
+                                <strong className="text-white block mb-1 text-sm tracking-widest uppercase">Head Office</strong>
                                 〒541-0047<br />大阪府大阪市中央区淡路町1-4-9<br />TPR北浜ビル 6F
                             </div>
                             <div className="border-l border-white/20 pl-4 hover:border-[var(--color-brand-accent)] transition-colors duration-300">
-                                <strong className="text-white block mb-1 text-xs tracking-widest uppercase">Contact</strong>
+                                <strong className="text-white block mb-1 text-sm tracking-widest uppercase">Contact</strong>
                                 info@evantia-co.jp<br />090-2393-2820
                             </div>
                         </address>
@@ -105,11 +105,11 @@ export const Footer = () => {
                         {FOOTER_MAP.map((section, i) => (
                             <div key={i} className="flex flex-col">
                                 <div className="h-px w-8 bg-white/30 mb-6 group-hover:w-12 transition-all duration-300"></div>
-                                <h3 className="font-bold text-xs tracking-[0.2em] text-[var(--color-brand-accent)] mb-6 uppercase">{section.category}</h3>
+                                <h3 className="font-extrabold text-sm tracking-[0.2em] text-[var(--color-brand-accent)] mb-6 uppercase">{section.category}</h3>
                                 <ul className="space-y-3">
                                     {section.links.map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-sm font-bold text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block py-0.5">
+                                            <Link href={link.href} className="text-base font-bold text-white hover:text-[var(--color-brand-accent)] hover:pl-2 transition-all duration-300 block py-0.5">
                                                 {link.label}
                                             </Link>
                                         </li>
@@ -121,7 +121,7 @@ export const Footer = () => {
                 </div>
 
                 {/* 3. Bottom Legal */}
-                <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-white/5 text-[10px] text-gray-600 font-medium tracking-wide uppercase">
+                <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-white/5 text-sm text-white font-bold tracking-wide uppercase">
                     <div className="flex flex-wrap justify-center gap-8 mb-4 md:mb-0">
                         <Link href="/privacy" className="hover:text-[var(--color-brand-accent)] transition-colors">プライバシーポリシー</Link>
                         <Link href="/security" className="hover:text-[var(--color-brand-accent)] transition-colors">情報セキュリティ基本方針</Link>
