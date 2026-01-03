@@ -4,29 +4,24 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ArrowLeft, Calendar, Tag, Share2 } from "lucide-react";
 import Link from "next/link";
 
-// Mock Data
+// テスト用データ
 const ARTICLES: Record<string, any> = {
-    "article-1": {
-        date: "2024.01.05",
+    "test": {
+        date: "2026.01.05",
         cat: "KNOW-HOW",
-        title: "エンジニア採用におけるスカウトメールの開封率を劇的に改善する3つのポイントとは？",
+        title: "【テスト記事】コラム機能のサンプル",
         content: `
-            <p>売り手市場が続くエンジニア採用において、スカウトメールの開封率は極めて重要です。多くの企業がテンプレートを使い回す中、候補者は「自分に向けられたメッセージかどうか」を瞬時に判断しています。</p>
-            <h3>1. 件名で「Why You」を伝える</h3>
-            <p>「【面談確約】エンジニア募集」といった件名は、候補者にとってノイズでしかありません。「なぜ、あなたのGithubを見て連絡したのか」を件名の最初の15文字に凝縮する必要があります。</p>
-            <h3>2. 技術スタックへのリスペクト</h3>
-            <p>エンジニアは技術へのこだわりを持っています。単に言語名を羅列するのではなく、「あなたが◯◯のリポジトリで書いていたコードの設計思想に共感しました」といった踏み込んだ内容が必要です。</p>
-            <blockquote>「テンプレ」ではなく「ラブレター」を書くつもりで。</blockquote>
-            <h3>3. 会社の課題を正直に晒す</h3>
-            <p>「素晴らしい環境です」とアピールするよりも、「現在、技術的負債の解消に苦戦しており、アーキテクチャの再設計ができるリードエンジニアを求めています」と正直に課題を伝えた方が、優秀なエンジニアの挑戦心をくすぐります。</p>
+            <p>これはコラム機能のテスト用記事です。</p>
+            <h3>見出しサンプル</h3>
+            <p>実際の記事が公開されるまでの仮コンテンツとなります。記事の表示やレイアウトの確認用にご利用ください。</p>
+            <blockquote>引用ブロックのサンプルです。</blockquote>
+            <p>本番運用時には、この記事を削除または更新してください。</p>
         `
-    },
-    // Fallback
-    "article-2": { date: "2023.12.20", cat: "TREND", title: "2026年新卒採用予測", content: "<p>...</p>" }
+    }
 };
 
 export default function ColumnDetailPage({ params }: { params: { slug: string } }) {
-    const article = ARTICLES[params.slug] || ARTICLES["article-1"];
+    const article = ARTICLES[params.slug] || ARTICLES["test"];
 
     return (
         <div className="bg-white pb-40 text-black">
