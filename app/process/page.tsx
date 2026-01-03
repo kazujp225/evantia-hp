@@ -18,21 +18,21 @@ export default function ProcessPage() {
             title: "Strategy & Design",
             desc: "採用が「感覚」から「言語」になる",
             detail: "経営目標から逆算した採用要件を定義。評価基準を明確に言語化することで、選考の精度を向上させます。",
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600"
+            image: "/assets/images/service-strategy.jpg"
         },
         {
             step: "02",
             title: "Execution & System",
             desc: "属人性が「仕組み」に変わる",
             detail: "スカウト、日程調整、面接フィードバック。すべての工程を標準化し、再現性のある採用体制を構築します。",
-            image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1600"
+            image: "/assets/images/service-execution.jpg"
         },
         {
             step: "03",
             title: "Transfer & Self-Run",
             desc: "自社での運用が可能になる",
             detail: "最終的な目標は、貴社での自走体制の確立です。構築したノウハウと仕組みを社内に移管し、持続的に成果を出せる採用チームを実現します。",
-            image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600"
+            image: "/assets/images/hero-team.jpg"
         }
     ];
 
@@ -42,8 +42,8 @@ export default function ProcessPage() {
             {/* Page Header with Image */}
             <div className="relative h-[60vh] flex items-end">
                 <Image
-                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=2000"
-                    alt="Process Header"
+                    src="/assets/images/process-hero.jpg"
+                    alt="採用プロセス - ビジネスミーティング"
                     fill
                     className="object-cover brightness-50"
                     priority

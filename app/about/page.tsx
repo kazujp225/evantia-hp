@@ -23,8 +23,8 @@ export default function AboutPage() {
             {/* Hero Image */}
             <div className="relative min-h-[80vh] md:h-[70vh] w-full overflow-hidden bg-zinc-900">
                 <Image
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
-                    alt="About Hero"
+                    src="/assets/images/about-hero.jpg"
+                    alt="エバンティアのオフィス - モダンなビジネス環境"
                     fill
                     className="object-cover"
                     priority
@@ -66,8 +66,8 @@ export default function AboutPage() {
                         </div>
                         <div className="relative aspect-square md:aspect-[4/5] bg-muted">
                             <Image
-                                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1200"
-                                alt="Working"
+                                src="/assets/images/about-team.jpg"
+                                alt="エバンティアのチームワーク - 協力して課題に取り組む様子"
                                 fill
                                 className="object-cover transition-all duration-1000 hover:scale-105"
                             />
@@ -106,7 +106,7 @@ export default function AboutPage() {
                                 { label: "資本金", value: "500万円" },
                                 { label: "代表取締役", value: "新井 淳平", sub: "Junpei Arai" },
                                 { label: "取締役", value: "豊嶋 令", sub: "Ryo Toyoshima" },
-                                { label: "所在地", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F", link: "https://maps.google.com" },
+                                { label: "所在地", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F", link: "https://maps.google.co.jp/maps?q=大阪市中央区淡路町1-4-9" },
                                 { label: "連絡先", value: "info@evantia-co.jp", sub: "090-2393-2820" }
                             ].map((row, i) => (
                                 <div key={i} className="group grid grid-cols-1 md:grid-cols-4 py-8 border-b border-black/10 hover:border-[var(--color-brand-accent)] transition-colors duration-500 items-baseline gap-2 md:gap-0">

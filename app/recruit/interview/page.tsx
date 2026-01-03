@@ -16,7 +16,7 @@ const INTERVIEWS = [
         role: "Recruitment Consultant",
         joined: "2026",
         title: "クライアントの事業成長に貢献することが、私たちの目標です。",
-        image: "https://images.unsplash.com/photo-1507679799987-c7377ec48696?auto=format&fit=crop&q=80&w=800"
+        image: "/assets/images/interview-1.jpg"
     },
     {
         id: "002",
@@ -24,23 +24,23 @@ const INTERVIEWS = [
         role: "RPO Specialist",
         joined: "2026",
         title: "現場にこそ答えがある。地道な改善が組織を変える。",
-        image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800"
+        image: "/assets/images/interview-2.jpg"
     },
     {
         id: "003",
         name: "佐藤 一郎",
         role: "Creative Director",
-        joined: "2025",
+        joined: "2026",
         title: "言葉にできない魅力を、デザインの力で可視化する。",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+        image: "/assets/images/interview-3.jpg"
     },
     {
         id: "004",
         name: "高橋 由美",
         role: "Career Advisor",
-        joined: "2025",
+        joined: "2026",
         title: "「転職」という人生の分岐点に、真摯に向き合う。",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800"
+        image: "/assets/images/interview-1.jpg"
     },
     {
         id: "005",
@@ -48,7 +48,7 @@ const INTERVIEWS = [
         role: "Corporate Staff",
         joined: "2026",
         title: "成長する組織の管理と推進を同時に担うやりがい。",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
+        image: "/assets/images/interview-2.jpg"
     },
     {
         id: "006",
@@ -56,7 +56,7 @@ const INTERVIEWS = [
         role: "HR Tech Engineer",
         joined: "2026",
         title: "テクノロジーで採用プロセスを効率化し、マッチングの精度を高める。",
-        image: "https://images.unsplash.com/photo-1573496733222-7773f324fc28?auto=format&fit=crop&q=80&w=800"
+        image: "/assets/images/interview-3.jpg"
     }
 ];
 
@@ -84,7 +84,6 @@ export default function InterviewPage() {
                                             src={interview.image}
                                             alt={interview.name}
                                             fill
-                                            unoptimized
                                             className="object-cover group-hover:scale-105 transition-transform duration-700 filter grayscale group-hover:grayscale-0"
                                         />
                                     </div>

@@ -23,7 +23,7 @@ export function OrganizationJsonLd() {
       availableLanguage: ["Japanese"],
     },
     sameAs: [],
-    foundingDate: "2024",
+    foundingDate: "2026-01-05",
     areaServed: "JP",
     serviceArea: {
       "@type": "Country",

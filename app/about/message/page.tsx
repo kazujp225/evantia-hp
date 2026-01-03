@@ -17,8 +17,8 @@ export default function MessagePage() {
                     <ScrollReveal className="w-full md:w-1/3">
                         <div className="aspect-[3/4] bg-gray-200 rounded-2xl relative overflow-hidden group">
                             <Image
-                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
-                                alt="CEO Portrait"
+                                src="/assets/images/ceo.jpg"
+                                alt="代表取締役 新井淳平"
                                 fill
                                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                             />

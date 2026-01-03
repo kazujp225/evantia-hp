@@ -77,8 +77,8 @@ export default function ServicePage() {
             {/* Hero Section */}
             <section className="relative min-h-[60vh] md:min-h-[70vh] w-full overflow-hidden">
                 <Image
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000"
-                    alt="Service Hero"
+                    src="/assets/images/service-hero.jpg"
+                    alt="採用コンサルティング - チームミーティング"
                     fill
                     className="object-cover"
                     priority
@@ -185,7 +185,7 @@ export default function ServicePage() {
             {/* CTA Section */}
             <section className="py-20 md:py-32 px-6 bg-primary text-white relative overflow-hidden">
                 {/* Texture */}
-                <div className="absolute inset-0 opacity-[0.1] pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }}></div>
+                <div className="absolute inset-0 opacity-[0.1] pointer-events-none mix-blend-overlay" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }}></div>
                 <div className="max-w-screen-xl mx-auto text-center relative z-10">
                     <ScrollReveal>
                         <h2 className="text-3xl md:text-5xl font-black mb-8">
