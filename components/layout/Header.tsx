@@ -196,7 +196,7 @@ export const Header = () => {
                                             <span>大阪府大阪市</span>
                                         </div>
                                         <div className="flex flex-col gap-2">
-                                            <span>jyunpei.arai@evantia-co.jp</span>
+                                            <span>info@evantia-co.jp</span>
                                             <span>090-2393-2820</span>
                                         </div>
                                         <div className="flex gap-6 mt-8">

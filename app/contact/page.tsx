@@ -59,7 +59,7 @@ export default function ContactPage() {
                         <div className="p-8 border border-border bg-white">
                             <h3 className="font-bold mb-2">Direct Contact</h3>
                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                jyunpei.arai@evantia-co.jp<br />
+                                info@evantia-co.jp<br />
                                 090-2393-2820
                             </p>
                         </div>

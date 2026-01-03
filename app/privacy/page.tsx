@@ -63,7 +63,7 @@ export default function PrivacyPage() {
                             住所：〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F<br />
                             社名：株式会社エバンティア<br />
                             担当部署：管理部<br />
-                            Eメールアドレス：jyunpei.arai@evantia-co.jp
+                            Eメールアドレス：info@evantia-co.jp
                         </p>
                     </div>
                 </ScrollReveal>
