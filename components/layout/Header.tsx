@@ -89,24 +89,8 @@ export const Header = () => {
 
                         <div className="h-full flex flex-col">
                             {/* Mobile Layout */}
-                            <div className="flex-1 flex flex-col justify-center px-8 pt-24 pb-8 md:hidden">
-                                {/* Mobile Logo */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.05 }}
-                                    className="flex items-center gap-3 mb-8"
-                                >
-                                    <Image
-                                        src="/logo.png"
-                                        alt="EVANTIA"
-                                        width={40}
-                                        height={40}
-                                    />
-                                    <span className="text-lg font-bold tracking-tight text-white/80">EVANTIA</span>
-                                </motion.div>
-
-                                <nav className="flex flex-col gap-6">
+                            <div className="flex-1 flex flex-col px-8 pt-28 pb-8 md:hidden">
+                                <nav className="flex flex-col gap-4">
                                     {NAV_ITEMS.map((item, i) => (
                                         <motion.div
                                             key={item.href}
@@ -118,7 +102,10 @@ export const Header = () => {
                                                 href={item.href}
                                                 className="flex items-center justify-between py-4 border-b border-white/10 group"
                                             >
-                                                <span className="text-2xl font-black">{item.label}</span>
+                                                <div>
+                                                    <span className="text-2xl font-black block">{item.label}</span>
+                                                    <span className="text-xs font-bold tracking-widest text-white/40">{item.en}</span>
+                                                </div>
                                                 <ArrowUpRight size={20} className="text-white/40 group-hover:text-[hsl(150_50%_50%)] transition-colors" />
                                             </Link>
                                         </motion.div>
@@ -129,11 +116,11 @@ export const Header = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5 }}
-                                    className="mt-10"
+                                    className="mt-8"
                                 >
                                     <Link
                                         href="/contact"
-                                        className="flex items-center justify-center w-full bg-white text-[hsl(145_45%_16%)] py-5 rounded-full font-black text-xl hover:bg-[hsl(150_50%_50%)] hover:text-white transition-colors"
+                                        className="flex items-center justify-center w-full bg-white text-[hsl(145_45%_16%)] py-4 rounded-full font-black text-lg hover:bg-[hsl(150_50%_50%)] hover:text-white transition-colors"
                                     >
                                         お問い合わせ
                                     </Link>
@@ -143,10 +130,10 @@ export const Header = () => {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.6 }}
-                                    className="mt-auto pt-8 text-center text-white/50 text-base"
+                                    className="mt-auto pt-6 text-white/40 text-sm space-y-1"
                                 >
-                                    <p className="font-bold">株式会社エバンティア</p>
-                                    <p className="mt-2">大阪府大阪市中央区</p>
+                                    <p>info@evantia-co.jp</p>
+                                    <p>大阪府大阪市中央区淡路町1-4-9</p>
                                 </motion.div>
                             </div>
 
