@@ -9,6 +9,7 @@ import Link from "next/link";
 const ARTICLES = [
     {
         id: 1,
+        slug: "test",
         date: "2026.01.05",
         cat: "KNOW-HOW",
         catJp: "ノウハウ",
@@ -60,7 +61,7 @@ export default function ColumnPage() {
                         {filteredArticles.length > 0 ? (
                             filteredArticles.map((article, i) => (
                                 <ScrollReveal key={article.id} delay={i * 0.05}>
-                                    <div className="group block py-12 border-b border-border">
+                                    <Link href={`/column/${article.slug}`} className="group block py-12 border-b border-border hover:bg-gray-50 transition-colors -mx-6 px-6">
                                         <div className="grid md:grid-cols-[200px_1fr] gap-8">
                                             <div className="flex flex-col gap-2">
                                                 <span className="font-mono text-sm text-gray-400">{article.date}</span>
@@ -68,15 +69,18 @@ export default function ColumnPage() {
                                             </div>
 
                                             <div>
-                                                <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-6">
+                                                <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-6 group-hover:text-primary transition-colors">
                                                     {article.title}
                                                 </h3>
                                                 <p className="text-text-light leading-relaxed line-clamp-2 md:line-clamp-none">
                                                     {article.desc}
                                                 </p>
+                                                <span className="inline-flex items-center gap-2 mt-4 text-sm font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                                                    記事を読む <ArrowRight size={14} />
+                                                </span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </ScrollReveal>
                             ))
                         ) : (
