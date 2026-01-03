@@ -224,72 +224,30 @@ export default function Home() {
 
       {/* 9. CTA */}
       {/* 9. CTA - Redesigned to Split Layout */}
-      <section className="py-24 md:py-32 bg-white px-6 border-t border-zinc-200 relative overflow-hidden" aria-labelledby="cta-heading">
-        {/* Texture Overlay */}
-        <div className="absolute inset-0 opacity-[0.4] pointer-events-none mix-blend-multiply" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }} aria-hidden="true" />
-
-        {/* Large Watermark */}
-        <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 select-none pointer-events-none opacity-[0.02]" aria-hidden="true">
-          <span className="text-[30vw] font-black leading-none text-black tracking-tighter">
-            CONTACT
-          </span>
-        </div>
-
-        <div className="max-w-screen-xl mx-auto relative z-10">
+      {/* 9. CTA - Compact Horizontal Layout */}
+      <section className="py-20 bg-zinc-900 border-t border-zinc-200" aria-labelledby="cta-heading">
+        <div className="max-w-screen-xl mx-auto px-6">
           <ScrollReveal>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              {/* Left: Typographic Statement (7 cols) */}
-              <div className="lg:col-span-7 relative">
-                <span className="block text-xs font-black tracking-[0.3em] text-[var(--color-brand-accent)] uppercase mb-8 flex items-center gap-3">
-                  <span className="w-12 h-[1px] bg-[var(--color-brand-accent)]"></span>
-                  Start Your Journey
-                </span>
-                <h2 id="cta-heading" className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] text-zinc-900 mb-8 font-feature-settings-palt">
-                  LET'S<br />
-                  CREATE<br />
-                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-brand-accent)]">
-                    FUTURE
-                    <span className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-2 md:h-4 bg-[var(--color-brand-accent)]/20 -skew-x-12 -z-10 mix-blend-multiply" aria-hidden="true"></span>
-                  </span>
-                  <span className="text-[var(--color-brand-accent)]">.</span>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
+              {/* Left: Compact Statement */}
+              <div className="flex-1 text-center md:text-left">
+                <h2 id="cta-heading" className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-none mb-2 font-feature-settings-palt">
+                  LET'S CREATE <span className="text-[var(--color-brand-accent)]">FUTURE.</span>
                 </h2>
+                <p className="text-zinc-400 font-bold text-sm md:text-base tracking-widest uppercase">
+                  未来を、共に創る。
+                </p>
               </div>
 
-              {/* Right: Message & Action (5 cols) */}
-              <div className="lg:col-span-5 lg:pt-20 flex flex-col items-start relative">
-                {/* Vertical Decorative Line */}
-                <div className="absolute left-[-2rem] top-20 bottom-0 w-[1px] bg-zinc-100 hidden lg:block" aria-hidden="true"></div>
-
-                <p className="text-xl md:text-2xl font-bold text-zinc-900 mb-8 leading-relaxed font-feature-settings-palt">
-                  未来を、共に創る。<br />
-                  <span className="text-zinc-400 text-lg md:text-xl">貴社の成長を支えるパートナーとして。</span>
-                </p>
-                <p className="text-base text-zinc-500 font-medium leading-loose mb-12">
-                  採用課題、組織課題、どのようなフェーズでも構いません。<br />
-                  まずは貴社の「実現したい未来」をお聞かせください。
-                </p>
-
+              {/* Right: Action Button */}
+              <div className="flex-shrink-0">
                 <Link
                   href="/contact"
-                  className="group relative inline-flex items-center gap-6 px-10 py-5 bg-zinc-900 text-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-zinc-500/20"
+                  className="group relative inline-flex items-center gap-4 px-10 py-5 bg-white text-zinc-900 overflow-hidden rounded-full transition-all duration-300 hover:bg-[var(--color-brand-accent)] hover:text-white"
                 >
-                  <span className="relative z-10 text-sm font-black tracking-[0.2em] uppercase group-hover:text-[var(--color-brand-accent)] transition-colors">Contact Form</span>
-                  <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 group-hover:text-[var(--color-brand-accent)] transition-all" />
-
-                  {/* Hover Effect - Border Reveal */}
-                  <div className="absolute inset-0 border border-transparent group-hover:border-[var(--color-brand-accent)] transition-colors duration-300" />
+                  <span className="relative z-10 text-sm font-black tracking-[0.2em] uppercase">Contact Us</span>
+                  <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                 </Link>
-
-                <div className="mt-16 pt-8 border-t border-dashed border-zinc-200 w-full">
-                  <p className="text-[10px] font-black text-zinc-400 tracking-[0.2em] uppercase mb-3 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-zinc-300"></span>
-                    Direct Contact
-                  </p>
-                  <a href="tel:03-1234-5678" className="font-mono text-2xl font-bold text-zinc-900 hover:text-[var(--color-brand-accent)] transition-colors tracking-tight">
-                    03-1234-5678
-                  </a>
-                  <p className="text-xs text-zinc-400 mt-2 font-medium">平日 10:00 - 19:00</p>
-                </div>
               </div>
             </div>
           </ScrollReveal>
