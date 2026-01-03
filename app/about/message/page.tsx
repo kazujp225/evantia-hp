@@ -57,7 +57,7 @@ export default function MessagePage() {
                         </div>
 
                         <div className="mt-16 pt-16 border-t border-black">
-                            <img src="/signature.png" alt="Signature" className="h-20 opacity-50" /> {/* Placeholder */}
+                            <p className="text-xl font-bold text-gray-800">代表取締役　新井 淳平</p>
                         </div>
                     </ScrollReveal>
                 </div>

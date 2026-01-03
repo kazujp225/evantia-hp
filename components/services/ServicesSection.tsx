@@ -74,7 +74,7 @@ export function ServicesSection() {
       <div className="max-w-screen-xl mx-auto relative z-10 h-full flex flex-col">
         <div className="mb-10 md:mb-16 flex justify-between items-start">
           <div>
-            <span className="text-xs font-bold tracking-[0.2em] mb-4 text-[var(--color-brand-accent)] block uppercase flex items-center gap-2">
+            <span className="text-sm md:text-xs font-black tracking-[0.2em] mb-4 text-[var(--color-brand-accent)] block uppercase flex items-center gap-2">
               <span className="w-8 h-[1px] bg-[var(--color-brand-accent)] inline-block"></span>
               Our Services
             </span>
@@ -83,7 +83,7 @@ export function ServicesSection() {
             </p>
           </div>
           <div className="hidden md:block text-right">
-            <span className="text-white/40 text-xs font-mono">0{currentIndex + 1} / 0{SERVICES.length}</span>
+            <span className="text-white/40 text-sm md:text-xs font-mono font-bold">0{currentIndex + 1} / 0{SERVICES.length}</span>
           </div>
         </div>
 
@@ -106,7 +106,7 @@ export function ServicesSection() {
               </p>
               <Link
                 href="/service"
-                className="inline-flex items-center gap-3 text-white text-sm font-bold tracking-widest hover:gap-5 transition-all group hover:text-[var(--color-brand-accent)]"
+                className="inline-flex items-center gap-3 text-white text-base md:text-sm font-black tracking-widest hover:gap-5 transition-all group hover:text-[var(--color-brand-accent)]"
                 aria-label="サービス詳細ページへ"
               >
                 <span className="border-b border-transparent group-hover:border-[var(--color-brand-accent)] pb-1">詳しく見る</span> <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -129,7 +129,7 @@ export function ServicesSection() {
               <div className={`absolute top-0 left-0 h-[3px] transition-all duration-500 ${currentIndex === i ? "w-full bg-[var(--color-brand-accent)] shadow-[0_0_15px_rgba(var(--color-brand-accent),0.6)]" : "w-0 bg-white/30 group-hover:w-full"
                 }`} aria-hidden="true" />
 
-              <span className={`text-xs font-bold tracking-widest uppercase block mb-2 transition-colors ${currentIndex === i ? "text-[var(--color-brand-accent)]" : "text-white/40 group-hover:text-[var(--color-brand-accent)]"
+              <span className={`text-sm md:text-xs font-black tracking-widest uppercase block mb-2 transition-colors ${currentIndex === i ? "text-[var(--color-brand-accent)]" : "text-white/40 group-hover:text-[var(--color-brand-accent)]"
                 }`}>
                 0{i + 1} - {service.en}
               </span>

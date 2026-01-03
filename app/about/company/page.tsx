@@ -49,14 +49,9 @@ export default function CompanyPage() {
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Location</div>
                             <div className="font-bold text-xl leading-relaxed">
-                                <div className="mb-4">
-                                    <span className="block text-sm text-gray-400 mb-1">TOKYO HEADQUARTER</span>
-                                    〒100-0004 東京都千代田区大手町1-2-3
-                                </div>
-                                <div>
-                                    <span className="block text-sm text-gray-400 mb-1">OSAKA BRANCH</span>
-                                    〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル6F
-                                </div>
+                                〒541-0047<br />
+                                大阪府大阪市中央区淡路町1-4-9<br />
+                                TPR北浜ビル 6F
                             </div>
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
@@ -67,10 +62,19 @@ export default function CompanyPage() {
                 </ScrollReveal>
 
                 {/* Map */}
-                <ScrollReveal delay={0.2} className="mt-20 h-[400px] bg-gray-200 rounded-2xl relative overflow-hidden group">
-                    {/* Placeholder Map Image or Embed */}
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                        GOOGLE MAP EMBED AREA
+                <ScrollReveal delay={0.2} className="mt-20">
+                    <div className="h-[400px] rounded-2xl relative overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.7089376395833!2d135.50361!3d34.6891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e71f8e3e6b7d%3A0x8e3e6b7d8e3e6b7d!2z44CSNTU0MS0wMDQ3IOWkp-mYquW6nOWkp-mYquW4guS4reWkruWMuua3oei3r-eUujEtNC05IFRQSUQ5NOWMl-a1nOODk-ODqw!5e0!3m2!1sja!2sjp!4v1704000000000!5m2!1sja!2sjp"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="株式会社エバンティア 所在地"
+                            className="grayscale hover:grayscale-0 transition-all duration-500"
+                        />
                     </div>
                 </ScrollReveal>
             </div>

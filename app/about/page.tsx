@@ -78,13 +78,13 @@ export default function AboutPage() {
                 {/* Corporate Philosophy */}
                 <div className="border-t border-border pt-20 mb-20">
                     <ScrollReveal>
-                        <h2 className="text-xs font-black tracking-[0.4em] uppercase mb-12">企業理念</h2>
+                        <h2 className="text-sm md:text-xs font-black tracking-[0.4em] uppercase mb-12">企業理念</h2>
                         <div className="max-w-3xl">
                             <p className="text-2xl md:text-3xl font-bold leading-relaxed mb-8">
                                 採用は「人を集めること」ではなく、<br />
                                 「未来をつくること」。
                             </p>
-                            <p className="text-muted-foreground font-medium leading-relaxed text-lg">
+                            <p className="text-muted-foreground font-bold md:font-medium leading-relaxed text-lg">
                                 私たちは人材コンサルの専門性を活かし、企業一社一社の課題に向き合い、
                                 最適な人材との出会いを実現することで、企業の成長を支えます。
                             </p>
@@ -95,7 +95,7 @@ export default function AboutPage() {
                 {/* Company Profile - High Impact List */}
                 <div className="border-t border-black pt-20">
                     <ScrollReveal>
-                        <h2 className="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-10 flex items-center gap-3">
+                        <h2 className="text-sm md:text-xs font-black tracking-[0.2em] text-primary uppercase mb-10 flex items-center gap-3">
                             <span className="w-8 h-[2px] bg-primary"></span>
                             Company Profile
                         </h2>
@@ -110,12 +110,12 @@ export default function AboutPage() {
                                 { label: "連絡先", value: "info@evantia-co.jp", sub: "090-2393-2820" }
                             ].map((row, i) => (
                                 <div key={i} className="group grid grid-cols-1 md:grid-cols-4 py-8 border-b border-black/10 hover:border-[var(--color-brand-accent)] transition-colors duration-500 items-baseline gap-2 md:gap-0">
-                                    <div className="md:col-span-1 text-xs font-bold uppercase tracking-widest text-muted-foreground group-hover:text-[var(--color-brand-accent)] transition-colors">
+                                    <div className="md:col-span-1 text-sm md:text-xs font-black uppercase tracking-widest text-muted-foreground group-hover:text-[var(--color-brand-accent)] transition-colors">
                                         {row.label}
                                     </div>
                                     <div className="md:col-span-3">
                                         <div className="text-xl md:text-2xl font-bold tracking-tight">{row.value}</div>
-                                        {row.sub && <div className="text-sm text-muted-foreground font-mono mt-1">{row.sub}</div>}
+                                        {row.sub && <div className="text-base md:text-sm text-muted-foreground font-mono font-bold mt-1">{row.sub}</div>}
                                     </div>
                                 </div>
                             ))}
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 <div className="pt-32 mt-20 border-t border-black relative">
                     <ScrollReveal>
                         <div className="mb-16">
-                            <h2 className="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4 flex items-center gap-3">
+                            <h2 className="text-sm md:text-xs font-black tracking-[0.2em] text-primary uppercase mb-4 flex items-center gap-3">
                                 <span className="w-8 h-[2px] bg-primary"></span>
                                 Services
                             </h2>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                                 "人材定着・組織開発コンサル"
                             ].map((item, i) => (
                                 <div key={i} className="group flex items-baseline gap-6 py-8 border-b border-black/10 hover:border-[var(--color-brand-accent)] transition-colors duration-300">
-                                    <span className="text-xs font-mono font-bold text-primary">0{i + 1}</span>
+                                    <span className="text-sm md:text-xs font-mono font-black text-primary">0{i + 1}</span>
                                     <h3 className="text-xl font-bold tracking-tight group-hover:translate-x-2 transition-transform duration-300">{item}</h3>
                                 </div>
                             ))}

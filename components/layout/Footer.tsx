@@ -23,8 +23,7 @@ const FOOTER_MAP = [
     {
         category: "採用情報",
         links: [
-            { label: "インタビュー", href: "/recruit/interview" },
-            { label: "カルチャー", href: "/recruit" },
+            { label: "採用TOP", href: "/recruit" },
             { label: "エントリー", href: "/recruit/entry" },
         ]
     },
@@ -58,7 +57,7 @@ export const Footer = () => {
                 <div className="border-b border-white/10 pb-20 mb-24">
                     <div className="flex flex-col gap-12 text-center md:text-left md:flex-row md:justify-between md:items-end">
                         <div>
-                            <span className="text-xs font-bold tracking-[0.3em] text-[var(--color-brand-accent)] mb-6 block uppercase flex items-center justify-center md:justify-start gap-3">
+                            <span className="text-sm md:text-xs font-black tracking-[0.3em] text-[var(--color-brand-accent)] mb-6 block uppercase flex items-center justify-center md:justify-start gap-3">
                                 <span className="w-10 h-[1px] bg-[var(--color-brand-accent)]"></span>
                                 Let&apos;s Create Future
                             </span>
@@ -66,7 +65,7 @@ export const Footer = () => {
                                 未来を、<br />
                                 共に創る。
                             </h2>
-                            <p className="text-white/70 font-medium text-lg md:text-xl max-w-xl leading-relaxed">
+                            <p className="text-white/70 font-bold md:font-medium text-lg md:text-xl max-w-xl leading-relaxed">
                                 貴社の成長を支えるパートナーとして。<br />
                                 まずはお気軽にご相談ください。
                             </p>
@@ -105,11 +104,11 @@ export const Footer = () => {
                         {FOOTER_MAP.map((section, i) => (
                             <div key={i} className="flex flex-col">
                                 <div className="h-px w-8 bg-white/30 mb-6 group-hover:w-12 transition-all duration-300" aria-hidden="true"></div>
-                                <h3 className="font-extrabold text-sm tracking-[0.2em] text-[var(--color-brand-accent)] mb-6 uppercase">{section.category}</h3>
+                                <h3 className="font-black text-base md:text-sm tracking-[0.2em] text-[var(--color-brand-accent)] mb-6 uppercase">{section.category}</h3>
                                 <ul className="space-y-3" role="list">
                                     {section.links.map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-base font-bold text-white hover:text-[var(--color-brand-accent)] hover:pl-2 transition-all duration-300 block py-0.5">
+                                            <Link href={link.href} className="text-base font-bold text-white hover:text-[var(--color-brand-accent)] hover:pl-2 transition-all duration-300 block py-1">
                                                 {link.label}
                                             </Link>
                                         </li>
@@ -121,7 +120,7 @@ export const Footer = () => {
                 </div>
 
                 {/* 3. Bottom Legal */}
-                <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-white/5 text-sm text-white font-bold tracking-wide uppercase">
+                <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-white/5 text-base md:text-sm text-white font-bold tracking-wide uppercase">
                     <div className="flex flex-wrap justify-center gap-8 mb-4 md:mb-0">
                         <Link href="/privacy" className="hover:text-[var(--color-brand-accent)] transition-colors">プライバシーポリシー</Link>
                         <Link href="/security" className="hover:text-[var(--color-brand-accent)] transition-colors">情報セキュリティ基本方針</Link>

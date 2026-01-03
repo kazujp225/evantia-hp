@@ -14,14 +14,14 @@ export function NewsSection() {
                 {/* Header */}
                 <div className="md:w-1/4">
                     <ScrollReveal>
-                        <span className="text-sm font-bold tracking-[0.3em] uppercase text-primary md:text-muted-foreground mb-4 block flex items-center gap-2">
+                        <span className="text-base md:text-sm font-black tracking-[0.3em] uppercase text-primary md:text-muted-foreground mb-4 block flex items-center gap-2">
                             <span className="w-6 h-[2px] bg-primary md:hidden"></span>
                             Latest Info
                         </span>
                         <h2 id="news-heading" className="text-4xl font-extrabold tracking-tight mb-8">News</h2>
                         <Link
                             href="/news"
-                            className="inline-flex items-center gap-2 text-sm font-bold tracking-widest hover:text-primary transition-colors group"
+                            className="inline-flex items-center gap-2 text-base md:text-sm font-black tracking-widest hover:text-primary transition-colors group"
                             aria-label="すべてのニュースを見る"
                         >
                             <span className="border-b border-transparent group-hover:border-primary pb-0.5 transition-all">VIEW ALL</span>
@@ -38,8 +38,8 @@ export function NewsSection() {
                                 <Link href="/news" className="group block py-8 border-b border-border/60 hover:border-black transition-colors duration-300">
                                     <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10">
                                         <div className="flex items-center gap-6 min-w-[200px]">
-                                            <span className="font-mono text-xs md:text-sm text-muted-foreground group-hover:text-black transition-colors">{item.date}</span>
-                                            <span className={`text-xs font-bold px-2 py-0.5 border ${item.cat === 'RELEASE' ? 'bg-black text-white border-black' : 'text-gray-500 border-gray-200 bg-gray-50'}`}>
+                                            <span className="font-mono text-sm font-bold text-muted-foreground group-hover:text-black transition-colors">{item.date}</span>
+                                            <span className={`text-sm md:text-xs font-bold px-2.5 py-1 border ${item.cat === 'RELEASE' ? 'bg-black text-white border-black' : 'text-gray-500 border-gray-200 bg-gray-50'}`}>
                                                 {item.cat}
                                             </span>
                                         </div>

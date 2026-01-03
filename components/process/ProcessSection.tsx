@@ -33,7 +33,7 @@ export function ProcessSection() {
             <div className="container-custom">
                 <ScrollReveal className="mb-24 flex flex-col md:flex-row justify-between items-end">
                     <div>
-                        <span className="text-primary font-bold tracking-widest text-xs mb-4 block uppercase flex items-center gap-2">
+                        <span className="text-primary font-black tracking-widest text-sm md:text-xs mb-4 block uppercase flex items-center gap-2">
                         <span className="w-6 h-[2px] bg-primary"></span>
                         The EVANTIA Method
                     </span>
@@ -41,7 +41,7 @@ export function ProcessSection() {
                             Process of<br />Transformation.
                         </h2>
                     </div>
-                    <p className="text-gray-500 font-mono text-xs md:text-right mt-6 md:mt-0">
+                    <p className="text-gray-500 font-mono text-sm md:text-xs font-bold md:text-right mt-6 md:mt-0">
                         SYSTEMATIC APPROACH<br />FOR SUSTAINABLE GROWTH
                     </p>
                 </ScrollReveal>
@@ -59,13 +59,13 @@ export function ProcessSection() {
                                     <div className="absolute left-[11px] top-0 md:left-0 md:top-[23px] w-[10px] h-[10px] rounded-full bg-white border-2 border-primary z-10 group-hover:bg-primary transition-colors duration-300" />
 
                                     <div className="mb-6">
-                                        <span className="font-mono text-xs text-primary font-bold tracking-widest block mb-2">{step.phase}</span>
+                                        <span className="font-mono text-sm md:text-xs text-primary font-black tracking-widest block mb-2">{step.phase}</span>
                                         <span className="text-7xl font-black font-serif italic text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-transparent stroke-gray-300 md:opacity-50 group-hover:opacity-100 group-hover:from-primary/20 group-hover:to-primary transition-all duration-500" style={{ WebkitTextStroke: "1px rgba(0,0,0,0.1)" }}>{step.num}</span>
                                     </div>
 
                                     <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-                                    <p className="text-sm font-bold text-primary mb-4">{step.jp}</p>
-                                    <p className="text-gray-500 text-sm leading-relaxed border-l-2 border-primary/30 md:border-gray-100 pl-4 group-hover:border-primary transition-colors duration-300">
+                                    <p className="text-base md:text-sm font-bold text-primary mb-4">{step.jp}</p>
+                                    <p className="text-gray-500 text-base md:text-sm font-medium leading-relaxed border-l-2 border-primary/30 md:border-gray-100 pl-4 group-hover:border-primary transition-colors duration-300">
                                         {step.desc}
                                     </p>
                                 </div>

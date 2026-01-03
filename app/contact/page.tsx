@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { ContactForm } from "@/components/contact/ContactForm";
 
 import { Metadata } from "next";
 
@@ -30,28 +29,7 @@ export default function ContactPage() {
                             <p className="text-muted-foreground font-medium">採用課題のご相談、お仕事のご依頼など、<br />お気軽にお問い合わせください。</p>
                         </div>
 
-                        <form className="space-y-8">
-                            <div className="grid grid-cols-1 gap-8">
-                                <div>
-                                    <label htmlFor="company" className="block text-xs font-bold tracking-widest mb-3 uppercase text-[var(--color-brand-accent)]">Company</label>
-                                    <input type="text" id="company" className="w-full bg-zinc-50 border-b border-border p-4 font-bold focus:outline-none focus:border-[var(--color-brand-accent)] focus:bg-white transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="御社名" />
-                                </div>
-                                <div>
-                                    <label htmlFor="email" className="block text-xs font-bold tracking-widest mb-3 uppercase text-[var(--color-brand-accent)]">Email</label>
-                                    <input type="email" id="email" className="w-full bg-zinc-50 border-b border-border p-4 font-bold focus:outline-none focus:border-[var(--color-brand-accent)] focus:bg-white transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="メールアドレス" />
-                                </div>
-                                <div>
-                                    <label htmlFor="content" className="block text-xs font-bold tracking-widest mb-3 uppercase text-[var(--color-brand-accent)]">Detail</label>
-                                    <textarea id="content" rows={6} className="w-full bg-zinc-50 border-b border-border p-4 font-bold focus:outline-none focus:border-[var(--color-brand-accent)] focus:bg-white transition-colors rounded-none placeholder:text-muted-foreground/30" placeholder="ご相談内容"></textarea>
-                                </div>
-                            </div>
-
-                            <div className="pt-8 text-center">
-                                <button type="submit" className="inline-flex items-center gap-4 bg-[var(--color-primary)] text-white px-12 py-5 text-sm font-black tracking-widest hover:bg-[var(--color-brand-accent)] transition-all duration-300 shadow-lg hover:shadow-[var(--color-brand-accent)]/40 hover:-translate-y-1">
-                                    送信する <ArrowRight className="w-4 h-4" />
-                                </button>
-                            </div>
-                        </form>
+                        <ContactForm />
                     </ScrollReveal>
                 </div>
             </div>

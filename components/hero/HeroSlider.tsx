@@ -111,12 +111,12 @@ export function HeroSlider() {
                         >
 
                             {/* --- LEFT: CONTENT AREA (Corporate/Info) --- */}
-                            <div className="relative w-full h-auto min-h-[55%] lg:h-full lg:w-[45%] bg-zinc-50 md:bg-zinc-50/50 md:backdrop-blur-sm flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 lg:border-r border-zinc-200/50 border-b lg:border-b-0 pb-24 md:pb-0 transition-all duration-300">
+                            <div className="relative w-full h-[55%] lg:h-full lg:w-[45%] bg-zinc-50 md:bg-zinc-50/50 md:backdrop-blur-sm flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 lg:border-r border-zinc-200/50 border-b lg:border-b-0 pb-20 md:pb-0 transition-all duration-300">
                                 {/* Grid Texture Overlay */}
                                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.4] pointer-events-none mix-blend-multiply" style={{ backgroundSize: '40px 40px' }} />
 
                                 {/* Slide Content Wrapper */}
-                                <div className="relative z-10 mt-0 pt-16 md:pt-0 lg:mt-0">
+                                <div className="relative z-10 mt-0 pt-12 md:pt-0 lg:mt-0">
                                     <motion.div
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
@@ -124,7 +124,7 @@ export function HeroSlider() {
                                         className="flex items-center gap-3 mb-6 md:mb-10"
                                     >
                                         <div className="w-8 h-[1px] bg-[var(--color-brand-accent)]" />
-                                        <span className="text-xs font-bold tracking-[0.2em] uppercase text-[var(--color-brand-accent)]">
+                                        <span className="text-sm md:text-xs font-black tracking-[0.2em] uppercase text-[var(--color-brand-accent)]">
                                             0{slide.id} — {slide.label}
                                         </span>
                                     </motion.div>
@@ -168,8 +168,8 @@ export function HeroSlider() {
                                 </div>
 
                                 {/* --- NEWS TICKER (Bottom Left) --- */}
-                                <div className="absolute bottom-0 left-0 w-full border-t border-zinc-200 bg-white/80 backdrop-blur-md py-4 px-6 md:px-10 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 overflow-hidden z-20">
-                                    <span className="text-xs font-bold tracking-widest text-zinc-400 uppercase flex-shrink-0">Latest News</span>
+                                <div className="absolute bottom-0 left-0 w-full border-t border-zinc-200 bg-white/80 backdrop-blur-md py-3 px-6 md:py-4 md:px-10 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 overflow-hidden z-20">
+                                    <span className="text-[10px] md:text-xs font-black tracking-widest text-zinc-400 uppercase flex-shrink-0">Latest News</span>
                                     <div className="flex-1 overflow-hidden relative h-6 w-full">
                                         <AnimatePresence mode="popLayout">
                                             <motion.div
@@ -180,15 +180,15 @@ export function HeroSlider() {
                                                 transition={{ duration: 0.5 }}
                                                 className="absolute top-0 left-0 w-full flex items-center gap-3 truncate"
                                             >
-                                                <span className="text-xs font-mono text-zinc-500">{NEWS_TICKER[index % NEWS_TICKER.length].date}</span>
-                                                <span className="text-xs px-1.5 py-0.5 border border-[var(--color-brand-accent)]/30 rounded text-[var(--color-brand-accent)] bg-[var(--color-brand-accent)]/5">{NEWS_TICKER[index % NEWS_TICKER.length].category}</span>
-                                                <span className="text-xs font-medium text-zinc-800 truncate hover:text-[var(--color-brand-accent)] hover:underline cursor-pointer transition-colors">
+                                                <span className="text-sm md:text-xs font-mono font-bold text-zinc-500">{NEWS_TICKER[index % NEWS_TICKER.length].date}</span>
+                                                <span className="text-sm md:text-xs font-bold px-2 py-1 border border-[var(--color-brand-accent)]/30 rounded text-[var(--color-brand-accent)] bg-[var(--color-brand-accent)]/5">{NEWS_TICKER[index % NEWS_TICKER.length].category}</span>
+                                                <span className="text-sm md:text-xs font-bold text-zinc-800 truncate hover:text-[var(--color-brand-accent)] hover:underline cursor-pointer transition-colors">
                                                     {NEWS_TICKER[index % NEWS_TICKER.length].title}
                                                 </span>
                                             </motion.div>
                                         </AnimatePresence>
                                     </div>
-                                    <Link href="/news" className="hidden md:flex items-center text-xs font-bold text-zinc-400 hover:text-zinc-900 transition-colors uppercase gap-1 shrink-0" aria-label="すべてのニュースを見る">
+                                    <Link href="/news" className="hidden md:flex items-center text-xs font-black text-zinc-400 hover:text-zinc-900 transition-colors uppercase gap-1 shrink-0" aria-label="すべてのニュースを見る">
                                         View All <ChevronRight className="w-3 h-3" aria-hidden="true" />
                                     </Link>
                                 </div>

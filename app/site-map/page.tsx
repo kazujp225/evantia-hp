@@ -42,7 +42,6 @@ const SITE_STRUCTURE = [
         category: "RECRUIT",
         links: [
             { label: "採用トップ", href: "/recruit" },
-            { label: "インタビュー", href: "/recruit/interview" },
             { label: "エントリー", href: "/recruit/entry" },
         ]
     },

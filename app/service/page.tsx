@@ -130,7 +130,7 @@ export default function ServicePage() {
                     <div className="grid grid-cols-1 gap-0 border-t border-black/10">
                         {features.map((feature, i) => (
                             <ScrollReveal key={i} delay={i * 0.1}>
-                                <div className="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-start p-8 md:p-12 border-b border-black/10 hover:bg-[var(--color-brand-accent)]/5 transition-colors duration-500">
+                                <div className="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-start p-6 md:p-12 border-b border-black/10 hover:bg-[var(--color-brand-accent)]/5 transition-colors duration-500">
                                     <div className="lg:col-span-1">
                                         <span className="text-4xl md:text-5xl font-black text-[var(--color-primary)]/20 group-hover:text-[var(--color-brand-accent)] transition-colors">{feature.num}</span>
                                     </div>
@@ -165,7 +165,7 @@ export default function ServicePage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                         {services.map((service, i) => (
                             <ScrollReveal key={i} delay={i * 0.05}>
-                                <div className="group p-8 border border-border/40 hover:border-primary/40 hover:bg-zinc-50/50 transition-all h-full">
+                                <div className="group p-6 md:p-8 border border-border/40 hover:border-primary/40 hover:bg-zinc-50/50 transition-all h-full">
                                     <div className="flex items-start gap-6">
                                         <span className="text-3xl font-black text-primary/30 group-hover:text-primary/50 transition-colors">{service.num}</span>
                                         <div>

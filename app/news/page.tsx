@@ -25,7 +25,7 @@ export default function NewsPage() {
         <div className="bg-white pb-40 text-black">
             <PageHeader title="NEWS" subtitle="お知らせ" />
 
-            <section className="py-24">
+            <section className="py-16 md:py-24">
                 <div className="container-custom max-w-4xl">
                     {/* Filter - Clickable */}
                     <div className="flex gap-6 md:gap-8 mb-12 overflow-x-auto pb-4 border-b border-border">
@@ -55,7 +55,7 @@ export default function NewsPage() {
                                                     {item.cat}
                                                 </span>
                                             </div>
-                                            <h3 className="text-lg md:text-xl font-bold group-hover:translate-x-2 transition-transform duration-300">
+                                            <h3 className="text-xl md:text-2xl font-bold group-hover:translate-x-2 transition-transform duration-300">
                                                 {item.title}
                                             </h3>
                                         </div>
