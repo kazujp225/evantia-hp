@@ -15,76 +15,7 @@ export default function Home() {
       {/* 1. FIRST VIEW - Hero Slider Restored */}
       <HeroSlider />
 
-      {/* 2. VALUE SUMMARY */}
-      <section className="py-16 md:py-24 px-6 border-b border-border/40" aria-label="バリューサマリー">
-        <div className="max-w-screen-xl mx-auto">
-          <ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-border mt-10">
-              {/* Item 01 */}
-              <div className="group py-8 md:py-12 md:pr-12 border-b md:border-b-0 md:border-r border-border min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/30">
-                {/* Accent Top Line on Hover */}
-                <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
-
-                <div className="relative z-10 px-6 md:px-0">
-                  <span className="text-sm md:text-xs font-black tracking-[0.2em] text-primary md:text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-primary md:bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
-                    Strategy
-                  </span>
-                  <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
-                    行動の前に、<br />戦略を。
-                  </h3>
-                  <p className="text-base md:text-base text-muted-foreground font-bold md:font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-2 border-l-2 border-primary/30 md:border-transparent group-hover:border-[var(--color-brand-accent)]/30">
-                    Strategy before action.
-                  </p>
-                </div>
-                <span className="block text-[100px] md:text-[180px] leading-none font-bold text-foreground/[0.03] absolute bottom-2 right-4 md:bottom-[-40px] md:right-2 select-none pointer-events-none group-hover:text-[var(--color-brand-accent)]/[0.05] transition-colors duration-500">01</span>
-              </div>
-
-              {/* Item 02 */}
-              <div className="group py-8 md:py-12 md:px-12 border-b md:border-b-0 md:border-r border-border min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/30">
-                <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
-
-                <div className="relative z-10 px-6 md:px-0">
-                  <span className="text-sm md:text-xs font-black tracking-[0.2em] text-primary md:text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-primary md:bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
-                    Execution
-                  </span>
-                  <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
-                    確実な<br />実行。
-                  </h3>
-                  <p className="text-base md:text-base text-muted-foreground font-bold md:font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-2 border-l-2 border-primary/30 md:border-transparent group-hover:border-[var(--color-brand-accent)]/30">
-                    Reliable execution.
-                  </p>
-                </div>
-                <span className="block text-[100px] md:text-[180px] leading-none font-bold text-foreground/[0.03] absolute bottom-2 right-4 md:bottom-[-40px] md:right-2 select-none pointer-events-none group-hover:text-[var(--color-brand-accent)]/[0.05] transition-colors duration-500">02</span>
-              </div>
-
-              {/* Item 03 */}
-              <div className="group py-8 md:py-12 md:pl-12 min-h-[200px] md:min-h-[320px] flex flex-col justify-between relative transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/30">
-                <div className="absolute top-0 left-0 w-0 h-[2px] bg-[var(--color-brand-accent)] transition-all duration-500 group-hover:w-full" />
-
-                <div className="relative z-10 px-6 md:px-0">
-                  <span className="text-sm md:text-xs font-black tracking-[0.2em] text-primary md:text-primary/50 uppercase mb-8 block group-hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-primary md:bg-border group-hover:bg-[var(--color-brand-accent)] transition-colors"></span>
-                    Asset
-                  </span>
-                  <h3 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">
-                    成果を、<br />資産にする。
-                  </h3>
-                  <p className="text-base md:text-base text-muted-foreground font-bold md:font-medium tracking-wide group-hover:text-foreground transition-colors duration-500 pl-2 border-l-2 border-primary/30 md:border-transparent group-hover:border-[var(--color-brand-accent)]/30">
-                    Results that remain.
-                  </p>
-                </div>
-                <span className="block text-[100px] md:text-[180px] leading-none font-bold text-foreground/[0.03] absolute bottom-2 right-4 md:bottom-[-40px] md:right-2 select-none pointer-events-none group-hover:text-[var(--color-brand-accent)]/[0.05] transition-colors duration-500">03</span>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-
-
-      {/* 4. PROCESS OF TRANSFORMATION */}
+      {/* 2. PROCESS OF TRANSFORMATION */}
       <section className="py-24 md:py-40 px-6 border-b border-border/40 relative overflow-hidden bg-background" aria-labelledby="process-heading">
         <div className="max-w-screen-xl mx-auto relative z-10">
           <div className="mb-20 md:mb-32">

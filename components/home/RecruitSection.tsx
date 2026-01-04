@@ -41,10 +41,10 @@ export function RecruitSection() {
 
                         <Link
                             href="/recruit"
-                            className="group relative inline-flex items-center gap-4 px-12 py-6 bg-white text-[var(--color-primary)] text-sm font-black tracking-[0.2em] overflow-hidden rounded-full hover:bg-[var(--color-brand-accent)] hover:text-white transition-all duration-300 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_-5px_rgba(16,185,129,0.5)]"
+                            className="btn-shine group relative inline-flex items-center gap-4 px-12 py-6 bg-white text-[var(--color-primary)] text-sm font-black tracking-[0.2em] overflow-hidden rounded-full hover:bg-[var(--color-brand-accent)] hover:text-white transition-all duration-500 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-5px_rgba(46,125,85,0.6)] hover:scale-105"
                         >
                             <span className="relative z-10 transition-transform duration-300 group-hover:-translate-x-1">採用情報を見る</span>
-                            <ArrowRight className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
+                            <ArrowRight className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
                         </Link>
                     </div>
                 </ScrollReveal>

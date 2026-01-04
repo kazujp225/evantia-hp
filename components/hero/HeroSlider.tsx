@@ -159,10 +159,10 @@ export function HeroSlider() {
                                             className="group inline-flex items-center gap-4 text-sm font-black tracking-[0.2em] text-[var(--color-primary)] uppercase"
                                             aria-label={`${slide.btnText}ページへ`}
                                         >
-                                            <div className="w-14 h-14 border-2 border-[var(--color-primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:text-white group-hover:shadow-lg transition-all duration-300" aria-hidden="true">
-                                                <ArrowRight className="w-5 h-5 transition-colors" />
+                                            <div className="w-14 h-14 border-2 border-[var(--color-primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:text-white group-hover:shadow-[0_0_25px_rgba(46,125,85,0.4)] group-hover:scale-110 transition-all duration-300" aria-hidden="true">
+                                                <ArrowRight className="w-5 h-5 transition-all group-hover:translate-x-0.5" />
                                             </div>
-                                            <span className="group-hover:translate-x-2 transition-transform duration-300">{slide.btnText}</span>
+                                            <span className="link-underline group-hover:translate-x-2 transition-transform duration-300">{slide.btnText}</span>
                                         </Link>
                                     </motion.div>
                                 </div>
@@ -214,7 +214,7 @@ export function HeroSlider() {
                                 </motion.div>
 
                                 {/* Slide Progress / Navigation (Right Side) */}
-                                <div className="absolute bottom-10 right-10 flex gap-1 z-20" role="tablist" aria-label="スライド選択">
+                                <div className="absolute bottom-10 right-10 flex gap-2 z-20" role="tablist" aria-label="スライド選択">
                                     {SLIDES.map((s, i) => (
                                         <button
                                             key={i}
@@ -223,8 +223,10 @@ export function HeroSlider() {
                                             aria-selected={currentSlide === i}
                                             aria-label={`スライド${i + 1}: ${s.titleText}`}
                                             className={cn(
-                                                "h-1 transition-all duration-500",
-                                                currentSlide === i ? "w-12 bg-white" : "w-3 bg-white/40 hover:bg-white/60"
+                                                "h-1.5 rounded-full transition-all duration-500",
+                                                currentSlide === i
+                                                    ? "w-14 bg-gradient-to-r from-white to-[var(--color-brand-accent)] shadow-[0_0_10px_rgba(255,255,255,0.5)]"
+                                                    : "w-4 bg-white/40 hover:bg-white/70 hover:w-6"
                                             )}
                                         />
                                     ))}

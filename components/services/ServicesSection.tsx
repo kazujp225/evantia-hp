@@ -106,10 +106,10 @@ export function ServicesSection() {
               </p>
               <Link
                 href="/service"
-                className="inline-flex items-center gap-3 text-white text-base md:text-sm font-black tracking-widest hover:gap-5 transition-all group hover:text-[var(--color-brand-accent)]"
+                className="btn-shine inline-flex items-center gap-3 text-white text-base md:text-sm font-black tracking-widest hover:gap-5 transition-all group bg-white/10 backdrop-blur-sm px-6 py-3 rounded-sm hover:bg-[var(--color-brand-accent)] hover:text-white"
                 aria-label="サービス詳細ページへ"
               >
-                <span className="border-b border-transparent group-hover:border-[var(--color-brand-accent)] pb-1">詳しく見る</span> <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                <span>詳しく見る</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
               </Link>
             </motion.div>
           </AnimatePresence>
@@ -124,16 +124,22 @@ export function ServicesSection() {
               role="tab"
               aria-selected={currentIndex === i}
               aria-label={`${service.title}を表示`}
-              className={`pt-6 pb-2 px-2 text-left transition-all duration-300 relative group`}
+              className={`pt-6 pb-4 px-4 text-left transition-all duration-300 relative group ${currentIndex === i ? "bg-white/5" : "hover:bg-white/5"}`}
             >
-              <div className={`absolute top-0 left-0 h-[3px] transition-all duration-500 ${currentIndex === i ? "w-full bg-[var(--color-brand-accent)] shadow-[0_0_15px_rgba(var(--color-brand-accent),0.6)]" : "w-0 bg-white/30 group-hover:w-full"
+              {/* Top accent line */}
+              <div className={`absolute top-0 left-0 h-[3px] transition-all duration-500 ${currentIndex === i ? "w-full bg-gradient-to-r from-[var(--color-brand-accent)] to-[var(--color-brand-gold)] shadow-[0_0_20px_rgba(46,125,85,0.5)]" : "w-0 bg-white/30 group-hover:w-full"
                 }`} aria-hidden="true" />
 
-              <span className={`text-sm md:text-xs font-black tracking-widest uppercase block mb-2 transition-colors ${currentIndex === i ? "text-[var(--color-brand-accent)]" : "text-white/40 group-hover:text-[var(--color-brand-accent)]"
+              {/* Number badge */}
+              <div className={`absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-xs font-black transition-all duration-300 ${currentIndex === i ? "bg-[var(--color-brand-accent)] text-white scale-110" : "bg-white/10 text-white/40 group-hover:bg-white/20 group-hover:text-white"}`}>
+                0{i + 1}
+              </div>
+
+              <span className={`text-sm md:text-xs font-black tracking-widest uppercase block mb-2 transition-all duration-300 ${currentIndex === i ? "text-[var(--color-brand-accent)]" : "text-white/40 group-hover:text-[var(--color-brand-accent)] group-hover:tracking-[0.2em]"
                 }`}>
-                0{i + 1} - {service.en}
+                {service.en}
               </span>
-              <span className={`text-sm md:text-lg font-black block truncate transition-colors ${currentIndex === i ? "text-white scale-105 origin-left" : "text-white/40 group-hover:text-white"
+              <span className={`text-base md:text-lg font-black block truncate transition-all duration-300 ${currentIndex === i ? "text-white translate-x-1" : "text-white/40 group-hover:text-white group-hover:translate-x-1"
                 }`}>
                 {service.title}
               </span>

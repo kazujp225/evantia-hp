@@ -147,3 +147,271 @@ body::before {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ========================================
+   UI Enhancement Styles
+   ======================================== */
+
+/* Animated Underline Links */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-brand-accent), var(--color-primary));
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Card Hover Effect */
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1),
+              0 8px 16px -8px rgba(0, 0, 0, 0.06);
+}
+
+/* Gradient Border Effect */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: linear-gradient(180deg, var(--color-brand-accent), var(--color-brand-gold));
+  transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gradient-border:hover::before {
+  height: 100%;
+}
+
+/* Button Shine Effect */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.btn-shine:hover::before {
+  left: 100%;
+}
+
+/* Section Title Accent */
+.section-title-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-accent::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-brand-accent), var(--color-brand-gold));
+  border-radius: 2px;
+}
+
+/* Numbered Section Label */
+.numbered-label {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.numbered-label::before {
+  content: attr(data-number);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-brand-accent);
+  opacity: 0.6;
+}
+
+/* Subtle Background Pattern */
+.bg-pattern {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Image Hover Zoom */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Stagger Animation Children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: staggerFadeIn 0.5s ease forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes staggerFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow Effect */
+.glow-accent {
+  box-shadow: 0 0 0 0 rgba(46, 125, 85, 0);
+  transition: box-shadow 0.4s ease;
+}
+
+.glow-accent:hover {
+  box-shadow: 0 0 24px 4px rgba(46, 125, 85, 0.15);
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-brand-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth Divider */
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border),
+    var(--color-brand-accent),
+    var(--color-border),
+    transparent
+  );
+}
+
+/* Icon Container */
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--color-secondary), rgba(255,255,255,0.8));
+  transition: all 0.3s ease;
+}
+
+.icon-container:hover {
+  background: linear-gradient(135deg, var(--color-brand-accent), var(--color-primary));
+  color: white;
+  transform: rotate(-5deg) scale(1.05);
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.badge-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.badge-accent {
+  background: linear-gradient(135deg, var(--color-brand-accent), var(--color-primary));
+  color: white;
+}
+
+.badge-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-muted-foreground);
+}
+
+/* Interactive List Item */
+.list-item-interactive {
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.list-item-interactive::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.list-item-interactive:hover {
+  padding-left: 2rem;
+  color: var(--color-primary);
+}
+
+.list-item-interactive:hover::before {
+  width: 12px;
+  border-radius: 2px;
+  background: var(--color-brand-accent);
+}

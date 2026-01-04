@@ -70,8 +70,8 @@ export const Footer = () => {
                                 まずはお気軽にご相談ください。
                             </p>
                         </div>
-                        <Link href="/contact" className="group flex items-center justify-center gap-4 bg-white text-black px-12 py-5 text-lg font-bold tracking-widest hover:bg-[var(--color-brand-accent)] hover:text-white transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(0,100,200,0.4)]" aria-label="お問い合わせページへ">
-                            お問い合わせ <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
+                        <Link href="/contact" className="btn-shine group flex items-center justify-center gap-4 bg-white text-black px-12 py-5 text-lg font-bold tracking-widest hover:bg-[var(--color-brand-accent)] hover:text-white transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(46,125,85,0.4)]" aria-label="お問い合わせページへ">
+                            お問い合わせ <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" aria-hidden="true" />
                         </Link>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ export const Footer = () => {
                                 <ul className="space-y-3" role="list">
                                     {section.links.map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-base font-bold text-white hover:text-[var(--color-brand-accent)] hover:pl-2 transition-all duration-300 block py-1">
+                                            <Link href={link.href} className="list-item-interactive text-base font-bold text-white hover:text-[var(--color-brand-accent)] transition-all duration-300 block py-1.5">
                                                 {link.label}
                                             </Link>
                                         </li>
@@ -122,10 +122,10 @@ export const Footer = () => {
                 {/* 3. Bottom Legal */}
                 <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-white/5 text-base md:text-sm text-white font-bold tracking-wide uppercase">
                     <div className="flex flex-wrap justify-center gap-8 mb-4 md:mb-0">
-                        <Link href="/privacy" className="hover:text-[var(--color-brand-accent)] transition-colors">プライバシーポリシー</Link>
-                        <Link href="/security" className="hover:text-[var(--color-brand-accent)] transition-colors">情報セキュリティ基本方針</Link>
-                        <Link href="/terms" className="hover:text-[var(--color-brand-accent)] transition-colors">利用規約</Link>
-                        <Link href="/site-map" className="hover:text-[var(--color-brand-accent)] transition-colors">サイトマップ</Link>
+                        <Link href="/privacy" className="link-underline hover:text-[var(--color-brand-accent)] transition-colors">プライバシーポリシー</Link>
+                        <Link href="/security" className="link-underline hover:text-[var(--color-brand-accent)] transition-colors">情報セキュリティ基本方針</Link>
+                        <Link href="/terms" className="link-underline hover:text-[var(--color-brand-accent)] transition-colors">利用規約</Link>
+                        <Link href="/site-map" className="link-underline hover:text-[var(--color-brand-accent)] transition-colors">サイトマップ</Link>
                     </div>
                     <p>© 2026 EVANTIA Inc. All Rights Reserved.</p>
                 </div>

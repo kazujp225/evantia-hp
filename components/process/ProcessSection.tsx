@@ -54,18 +54,18 @@ export function ProcessSection() {
                     <div className="grid md:grid-cols-3 gap-12 md:gap-8">
                         {STEPS.map((step, i) => (
                             <ScrollReveal key={step.num} delay={i * 0.2}>
-                                <div className="relative pl-12 md:pl-0 pt-0 md:pt-12 group">
+                                <div className="relative pl-12 md:pl-0 pt-0 md:pt-12 group cursor-pointer">
                                     {/* Connection Point */}
-                                    <div className="absolute left-[11px] top-0 md:left-0 md:top-[23px] w-[10px] h-[10px] rounded-full bg-white border-2 border-primary z-10 group-hover:bg-primary transition-colors duration-300" />
+                                    <div className="absolute left-[11px] top-0 md:left-0 md:top-[23px] w-[10px] h-[10px] rounded-full bg-white border-2 border-primary z-10 group-hover:bg-primary group-hover:scale-150 transition-all duration-300" />
 
                                     <div className="mb-6">
-                                        <span className="font-mono text-sm md:text-xs text-primary font-black tracking-widest block mb-2">{step.phase}</span>
-                                        <span className="text-7xl font-black font-serif italic text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-transparent stroke-gray-300 md:opacity-50 group-hover:opacity-100 group-hover:from-primary/20 group-hover:to-primary transition-all duration-500" style={{ WebkitTextStroke: "1px rgba(0,0,0,0.1)" }}>{step.num}</span>
+                                        <span className="font-mono text-sm md:text-xs text-primary font-black tracking-widest block mb-2 group-hover:tracking-[0.3em] transition-all duration-300">{step.phase}</span>
+                                        <span className="text-7xl font-black font-serif italic text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-transparent stroke-gray-300 md:opacity-50 group-hover:opacity-100 group-hover:from-primary/20 group-hover:to-primary transition-all duration-500 group-hover:scale-110 inline-block origin-left" style={{ WebkitTextStroke: "1px rgba(0,0,0,0.1)" }}>{step.num}</span>
                                     </div>
 
-                                    <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-                                    <p className="text-base md:text-sm font-bold text-primary mb-4">{step.jp}</p>
-                                    <p className="text-gray-500 text-base md:text-sm font-medium leading-relaxed border-l-2 border-primary/30 md:border-gray-100 pl-4 group-hover:border-primary transition-colors duration-300">
+                                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">{step.title}</h3>
+                                    <p className="text-base md:text-sm font-bold text-primary mb-4 group-hover:translate-x-1 transition-transform duration-300">{step.jp}</p>
+                                    <p className="text-gray-500 text-base md:text-sm font-medium leading-relaxed border-l-2 border-primary/30 md:border-gray-100 pl-4 group-hover:border-primary group-hover:pl-5 transition-all duration-300">
                                         {step.desc}
                                     </p>
                                 </div>

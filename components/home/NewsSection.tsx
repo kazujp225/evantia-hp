@@ -21,11 +21,11 @@ export function NewsSection() {
                         <h2 id="news-heading" className="text-4xl font-extrabold tracking-tight mb-8">News</h2>
                         <Link
                             href="/news"
-                            className="inline-flex items-center gap-2 text-base md:text-sm font-black tracking-widest hover:text-primary transition-colors group"
+                            className="link-underline inline-flex items-center gap-2 text-base md:text-sm font-black tracking-widest hover:text-primary transition-colors group"
                             aria-label="すべてのニュースを見る"
                         >
-                            <span className="border-b border-transparent group-hover:border-primary pb-0.5 transition-all">VIEW ALL</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                            <span>VIEW ALL</span>
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
                         </Link>
                     </ScrollReveal>
                 </div>
@@ -35,15 +35,15 @@ export function NewsSection() {
                     <div className="flex flex-col">
                         {latestNews.map((item, i) => (
                             <ScrollReveal key={item.id} delay={i * 0.1}>
-                                <Link href="/news" className="group block py-8 border-b border-border/60 hover:border-black transition-colors duration-300">
+                                <Link href="/news" className="gradient-border group block py-8 pl-4 border-b border-border/60 hover:border-primary/30 hover:bg-secondary/30 transition-all duration-300 rounded-r-sm">
                                     <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10">
                                         <div className="flex items-center gap-6 min-w-[200px]">
-                                            <span className="font-mono text-sm font-bold text-muted-foreground group-hover:text-black transition-colors">{item.date}</span>
-                                            <span className={`text-sm md:text-xs font-bold px-2.5 py-1 border ${item.cat === 'RELEASE' ? 'bg-black text-white border-black' : 'text-gray-500 border-gray-200 bg-gray-50'}`}>
+                                            <span className="font-mono text-sm font-bold text-muted-foreground group-hover:text-primary transition-colors duration-300">{item.date}</span>
+                                            <span className={`text-sm md:text-xs font-bold px-3 py-1.5 rounded-sm transition-all duration-300 ${item.cat === 'RELEASE' ? 'bg-primary text-white' : 'text-muted-foreground border border-border bg-secondary/50 group-hover:border-primary/40'}`}>
                                                 {item.cat}
                                             </span>
                                         </div>
-                                        <h3 className="text-base md:text-lg font-bold group-hover:translate-x-2 transition-transform duration-300 ease-out line-clamp-1">
+                                        <h3 className="text-base md:text-lg font-bold group-hover:translate-x-3 group-hover:text-primary transition-all duration-300 ease-out line-clamp-1">
                                             {item.title}
                                         </h3>
                                     </div>

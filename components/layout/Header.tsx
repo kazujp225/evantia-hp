@@ -50,11 +50,11 @@ export const Header = () => {
                     <div className="flex items-center gap-4 md:gap-8">
                         <Link
                             href="/contact"
-                            className="hidden md:flex relative overflow-hidden bg-primary text-white px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
+                            className="btn-shine glow-accent hidden md:flex relative overflow-hidden bg-primary text-white px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(46,125,85,0.4)]"
                             aria-label="お問い合わせページへ"
                         >
                             <span className="relative z-10 flex items-center gap-2">
-                                CONTACT <ArrowUpRight size={16} aria-hidden="true" />
+                                CONTACT <ArrowUpRight size={16} className="group-hover:rotate-45 transition-transform duration-300" aria-hidden="true" />
                             </span>
                         </Link>
 
