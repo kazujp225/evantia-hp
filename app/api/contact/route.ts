@@ -247,9 +247,10 @@ export async function POST(request: Request) {
     ]);
 
     if (adminResult.error || customerResult.error) {
-      console.error('Resend error:', adminResult.error || customerResult.error);
+      const resendError = adminResult.error || customerResult.error;
+      console.error('Resend error:', JSON.stringify(resendError, null, 2));
       return NextResponse.json(
-        { error: 'メール送信に失敗しました' },
+        { error: `メール送信に失敗しました: ${resendError?.message || '不明なエラー'}` },
         { status: 500 }
       );
     }
