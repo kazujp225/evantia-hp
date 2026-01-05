@@ -198,6 +198,15 @@ function getCustomerEmailHtml(company: string, email: string, content: string) {
 }
 
 export async function POST(request: Request) {
+  // APIキーの存在チェック
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY is not configured');
+    return NextResponse.json(
+      { error: 'メール送信サービスが設定されていません' },
+      { status: 500 }
+    );
+  }
+
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
