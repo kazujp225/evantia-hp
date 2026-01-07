@@ -23,7 +23,7 @@ export default function CompanyPage() {
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Founded</div>
-                            <div className="font-bold text-xl md:text-2xl">2026年 1月 5日</div>
+                            <div className="font-bold text-xl md:text-2xl">2026年 1月 5日<span className="block text-sm text-gray-500 mt-1">※現在、設立登記申請中です。</span></div>
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Representative</div>
@@ -35,7 +35,7 @@ export default function CompanyPage() {
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Capital</div>
-                            <div className="font-bold text-xl md:text-2xl">500万円</div>
+                            <div className="font-bold text-xl md:text-2xl">1000万円</div>
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
                             <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Business</div>
