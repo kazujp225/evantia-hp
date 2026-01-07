@@ -9,7 +9,7 @@ export function OrganizationJsonLd() {
     description: "採用コンサルティング、採用代行（RPO）、スカウト代行を通じて企業の採用課題を解決する専門企業",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "淡路町1-4-9 TPR北浜ビル 6F",
+      streetAddress: "淡路町1-4-9 TPR北浜ビル 601",
       addressLocality: "大阪市中央区",
       addressRegion: "大阪府",
       postalCode: "541-0047",
@@ -72,7 +72,7 @@ export function LocalBusinessJsonLd() {
     email: "info@evantia-co.jp",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "淡路町1-4-9 TPR北浜ビル 6F",
+      streetAddress: "淡路町1-4-9 TPR北浜ビル 601",
       addressLocality: "大阪市中央区",
       addressRegion: "大阪府",
       postalCode: "541-0047",

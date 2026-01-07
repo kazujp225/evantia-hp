@@ -188,8 +188,10 @@ export const Header = () => {
                                         </div>
                                         <div className="flex flex-col gap-2">
                                             <span className="text-white">株式会社エバンティア</span>
-                                            <span>TPR北浜ビル 6F</span>
-                                            <span>大阪府大阪市</span>
+                                            <span className="text-white text-xs">＜本社＞</span>
+                                            <span>〒541-0047</span>
+                                            <span>大阪府大阪市中央区淡路町1-4-9</span>
+                                            <span>TPR北浜ビル 601</span>
                                         </div>
                                         <div className="flex flex-col gap-2">
                                             <span>info@evantia-co.jp</span>

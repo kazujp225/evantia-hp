@@ -188,7 +188,7 @@ function getCustomerEmailHtml(company: string, email: string, content: string) {
     <div style="${footerStyles}">
       <p style="margin: 0 0 8px; color: #1a3a2f; font-size: 14px; font-weight: 600;">株式会社エバンティア</p>
       <p style="margin: 0; color: #999999; font-size: 12px; line-height: 1.8;">
-        〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F<br>
+        〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 601<br>
         <a href="mailto:info@evantia-co.jp" style="color: #999999;">info@evantia-co.jp</a>
       </p>
     </div>

@@ -51,7 +51,7 @@ export default function CompanyPage() {
                             <div className="font-bold text-xl leading-relaxed">
                                 〒541-0047<br />
                                 大阪府大阪市中央区淡路町1-4-9<br />
-                                TPR北浜ビル 6F
+                                TPR北浜ビル 601
                             </div>
                         </div>
                         <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">

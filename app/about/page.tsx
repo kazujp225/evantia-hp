@@ -106,7 +106,7 @@ export default function AboutPage() {
                                 { label: "資本金", value: "1000万円" },
                                 { label: "代表取締役", value: "新井 淳平", sub: "Junpei Arai" },
                                 { label: "取締役", value: "豊嶋 令", sub: "Ryo Toyoshima" },
-                                { label: "所在地", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 6F", link: "https://maps.google.co.jp/maps?q=大阪市中央区淡路町1-4-9" },
+                                { label: "所在地", value: "〒541-0047 大阪府大阪市中央区淡路町1-4-9 TPR北浜ビル 601", link: "https://maps.google.co.jp/maps?q=大阪市中央区淡路町1-4-9" },
                                 { label: "連絡先", value: "info@evantia-co.jp", sub: "090-2393-2820" }
                             ].map((row, i) => (
                                 <div key={i} className="group grid grid-cols-1 md:grid-cols-4 py-8 border-b border-black/10 hover:border-[var(--color-brand-accent)] transition-colors duration-500 items-baseline gap-2 md:gap-0">

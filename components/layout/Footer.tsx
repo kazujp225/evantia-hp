@@ -90,7 +90,7 @@ export const Footer = () => {
                         <address className="not-italic text-base text-white space-y-6 leading-relaxed font-bold">
                             <div className="border-l border-[var(--color-brand-accent)] pl-4">
                                 <strong className="text-white block mb-1 text-sm tracking-widest uppercase">Head Office</strong>
-                                〒541-0047<br />大阪府大阪市中央区淡路町1-4-9<br />TPR北浜ビル 6F
+                                〒541-0047<br />大阪府大阪市中央区淡路町1-4-9<br />TPR北浜ビル 601
                             </div>
                             <div className="border-l border-white/20 pl-4 hover:border-[var(--color-brand-accent)] transition-colors duration-300">
                                 <strong className="text-white block mb-1 text-sm tracking-widest uppercase">Contact</strong>

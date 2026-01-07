@@ -40,7 +40,7 @@ export default function ContactPage() {
                         <div className="p-8 border border-border bg-white">
                             <h3 className="font-bold mb-2">Office</h3>
                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                〒541-0047<br />大阪府大阪市中央区淡路町1-4-9<br />TPR北浜ビル 6F
+                                〒541-0047<br />大阪府大阪市中央区淡路町1-4-9<br />TPR北浜ビル 601
                             </p>
                         </div>
                         <div className="p-8 border border-border bg-white">
