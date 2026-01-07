@@ -54,10 +54,6 @@ export default function CompanyPage() {
                                 TPR北浜ビル 601
                             </div>
                         </div>
-                        <div className="grid md:grid-cols-[200px_1fr] border-b border-gray-200 py-6">
-                            <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Bank</div>
-                            <div className="font-bold text-xl md:text-2xl">三菱UFJ銀行、三井住友銀行</div>
-                        </div>
                     </div>
                 </ScrollReveal>
 
