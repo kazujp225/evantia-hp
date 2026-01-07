@@ -115,8 +115,8 @@ export default function Home() {
       {/* 5. SERVICES OVERVIEW */}
       <ServicesSection />
 
-      {/* 6. NEWS */}
-      <NewsSection />
+      
+      
 
       {/* 7. PHILOSOPHY */}
       <section className="py-20 md:py-32 px-6 relative overflow-hidden text-white" aria-labelledby="philosophy-heading">

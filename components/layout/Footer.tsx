@@ -30,7 +30,6 @@ const FOOTER_MAP = [
     {
         category: "インフォメーション",
         links: [
-            { label: "ニュース", href: "/news" },
             { label: "コラム", href: "/column" },
             { label: "お問い合わせ", href: "/contact" },
         ]
