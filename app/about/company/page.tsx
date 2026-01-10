@@ -54,10 +54,6 @@ export default function CompanyPage() {
                                 TPR北浜ビル 601
                             </div>
                         </div>
-                        <div className="grid md:grid-cols-[200px_1fr] py-6">
-                            <div className="font-bold text-sm tracking-widest text-gray-500 uppercase py-2">Corporate Number</div>
-                            <div className="font-bold text-xl md:text-2xl">1200-01-283240</div>
-                        </div>
                     </div>
                 </ScrollReveal>
 
