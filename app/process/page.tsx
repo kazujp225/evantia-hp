@@ -2,12 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { HowToJsonLd } from "@/components/seo/JsonLd";
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "ご支援の流れ",
     description: "エバンティアの採用支援プロセス。戦略設計→実行・仕組み化→移管・自走の3ステップで、再現性のある採用体制を構築します。",
+    openGraph: {
+        title: "ご支援の流れ | 株式会社エバンティア",
+        description: "戦略設計→実行・仕組み化→移管・自走の3ステップで、再現性のある採用体制を構築します。",
+    },
     alternates: { canonical: "/process" },
 };
 
@@ -38,6 +43,7 @@ export default function ProcessPage() {
 
     return (
         <main className="bg-background min-h-screen">
+            <HowToJsonLd />
 
             {/* Page Header with Image */}
             <div className="relative h-[60vh] flex items-end">

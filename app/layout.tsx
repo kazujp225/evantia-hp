@@ -40,20 +40,11 @@ export const metadata: Metadata = {
     siteName: "株式会社エバンティア",
     title: "株式会社エバンティア | 採用コンサルティング・RPO・スカウト代行",
     description: "採用コンサルティング、採用代行（RPO）、スカウト代行を通じて企業の採用課題を解決。戦略設計から実行、内製化支援まで一貫してサポート。",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "株式会社エバンティア",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "株式会社エバンティア | 採用コンサルティング・RPO・スカウト代行",
     description: "採用コンサルティング、採用代行（RPO）、スカウト代行を通じて企業の採用課題を解決。",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,

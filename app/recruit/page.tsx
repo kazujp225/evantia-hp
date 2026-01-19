@@ -8,6 +8,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "採用情報",
     description: "株式会社エバンティアの採用情報。成長意欲が高く、課題解決に真摯に向き合う仲間を募集中。採用コンサルタント、RPO担当、スカウト代行担当など。",
+    openGraph: {
+        title: "採用情報 | 株式会社エバンティア",
+        description: "成長意欲が高く、課題解決に真摯に向き合う仲間を募集中。採用コンサルタント、RPO担当など。",
+    },
     alternates: { canonical: "/recruit" },
 };
 

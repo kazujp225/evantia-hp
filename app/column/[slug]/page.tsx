@@ -48,6 +48,15 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     return {
         title: `${article.title} | コラム`,
         description: article.desc,
+        openGraph: {
+            title: `${article.title} | コラム | 株式会社エバンティア`,
+            description: article.desc,
+            type: "article",
+            publishedTime: article.date.replace(/\./g, "-"),
+        },
+        alternates: {
+            canonical: `/column/${params.slug}`,
+        },
     };
 }
 

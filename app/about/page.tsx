@@ -33,11 +33,11 @@ export default function AboutPage() {
                 <div className="absolute bottom-0 left-0 w-full px-6 pb-16 md:pb-20 z-20">
                     <div className="max-w-screen-xl mx-auto">
                         <ScrollReveal>
-                            <h1 className="text-xl font-black tracking-widest uppercase mb-6 md:mb-8 text-white">Philosophy</h1>
-                            <p className="text-3xl md:text-6xl lg:text-7xl font-black leading-[1.15] max-w-5xl text-white">
+                            <span className="text-xl font-black tracking-widest uppercase mb-6 md:mb-8 text-white block">Philosophy</span>
+                            <h1 className="text-3xl md:text-6xl lg:text-7xl font-black leading-[1.15] max-w-5xl text-white">
                                 挑戦の価値と面白さを<br />
                                 最大化する
-                            </p>
+                            </h1>
                         </ScrollReveal>
                     </div>
                 </div>

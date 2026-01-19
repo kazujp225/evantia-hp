@@ -130,14 +130,14 @@ export function HeroSlider() {
                                     </motion.div>
 
                                     <div className="overflow-hidden pb-1">
-                                        <motion.h2
+                                        <motion.h1
                                             initial={{ y: "100%" }}
                                             animate={{ y: 0 }}
                                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                                             className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] text-zinc-900 mb-6 md:mb-8 font-feature-settings-palt"
                                         >
                                             {slide.title}
-                                        </motion.h2>
+                                        </motion.h1>
                                     </div>
 
                                     <motion.p

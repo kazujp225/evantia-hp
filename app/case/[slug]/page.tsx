@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ArrowLeft, CheckCircle2, TrendingUp, Users, Clock } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
 
 // Mock Data
 const CASES: Record<string, any> = {
@@ -23,6 +24,27 @@ const CASES: Record<string, any> = {
     "project-1": { industry: "メーカー", company: "グローバルマニュファクチャリング", result_main: "母集団形成 200% UP", result_sub: "リーダー候補3名採用", problem: "...", solution: "...", metrics: [] }
 };
 
+export function generateStaticParams() {
+    return Object.keys(CASES).map((slug) => ({
+        slug,
+    }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+    const project = CASES[params.slug] || CASES["project-0"];
+    return {
+        title: `${project.result_main} | 導入事例`,
+        description: `${project.company}様の採用課題を解決。${project.result_sub}。採用コンサルティング・RPO導入事例。`,
+        openGraph: {
+            title: `${project.result_main} | 導入事例 | 株式会社エバンティア`,
+            description: `${project.company}様の採用課題を解決。${project.result_sub}`,
+            type: "article",
+        },
+        alternates: {
+            canonical: `/case/${params.slug}`,
+        },
+    };
+}
 
 export default function CaseDetailPage({ params }: { params: { slug: string } }) {
     const project = CASES[params.slug] || CASES["project-0"];

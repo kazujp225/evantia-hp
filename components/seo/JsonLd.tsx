@@ -187,3 +187,115 @@ export function ServiceJsonLd({ name, description, url }: ServicePageProps) {
     />
   );
 }
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export function FAQJsonLd({ items }: { items: FAQItem[] }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+interface ArticleProps {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  image?: string;
+}
+
+export function ArticleJsonLd({
+  title,
+  description,
+  url,
+  datePublished,
+  dateModified,
+  image,
+}: ArticleProps) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description: description,
+    url: url,
+    datePublished: datePublished,
+    dateModified: dateModified || datePublished,
+    image: image || "https://evantia-co.jp/og-image.png",
+    author: {
+      "@type": "Organization",
+      name: "株式会社エバンティア",
+      url: "https://evantia-co.jp",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "株式会社エバンティア",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://evantia-co.jp/logo.png",
+      },
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+export function HowToJsonLd() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "採用支援サービス導入の流れ",
+    description: "エバンティアの採用支援プロセス。戦略設計から実行、自走体制の構築まで。",
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "戦略設計",
+        text: "経営目標から逆算した採用要件を定義。評価基準を明確に言語化することで、選考の精度を向上させます。",
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "実行・仕組み化",
+        text: "スカウト、日程調整、面接フィードバック。すべての工程を標準化し、再現性のある採用体制を構築します。",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "移管・自走",
+        text: "構築したノウハウと仕組みを社内に移管し、持続的に成果を出せる採用チームを実現します。",
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Target, Layers, Trophy } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { FAQJsonLd } from "@/components/seo/JsonLd";
 
 import { Metadata } from "next";
 
@@ -72,8 +73,28 @@ export default function ServicePage() {
         }
     ];
 
+    const faqItems = [
+        {
+            question: "採用コンサルティングとRPO（採用代行）の違いは何ですか？",
+            answer: "採用コンサルティングは戦略立案やプロセス設計など上流工程を中心に支援します。RPO（採用代行）は実際の採用業務（スカウト送信、日程調整、面接実施など）を代行するサービスです。エバンティアでは両方を一貫してご提供できます。"
+        },
+        {
+            question: "導入までどのくらいの期間がかかりますか？",
+            answer: "通常、初回ヒアリングから2〜4週間程度で本格稼働が可能です。緊急の採用ニーズがある場合は、最短1週間での立ち上げも対応可能です。"
+        },
+        {
+            question: "どのような業界・職種の採用に対応していますか？",
+            answer: "IT・通信、メーカー、サービス業など幅広い業界に対応しています。エンジニア、営業、管理部門など職種も問いません。特にハイクラス人材やポテンシャル採用に強みがあります。"
+        },
+        {
+            question: "料金体系はどうなっていますか？",
+            answer: "月額固定型、成果報酬型、ハイブリッド型など、貴社の状況やニーズに合わせて柔軟にご提案します。まずは無料相談でお気軽にご相談ください。"
+        }
+    ];
+
     return (
         <main className="bg-background min-h-screen">
+            <FAQJsonLd items={faqItems} />
             {/* Hero Section */}
             <section className="relative min-h-[60vh] md:min-h-[70vh] w-full overflow-hidden">
                 <Image
