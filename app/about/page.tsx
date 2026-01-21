@@ -102,7 +102,7 @@ export default function AboutPage() {
                         <div className="border-t border-black/10">
                             {[
                                 { label: "会社名", value: "株式会社エバンティア", sub: "EVANTIA Inc." },
-                                { label: "設立", value: "2026年1月5日", sub: "※現在、設立登記申請中です。" },
+                                { label: "設立", value: "2026年1月5日" },
                                 { label: "資本金", value: "1000万円" },
                                 { label: "代表取締役", value: "新井 淳平", sub: "Junpei Arai" },
                                 { label: "取締役", value: "豊嶋 令", sub: "Ryo Toyoshima" },
