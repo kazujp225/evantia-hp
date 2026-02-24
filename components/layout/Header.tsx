@@ -195,7 +195,7 @@ export const Header = () => {
                                         </div>
                                         <div className="flex flex-col gap-2">
                                             <span>info@evantia-co.jp</span>
-                                            <span>090-2393-2820</span>
+                                            <span>06-7178-1352</span>
                                         </div>
                                         <div className="flex gap-6 mt-8">
                                             <Link href="/contact" className="hover:text-[hsl(150_50%_50%)] transition-colors">お問い合わせ</Link>

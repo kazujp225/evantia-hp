@@ -47,7 +47,7 @@ export default function ContactPage() {
                             <h3 className="font-bold mb-2">Direct Contact</h3>
                             <p className="text-sm text-muted-foreground leading-relaxed">
                                 info@evantia-co.jp<br />
-                                090-2393-2820
+                                06-7178-1352
                             </p>
                         </div>
                     </div>

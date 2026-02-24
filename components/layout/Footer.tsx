@@ -94,7 +94,7 @@ export const Footer = () => {
                             </div>
                             <div className="border-l border-white/20 pl-4 hover:border-[var(--color-brand-accent)] transition-colors duration-300">
                                 <strong className="text-white block mb-1 text-sm tracking-widest uppercase">Contact</strong>
-                                info@evantia-co.jp<br />090-2393-2820
+                                info@evantia-co.jp<br />06-7178-1352
                             </div>
                         </address>
                     </div>

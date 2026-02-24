@@ -17,7 +17,7 @@ export function OrganizationJsonLd() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+81-90-2393-2820",
+      telephone: "+81-6-7178-1352",
       contactType: "customer service",
       email: "info@evantia-co.jp",
       availableLanguage: ["Japanese"],
@@ -68,7 +68,7 @@ export function LocalBusinessJsonLd() {
     image: "https://evantia-co.jp/logo.png",
     "@id": "https://evantia-co.jp",
     url: "https://evantia-co.jp",
-    telephone: "+81-90-2393-2820",
+    telephone: "+81-6-7178-1352",
     email: "info@evantia-co.jp",
     address: {
       "@type": "PostalAddress",
