@@ -78,14 +78,18 @@ export const Footer = () => {
                 {/* 2. Main Grid - Spec Sheet Style */}
                 <div className="grid grid-cols-2 md:grid-cols-12 gap-12 mb-40">
                     <div className="col-span-2 md:col-span-4">
-                        <div className="mb-10 flex items-center gap-4">
-                            <Image
-                                src="/logo.png"
-                                alt="株式会社エバンティア"
-                                width={56}
-                                height={56}
-                            />
-                            <span className="text-3xl font-extrabold tracking-tighter">EVANTIA</span>
+                        <div className="mb-10">
+                            <div className="flex items-center gap-4">
+                                <Image
+                                    src="/logo.png"
+                                    alt=""
+                                    width={56}
+                                    height={56}
+                                    className="flex-shrink-0"
+                                />
+                                <span className="text-3xl font-extrabold tracking-tighter">EVANTIA</span>
+                            </div>
+                            <p className="text-sm font-bold text-white/60 mt-2 tracking-widest">株式会社エバンティア</p>
                         </div>
                         <address className="not-italic text-base text-white space-y-6 leading-relaxed font-bold">
                             <div className="border-l border-[var(--color-brand-accent)] pl-4">
