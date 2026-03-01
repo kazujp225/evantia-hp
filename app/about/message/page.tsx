@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -41,8 +42,20 @@ export default function MessagePage() {
                         </p>
                     </div>
 
-                    <div className="mt-16 pt-16 border-t border-black">
-                        <p className="text-xl font-bold text-gray-800">代表取締役　新井 淳平</p>
+                    <div className="mt-16 pt-16 border-t border-black flex flex-col md:flex-row items-center md:items-end gap-8">
+                        <div className="w-48 md:w-56 flex-shrink-0">
+                            <Image
+                                src="/assets/images/ceo.jpg"
+                                alt="代表取締役 新井淳平"
+                                width={1024}
+                                height={1536}
+                                className="w-full h-auto"
+                            />
+                        </div>
+                        <div>
+                            <p className="text-sm text-gray-500 mb-1">代表取締役</p>
+                            <p className="text-2xl font-bold text-gray-800">新井 淳平</p>
+                        </div>
                     </div>
                 </ScrollReveal>
             </div>
