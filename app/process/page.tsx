@@ -56,7 +56,7 @@ export default function ProcessPage() {
                 />
                 <div className="relative z-10 w-full max-w-screen-xl mx-auto px-6 pb-20">
                     <ScrollReveal>
-                        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase text-white mb-6 leading-[0.9]">
+                        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase text-white mb-6 leading-[0.9]">
                             Process of<br />
                             Transformation.
                         </h1>
