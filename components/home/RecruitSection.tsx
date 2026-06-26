@@ -9,8 +9,8 @@ export function RecruitSection() {
             {/* Background Image with Parallax-like feel (static for now) */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/assets/images/hero-team.jpg"
-                    alt="チームワークと成長"
+                    src="/assets/images/office-team.jpg"
+                    alt="エバンティアのメンバーが協働する様子 - チームワークと成長"
                     fill
                     className="object-cover transition-transform duration-[2s] hover:scale-105"
                     style={{ filter: 'grayscale(100%) brightness(0.4)' }}

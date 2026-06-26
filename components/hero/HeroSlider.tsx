@@ -17,8 +17,8 @@ const NEWS_TICKER = [
 const SLIDES = [
     {
         id: 1,
-        image: "/assets/images/hero-philosophy.jpg",
-        imageAlt: "ビジネスミーティングの様子 - チームが戦略について議論している",
+        image: "/assets/images/office-member.jpg",
+        imageAlt: "エバンティアのメンバーがノートPCで業務に取り組む様子",
         label: "OUR PHILOSOPHY",
         title: (
             <>
@@ -33,8 +33,8 @@ const SLIDES = [
     },
     {
         id: 2,
-        image: "/assets/images/hero-selfdriving.jpg",
-        imageAlt: "モダンなオフィスビル - 企業の成長と自立を象徴",
+        image: "/assets/images/office-sales.jpg",
+        imageAlt: "電話で顧客対応をしながら業務を進めるエバンティアの営業メンバー",
         label: "SELF-DRIVING",
         title: (
             <>
@@ -49,8 +49,8 @@ const SLIDES = [
     },
     {
         id: 3,
-        image: "/assets/images/hero-team.jpg",
-        imageAlt: "プロフェッショナルチームの協働 - 少数精鋭による高品質なサービス",
+        image: "/assets/images/office-team.jpg",
+        imageAlt: "少数精鋭で連携しながら打ち合わせを行うエバンティアのメンバー",
         label: "ELITE TEAM",
         title: (
             <>
