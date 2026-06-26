@@ -12,7 +12,7 @@ export const metadata = {
 const INTERVIEWS = [
     {
         id: "001",
-        name: "田中 太郎",
+        name: "大野 翔太",
         role: "Recruitment Consultant",
         joined: "2026",
         title: "クライアントの事業成長に貢献することが、私たちの目標です。",
@@ -20,7 +20,7 @@ const INTERVIEWS = [
     },
     {
         id: "002",
-        name: "鈴木 花子",
+        name: "篠原 美月",
         role: "RPO Specialist",
         joined: "2026",
         title: "現場にこそ答えがある。地道な改善が組織を変える。",
@@ -28,7 +28,7 @@ const INTERVIEWS = [
     },
     {
         id: "003",
-        name: "佐藤 一郎",
+        name: "谷口 慎吾",
         role: "Creative Director",
         joined: "2026",
         title: "言葉にできない魅力を、デザインの力で可視化する。",
@@ -36,7 +36,7 @@ const INTERVIEWS = [
     },
     {
         id: "004",
-        name: "高橋 由美",
+        name: "河合 奈緒",
         role: "Career Advisor",
         joined: "2026",
         title: "「転職」という人生の分岐点に、真摯に向き合う。",
@@ -44,7 +44,7 @@ const INTERVIEWS = [
     },
     {
         id: "005",
-        name: "伊藤 健太",
+        name: "安藤 拓実",
         role: "Corporate Staff",
         joined: "2026",
         title: "成長する組織の管理と推進を同時に担うやりがい。",
@@ -52,7 +52,7 @@ const INTERVIEWS = [
     },
     {
         id: "006",
-        name: "渡辺 さくら",
+        name: "小林 七海",
         role: "HR Tech Engineer",
         joined: "2026",
         title: "テクノロジーで採用プロセスを効率化し、マッチングの精度を高める。",

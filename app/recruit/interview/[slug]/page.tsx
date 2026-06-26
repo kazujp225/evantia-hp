@@ -5,18 +5,16 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-// Mock Data
 const INTERVIEWS: Record<string, any> = {
     "001": {
-        name: "田中 太郎",
+        name: "大野 翔太",
         role: "Recruitment Consultant",
         title: "「クライアントの事業成長」こそが、我々のゴールである。",
         intro: "大手人材会社でMVPを獲得した後、なぜ立ち上げ間もないエバンティアを選んだのか。「本質的な支援」を追求する彼の原動力に迫る。",
         image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1200"
     },
-    // Add fake data for others to prevent 404
-    "002": { name: "鈴木 花子", role: "RPO Specialist", title: "現場にこそ答えがある。", intro: "...", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1200" },
-    "003": { name: "佐藤 一郎", role: "Designer", title: "デザインの力で可視化する。", intro: "...", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1200" }
+    "002": { name: "篠原 美月", role: "RPO Specialist", title: "現場にこそ答えがある。", intro: "...", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1200" },
+    "003": { name: "谷口 慎吾", role: "Creative Director", title: "デザインの力で可視化する。", intro: "...", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1200" }
 };
 
 export default function InterviewDetailPage({ params }: { params: { slug: string } }) {
