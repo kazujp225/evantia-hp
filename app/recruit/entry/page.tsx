@@ -8,10 +8,9 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const POSITIONS = [
-    { id: "consultant", label: "採用コンサルタント", en: "Recruitment Consultant" },
-    { id: "rpo", label: "RPOスペシャリスト", en: "RPO Specialist" },
-    { id: "advisor", label: "キャリアアドバイザー", en: "Career Advisor" },
-    { id: "corporate", label: "コーポレートスタッフ", en: "Corporate Staff" },
+    { id: "consulting-sales", label: "コンサル営業職", en: "Consulting Sales" },
+    { id: "customer-support", label: "カスタマーサポート・営業事務職", en: "Customer Support & Sales Administration" },
+    { id: "hr", label: "人事職（自社採用・労務）", en: "Human Resources (HR)" },
     { id: "other", label: "その他", en: "Other / Open Position" },
 ];
 
