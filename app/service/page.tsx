@@ -105,8 +105,8 @@ export default function ServicePage() {
                     priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-black/70" />
-                <div className="absolute bottom-0 left-0 w-full px-6 pb-16 md:pb-20">
-                    <div className="max-w-screen-xl mx-auto">
+                <div className="absolute bottom-0 left-0 w-full pb-16 md:pb-20">
+                    <div className="container-custom">
                         <ScrollReveal>
                             <span className="text-xs font-bold tracking-[0.3em] text-white/60 uppercase mb-6 block">Recruitment Consulting</span>
                             <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.15] max-w-4xl text-white mb-6">
@@ -122,8 +122,8 @@ export default function ServicePage() {
             </section>
 
             {/* Introduction */}
-            <section className="py-20 md:py-32 px-6 border-b border-border/40">
-                <div className="max-w-screen-xl mx-auto">
+            <section className="py-20 md:py-32 border-b border-border/40">
+                <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl">
                             <p className="text-xl md:text-2xl font-bold text-muted-foreground leading-relaxed">
@@ -137,8 +137,8 @@ export default function ServicePage() {
             </section>
 
             {/* Features Section - 特徴3選 */}
-            <section className="py-20 md:py-32 px-6 bg-zinc-50">
-                <div className="max-w-screen-xl mx-auto">
+            <section className="py-20 md:py-32 bg-zinc-50">
+                <div className="container-custom">
                     <ScrollReveal>
                         <div className="mb-16 md:mb-24">
                             <span className="text-xs font-bold tracking-[0.3em] text-primary uppercase mb-4 block">Our Strengths</span>
@@ -172,8 +172,8 @@ export default function ServicePage() {
             </section>
 
             {/* Services Section - 提供サービス6つ */}
-            <section className="py-20 md:py-32 px-6">
-                <div className="max-w-screen-xl mx-auto">
+            <section className="py-20 md:py-32">
+                <div className="container-custom">
                     <ScrollReveal>
                         <div className="mb-16 md:mb-24">
                             <span className="text-xs font-bold tracking-[0.3em] text-primary uppercase mb-4 block">Professional Services</span>
@@ -204,10 +204,10 @@ export default function ServicePage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 md:py-32 px-6 bg-primary text-white relative overflow-hidden">
+            <section className="py-20 md:py-32 bg-primary text-white relative overflow-hidden">
                 {/* Texture */}
                 <div className="absolute inset-0 opacity-[0.1] pointer-events-none mix-blend-overlay" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }}></div>
-                <div className="max-w-screen-xl mx-auto text-center relative z-10">
+                <div className="container-custom text-center relative z-10">
                     <ScrollReveal>
                         <h2 className="text-3xl md:text-5xl font-black mb-8">
                             採用課題、<br className="md:hidden" />ご相談ください。

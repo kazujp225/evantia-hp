@@ -42,7 +42,7 @@ export function ServicesSection() {
 
   return (
     <section
-      className="relative py-20 px-6 border-b border-border/40 overflow-hidden min-h-[500px] md:min-h-[550px]"
+      className="relative py-20 border-b border-border/40 overflow-hidden min-h-[500px] md:min-h-[550px]"
       aria-label="サービス紹介"
       aria-roledescription="カルーセル"
     >
@@ -71,7 +71,7 @@ export function ServicesSection() {
       </div>
 
       {/* Content */}
-      <div className="max-w-screen-xl mx-auto relative z-10 h-full flex flex-col">
+      <div className="container-custom relative z-10 h-full flex flex-col">
         <div className="mb-10 md:mb-16 flex justify-between items-start">
           <div>
             <span className="text-sm md:text-xs font-black tracking-[0.2em] mb-4 text-[var(--color-brand-accent)] block uppercase flex items-center gap-2">

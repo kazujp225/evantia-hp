@@ -5,7 +5,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function RecruitSection() {
     return (
-        <section className="relative py-32 md:py-48 px-6 overflow-hidden border-t border-zinc-800" aria-labelledby="recruit-heading">
+        <section className="relative py-32 md:py-48 overflow-hidden border-t border-zinc-800" aria-labelledby="recruit-heading">
             {/* Background Image with Parallax-like feel (static for now) */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -20,7 +20,7 @@ export function RecruitSection() {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-screen-xl mx-auto text-center text-white">
+            <div className="relative z-10 container-custom text-center text-white">
                 <ScrollReveal>
                     <div className="flex flex-col items-center">
                         <span className="text-sm md:text-sm font-black tracking-[0.4em] text-[var(--color-brand-accent)] uppercase mb-8 flex items-center gap-4">

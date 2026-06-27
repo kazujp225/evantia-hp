@@ -16,8 +16,8 @@ export default function Home() {
       <HeroSlider />
 
       {/* 2. PROCESS OF TRANSFORMATION */}
-      <section className="py-24 md:py-40 px-6 border-b border-border/40 relative overflow-hidden bg-background" aria-labelledby="process-heading">
-        <div className="max-w-screen-xl mx-auto relative z-10">
+      <section className="py-24 md:py-40 border-b border-border/40 relative overflow-hidden bg-background" aria-labelledby="process-heading">
+        <div className="container-custom relative z-10">
           <div className="mb-20 md:mb-32">
             <span className="text-sm md:text-xs font-black tracking-[0.2em] text-[var(--color-brand-accent)] uppercase mb-6 block flex items-center gap-4">
               <span className="w-12 h-[2px] bg-[var(--color-brand-accent)]"></span>
@@ -157,7 +157,7 @@ export default function Home() {
       {/* 9. CTA - Redesigned to Split Layout */}
       {/* 9. CTA - Compact Horizontal Layout */}
       <section className="py-20 bg-zinc-900 border-t border-zinc-200" aria-labelledby="cta-heading">
-        <div className="max-w-screen-xl mx-auto px-6">
+        <div className="container-custom">
           <ScrollReveal>
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
               {/* Left: Compact Statement */}

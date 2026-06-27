@@ -84,16 +84,10 @@ body::before {
 .container-custom {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  /* サイト全体の左右ガター（px-6 セクションと一致させ、各セクションの左端を縦に揃える） */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   max-width: 80rem;
-}
-
-@media (min-width: 768px) {
-  .container-custom {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 }
 
 /* Custom Selection */

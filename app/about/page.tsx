@@ -30,8 +30,8 @@ export default function AboutPage() {
                     priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/70 to-black/60" />
-                <div className="absolute bottom-0 left-0 w-full px-6 pb-16 md:pb-20 z-20">
-                    <div className="max-w-screen-xl mx-auto">
+                <div className="absolute bottom-0 left-0 w-full pb-16 md:pb-20 z-20">
+                    <div className="container-custom">
                         <ScrollReveal>
                             <span className="text-xl font-black tracking-widest uppercase mb-6 md:mb-8 text-white block">Philosophy</span>
                             <h1 className="text-3xl md:text-6xl lg:text-7xl font-black leading-[1.15] max-w-5xl text-white">
@@ -43,7 +43,7 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            <div className="max-w-screen-xl mx-auto px-6 py-24">
+            <div className="container-custom py-24">
 
                 {/* Philosophy Detail with Image */}
                 <ScrollReveal>

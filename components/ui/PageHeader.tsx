@@ -23,7 +23,7 @@ export const PageHeader = ({ title, subtitle }: { title: string; subtitle: strin
             {/* Decorative gradient orb */}
             <div className="absolute -top-20 -left-20 w-96 h-96 bg-[var(--color-brand-accent)]/20 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="max-w-screen-xl mx-auto px-6 relative z-10 stagger-children">
+            <div className="container-custom relative z-10 stagger-children">
                 <p className="text-[var(--color-brand-accent)] font-bold tracking-[0.3em] text-xs uppercase mb-6 flex items-center gap-3">
                     <span className="w-8 h-[2px] bg-gradient-to-r from-[var(--color-brand-accent)] to-[var(--color-brand-gold)]"></span>
                     {subtitle}

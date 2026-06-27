@@ -54,7 +54,7 @@ export default function ProcessPage() {
                     className="object-cover brightness-50"
                     priority
                 />
-                <div className="relative z-10 w-full max-w-screen-xl mx-auto px-6 pb-20">
+                <div className="relative z-10 w-full container-custom pb-20">
                     <ScrollReveal>
                         <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase text-white mb-6 leading-[0.9]">
                             Process of<br />
@@ -67,7 +67,7 @@ export default function ProcessPage() {
                 </div>
             </div>
 
-            <div className="max-w-screen-xl mx-auto px-6 py-32">
+            <div className="container-custom py-32">
                 <div className="space-y-32">
                     {steps.map((item, i) => (
                         <ScrollReveal key={i}>

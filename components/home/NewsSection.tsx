@@ -8,8 +8,8 @@ export function NewsSection() {
     const latestNews = NEWS.slice(0, 3);
 
     return (
-        <section className="py-20 md:py-32 px-6 border-b border-border/40" aria-labelledby="news-heading">
-            <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24">
+        <section className="py-20 md:py-32 border-b border-border/40" aria-labelledby="news-heading">
+            <div className="container-custom flex flex-col md:flex-row gap-16 md:gap-24">
 
                 {/* Header */}
                 <div className="md:w-1/4">
